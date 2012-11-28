@@ -1,4 +1,3 @@
-Dotfiles
-========
-
-Linux Config Files
+Personal Dotfiles
+=================
+Miscellaneous Config Files
