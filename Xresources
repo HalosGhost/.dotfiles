@@ -1,0 +1,11 @@
+!<-URXVT Configuration->
+URxvt.transparent: true
+URxvt.shading: 30
+
+URxvt.scrollBar: false
+
+URxvt.perl-ext-common: default,matcher
+URxvt.urlLauncher: /usr/bin/firefox
+URxvt.matcher.button: 1
+
+Xcursor.theme: Bluecurve
