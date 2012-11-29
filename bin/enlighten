@@ -1,0 +1,84 @@
+#!/bin/zsh
+
+#<- Configuration ->
+disp=/sys/class/backlight/gmux_backlight/brightness
+dstep=4096
+kbd=/sys/class/leds/smc::kbd_backlight/brightness
+kstep=15
+
+
+#<- Error Handling ->
+E_HELP=44
+E_PERMS=45
+
+
+#<- Function Declarations ->
+permissions () {
+   if [ "$UID" != 0 ]; then
+      echo Enlighten must be run with root privileges
+      exit "$E_PERMS"
+   fi
+}
+
+usage () {
+   echo Usage: enlighten \[-h\|--help\] \[\<increase\|decrease\> device\] 
+   echo Example: enlighten increase display
+   exit "$E_HELP"
+}
+
+update-kbd () {
+   permissions
+   sudo tee "$kbd" <<< "$new"
+   exit 0
+}
+
+update-disp () {
+   permissions
+   sudo tee "$disp" <<< "$new"
+   exit 0
+}
+
+
+#<- Run Contents ->
+case "$1" in
+   -h|--help)
+      usage
+      ;;
+   increase)
+      case "$2" in
+         keyboard)
+            current="$(<"$kbd")"
+            new="$(( current + kstep ))"
+            update-kbd
+            ;;
+         display)
+            current="$(<"$disp")"
+            new="$(( current + dstep ))"
+            update-disp
+            ;;
+         *)
+            usage
+            ;;
+      esac
+      ;;
+   decrease)
+      case "$2" in
+         keyboard)
+            current="$(<"$kbd")"
+            new="$(( current - kstep ))"
+            update-kbd
+            ;;
+         display)
+            current="$(<"$disp")"
+            new="$(( current - dstep ))"
+            update-disp
+            ;;
+         *)
+            usage
+            ;;
+      esac
+      ;;
+   *)
+      usage
+      ;;
+esac

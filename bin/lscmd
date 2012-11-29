@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#<-Variable Declaration->
+cmds=`echo -n $PATH | xargs -d : -I {} find {} -maxdepth 1 \
+  -executable -type f -printf '%P\n'`
+aliases=`alias | cut -d '=' -f 1`
+E_HELP=44
+
+#<-Function Declaration->
+usage () {
+  echo Usage: `basename $0` \[-h\|--help\] \[seek \<query\>\]
+  echo Example: `basename $0` seek ls
+  exit "$E_HELP"
+}
+
+printlist () {
+  echo "$cmds"$'\n'"$aliases" | sort -u
+}
+
+#<-Run Content->
+case "$1" in
+  -h|--help)
+    usage
+    ;;
+  seek)
+    printlist | grep $2
+    ;;
+  *)
+    printlist
+    ;;
+esac
+
+exit 0
