@@ -1,11 +1,41 @@
-!<-URXVT Configuration->
-URxvt.transparent: true
-URxvt.shading: 30
+!<-X Resources->
+Xcursor.theme:		Bluecurve
 
-URxvt.scrollBar: false
+!<-URxvt Configuration->
+URxvt*.transparent:	True
+URxvt*.shading: 	20
 
-URxvt.perl-ext-common: default,matcher
-URxvt.urlLauncher: /usr/bin/firefox
-URxvt.matcher.button: 1
+URxvt.scrollBar:	False
+URxvt.perl-ext-common:	default,tabbed
 
-Xcursor.theme: Bluecurve
+URxvt.font:		xft:inconsolata:size=10
+
+URxvt.perl-ext-common:  default,matcher
+URxvt.urlLauncher:      /usr/bin/firefox
+URxvt.matcher.button:   1
+
+URxvt*urgentOnBell:	true
+
+!Appearance
+URxvt*fading:		35
+URxvt*fadeColor:	#002b36
+URxvt*background:	#000000
+URxvt*foreground: 	#cccccc
+
+!Colors
+URxvt*color0: 		#111111
+URxvt*color8: 		#444444
+URxvt*color1:		#B10000
+URxvt*color9:		#CC0000
+URxvt*color2:		#6CB100
+URxvt*color10:		#7CCC00
+URxvt*color3:		#B15C00
+URxvt*color11:		#CC6A00
+URxvt*color4:		#005577
+URxvt*color12:		#0075A3
+URxvt*color5:		#5600B1
+URxvt*color13:		#6300CC
+URxvt*color6:		#007177
+URxvt*color14:		#009199
+URxvt*color7:		#bbbbbb
+URxvt*color15:		#efefef

@@ -39,13 +39,11 @@ alias ytdl='youtube-dl'
 alias sudo='sudo '
 alias grep='grep --color=auto'
 alias ls='ls --color=auto -CF'
-alias urxvt='urxvt -fg Green -bg Black -fn "xft:inconsolata:pixelsize=14"'
 alias bc='bc -lq'
 alias locate='locate -d /home/halosghost/.mlocate/mlocate.db'
 alias matrix='cmatrix -f -l -a'
 alias netcfg='sudo netcfg'
 alias packer='packer --auronly'
-alias mplay='mplayctl loadfile '
 alias whereami='pwd -P'
 
 #<- Suffixes ->

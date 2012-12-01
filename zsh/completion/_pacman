@@ -142,7 +142,7 @@ _pacman_action_query() {
 				;;
 		query_search)
 			_arguments -s : \
-                "$_pacman_opts_query_actions[@]" \
+				"$_pacman_opts_query_actions[@]" \
 				"$_pacman_opts_common[@]" \
 				"$_pacman_opts_query_modifiers[@]" \
 				'*:search text: '
@@ -287,77 +287,136 @@ _pacman_get_command() {
 
 _sync_shortopts=(
     '-S[sync command]'
-    '-b[set an alternate database location]'
-    '-c[remove old packages from cache directory (-cc for all)]'
+    '-b[set an alternate database location]:files:_files -/'
+    '*-c[remove old packages from cache directory (-cc for all)]'
     '-d[skip dependency version checks (-dd to skip all checks)]'
     '-g[view all members of a package group]'
-    '-i[view package information]'
-    '-l[view a list of packages in a repo]'
+    '*-i[view package information]'
+    '-l[view a list of packages in a repo]:package repo:_pacman_completions_repositories'
     '-p[print the targets instead of performing the operation]'
     '-q[show less information for query and search]'
-    '-r[set an alternate installation root]'
-    '-s[search remote repositories for matching strings]'
+    '-r[set an alternate installation root]:files:_files -/'
+    '-s[search remote repositories for matching strings]:regex:'
     '-u[upgrade installed packages (-uu allows downgrade)]'
     '-v[be verbose]'
     '-w[download packages but do not install/upgrade anything]'
-    '-y[download fresh package databases from the server]'
+    '*-y[download fresh package databases from the server]'
 )
 
-#_arguments -s "$_query_shortopts[@]" ;;
-#_arguments -s "$_remove_shortopts[@]" ;;
-#_arguments -s "$_upgrade_shortopts[@]" ;;
-#_arguments -s "$_version_shortopts[@]" ;;
-# main dispatcher
+_query_shortopts=(
+    '-Q[query command]'
+    '-b[an alternate database location]:files:_files -/'
+    '-c[view the changelog of a package]'
+    '-d[list packages installed as dependencies]'
+    '-e[list packages explicitly installed]'
+    '-g[view all members of a package group]:groups:_pacman_completions_installed_groups'
+    '*-i[view package information (-ii for backup files)]'
+    '-k[check that the files owned by the package(s) are present]'
+    '-l[list the contents of the queried package]'
+    '-m[list installed packages not found in sync db(s)]'
+    '-n[list installed packages only found in sync db(s)]'
+    '-o[query the package that own <file>]:package file:_files'
+    '-p[query a package file instead of the database]:package file:_files -g "*.pkg.tar*"'
+    '-q[show less information for query and search]'
+    '-r[set an alternate installation root]:directories:_files -/'
+    '-s[search locally-installed packages for matching strings]:regex:'
+    '-t[list packages not required by any package]'
+    '-u[list outdated packages]'
+    '-v[be verbose]'
+    )
+
+
+_pacman_maincomp(){
+	case $1 in
+		-Q*g) # ipkg groups
+			_arguments -s : \
+				"$_pacman_opts_common[@]" \
+				"$_pacman_opts_query_modifiers[@]" \
+				'*:groups:_pacman_completions_installed_groups'
+				;;
+		-Q*o) # file
+			_arguments -s : \
+				"$_pacman_opts_common[@]" \
+				"$_pacman_opts_query_modifiers[@]" \
+				'*:package file:_files'
+				;;
+		-Q*p) # file *.pkg.tar*
+			_arguments -s : \
+				"$_pacman_opts_common[@]" \
+				"$_pacman_opts_query_modifiers[@]" \
+				'*:package file:_files -g "*.pkg.tar*"'
+				;;
+		-Q*b|-Q*r)
+			_arguments -s : \
+				"$_pacman_opts_common[@]" \
+				"$_pacman_opts_query_modifiers[@]" \
+				'2:directories:_files -/' \
+				'*:query:_pacman_action_query'
+      ;;
+		-Q*s)
+			_arguments -s : \
+				"$_pacman_opts_common[@]" \
+				"$_pacman_opts_query_modifiers[@]" \
+				'2:regex:'
+			;;
+		-Q*)
+			_pacman_action_query	;;
+		-R*)
+			_pacman_action_remove   ;;
+		-S*c*) # no completion
+			return 0
+			;;
+		-S*l) # repos
+			_arguments -s : \
+				"$_pacman_opts_common[@]" \
+				"$_pacman_opts_sync_modifiers[@]" \
+				'*:package repo:_pacman_completions_repositories'
+				;;
+		-S*g) # pkg groups
+			_arguments -s : \
+				"$_pacman_opts_common[@]" \
+				"$_pacman_opts_sync_modifiers[@]" \
+				'*:package group:_pacman_completions_all_groups'
+			;;
+		-S*b|-S*r)
+			_arguments -s : \
+				"$_pacman_opts_common[@]" \
+				"$_pacman_opts_sync_modifiers[@]" \
+				'2:directories:_files -/' \
+				'*:sync:_pacman_action_sync'
+			;;
+		-S*s)
+			_arguments -s : \
+				"$_pacman_opts_common[@]" \
+				"$_pacman_opts_sync_modifiers[@]" \
+				'2:regex:'
+			;;
+		-S*)
+			_pacman_action_sync	;;
+		-U*)
+			_pacman_action_upgrade	;;
+		-V*)
+			_pacman_action_version	;;
+		-h*)
+			_pacman_action_help	;;
+		-  )
+			_pacman_action_none	;;
+		*  )
+			return 1	;;
+	esac
+}
 _pacman_zsh_comp() {
-    case $words[CURRENT] in
-        -S*) _arguments -s "$_sync_shortopts[@]" ;;
-        -Q*) _arguments -s "$_query_shortopts[@]" ;;
-        *)
-            case $words[2] in
-                -Q*g*) # ipkg groups
-                    _arguments -s : \
-                        "$_pacman_opts_common[@]" \
-                        "$_pacman_opts_query_modifiers[@]" \
-                        '*:groups:_pacman_completions_installed_groups'
-                        ;;
-                -Q*o*) # file
-                    _arguments -s : \
-                        "$_pacman_opts_common[@]" \
-                        "$_pacman_opts_query_modifiers[@]" \
-                        '*:package file:_files'
-                        ;;
-                -Q*p*) # file *.pkg.tar*
-                    _arguments -s : \
-                        "$_pacman_opts_common[@]" \
-                        "$_pacman_opts_query_modifiers[@]" \
-                        '*:package file:_files -g "*.pkg.tar*"'
-                        ;;
-                -Q*)  _pacman_action_query    ;;
-                -R*)  _pacman_action_remove   ;;
-                -S*c*) # no completion
-                    return 0
-                    ;;
-                -S*l*) # repos
-                    _arguments -s : \
-                        "$_pacman_opts_common[@]" \
-                        "$_pacman_opts_sync_modifiers[@]" \
-                        '*:package repo:_pacman_completions_repositories' \
-                        ;;
-                -S*g*) # pkg groups
-                    _arguments -s : \
-                        "$_pacman_opts_common[@]" \
-                        "$_pacman_opts_sync_modifiers[@]" \
-                        '*:package group:_pacman_completions_all_groups'
-                        ;;
-                -S*)  _pacman_action_sync     ;;
-                -U*)  _pacman_action_upgrade  ;;
-                -V*)  _pacman_action_version  ;;
-                -h*)  _pacman_action_help     ;;
-                -  )  _pacman_action_none     ;;
-                *  )  return 1                ;;
-            esac
-        ;;
-    esac
+    varcur="${(M)#words:#-*}"
+    if (( varcur == 1 )) && (( CURRENT < 3 )); then
+        case ${(M)words:#-*} in
+            -S*) _arguments -w "$_sync_shortopts[@]" ;;
+            -Q*) _arguments -w "$_query_shortopts[@]" ;;
+        esac
+    else
+        if _pacman_maincomp ${${(M)words:#-*}[-1]} ; then
+            _pacman_maincomp $words[2]
+        fi
+    fi
 }
 
 _key_shortopts=(
@@ -561,3 +620,5 @@ _pacman_comp() {
 }
 
 _pacman_comp "$@"
+
+# vim: set ft=zsh ts=2 sw=2 sts=2 noet:
