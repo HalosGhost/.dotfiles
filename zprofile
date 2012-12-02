@@ -1,4 +1,4 @@
-# ~/.zprofile
+#<- ZProfile ->
 
-# PATH Declarations
-export PATH=$PATH:/home/halosghost/.bin
+#<- Keep TTY constant for X ->
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx

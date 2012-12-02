@@ -1,3 +1,7 @@
-#!/bin/zsh
+#<- ZSH ENV ->
 
-export EDITOR=vim
+#<- PATH Declarations ->
+export PATH=$PATH:/home/halosghost/.bin
+
+#<- Environment Declarations ->
+export EDITOR=/usr/bin/vim
