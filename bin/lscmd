@@ -8,7 +8,7 @@ E_HELP=44
 
 #<-Function Declaration->
 usage () {
-  echo Usage: `basename $0` \[-h\|--help\] \[seek \<query\>\]
+  echo Usage: `basename $0` \[-h\|--help\] \[-s\|seek \<query\>\]
   echo Example: `basename $0` seek ls
   exit "$E_HELP"
 }
@@ -22,8 +22,8 @@ case "$1" in
   -h|--help)
     usage
     ;;
-  seek)
-    printlist | grep $2
+  -s|--seek)
+    printlist | grep --color=auto $2
     ;;
   *)
     printlist
