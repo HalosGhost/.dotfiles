@@ -47,6 +47,7 @@ bindcode 169 exec eject
 bindsym $ctrl+$alt+L exec xautolock -locknow
 
 # Map screenshot shortcut
+bindsym $mod+grave exec scrot /home/halosghost/Pictures/Scrn/shot-%d-%m-%Y-%s.png
 bindcode 107 exec scrot /home/halosghost/Pictures/Scrn/shot-%d-%m-%Y.png
 
 # kill focused window
