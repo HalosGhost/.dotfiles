@@ -2,7 +2,7 @@
 
 #<- Configuration ->
 disp=/sys/class/backlight/gmux_backlight/brightness
-dstep=4096
+dstep=2048
 kbd=/sys/class/leds/smc::kbd_backlight/brightness
 kstep=15
 
