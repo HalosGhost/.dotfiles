@@ -31,7 +31,7 @@ bindsym $mod+Return exec urxvt
 # Map Special Keys
 bindcode 68 exec sudo /home/halosghost/.bin/enlighten increase display
 bindcode 67 exec sudo /home/halosghost/.bin/enlighten decrease display
-bindcode 69 exec steam steam://open/games
+bindcode 69 exec steam
 bindcode 70 exec netflix-desktop 
 bindcode 72 exec sudo /home/halosghost/.bin/enlighten increase keyboard
 bindcode 71 exec sudo /home/halosghost/.bin/enlighten decrease keyboard
