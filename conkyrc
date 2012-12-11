@@ -1,0 +1,63 @@
+background no
+update_interval 2.0
+total_run_times 0
+own_window now
+own_window_transparent yes
+own_window_type override
+double_buffer yes
+maximum_width 300 
+draw_shades no
+draw_outline yes
+draw_borders no
+stippled_borders 0
+border_width 1
+color0 ffffff
+default_color d9d9d9
+default_shade_color c80000
+default_outline_color 383838
+alignment bottom_right
+gap_x 25
+gap_y 15
+no_buffers yes
+cpu_avg_samples 2
+net_avg_samples 2
+text_buffer_size 2048
+default_bar_size 150 20
+
+#template0 (cpu) 1:name 2:number
+template0 ${color0}\1) ${color}${freq_g \2}Ghz | ${cpu \2}% ${alignr}${cpubar \2 5,70}
+
+#template1 (memory) 1:name 2:type
+template1 ${color0}\1   ${color}${\2perc}%/${\2max} ${alignr}${\2bar 5,70}
+
+#template2 (hdd) 1:name 2:mountpoint
+template2 ${color0}\1   ${color}${fs_used \2}/${fs_size \2} ${alignr}${fs_bar 5,70 \2}
+
+#template3 (network - wired) 1:name 2:interface
+template3 ${if_up \2}${color0}\1 ${color}${addr \2}\n ${color0}Down: ${color}${downspeed \2} \n   ${color0}Total Down: ${color}${totaldown \2} ${alignr}${voffset -8}${downspeedgraph \2 10,70}\n\n  ${color0}Up: ${color}${upspeed \2}\n   ${color0}Total Up: ${color}${totalup \2} ${alignr}${voffset -8}${upspeedgraph \2 10,70}${endif}
+
+#template4 (network - wireless) 1:name 2:interface
+template4 ${if_up \2}${color0}\1 ${color}${addr \2}@${wireless_essid \2} | ${wireless_link_qual_perc \2}%\n  ${color0}Down: ${color}${downspeed \2} \n   ${color0}Total Down: ${color}${totaldown \2} ${alignr}${voffset -8}${downspeedgraph \2 10,70}\n\n  ${color0}Up: ${color}${upspeed \2}\n   ${color0}Total Up: ${color}${totalup \2} ${alignr}${voffset -8}${upspeedgraph \2 10,70}${endif}
+
+
+TEXT
+${exec date}
+${color0}UpTime: ${color}$uptime
+${color0}Kernel: ${color}$kernel
+
+${color0}CPUS: Temp: ${execi 30 sensors | grep "Physical id 0:" | cut -d "+" -f2 | cut -c1-4,6-7}
+ ${template0 1 cpu0}
+ ${template0 2 cpu1}
+ ${template0 3 cpu2}
+ ${template0 4 cpu3}
+
+${color0}Memory:
+ ${template1 Mem mem}
+
+${color0}Disks:
+ ${template2 /root /}
+ ${template2 /home /home}
+
+${color0}Network:
+ ${template3 eth0 eth0}
+ ${template4 wlan0 wlan0}
