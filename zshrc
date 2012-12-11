@@ -16,6 +16,7 @@ compinit
 export PS1="[%~]%% "
 export RPROMPT="%(?.%F{cyan}^_^%f.%F{red}o_O%f)"
 source $HOME/.zprofile
+source $HOME/.zsh_env
 
 #<- Keybinds ->
 bindkey -v
