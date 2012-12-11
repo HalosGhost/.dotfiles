@@ -58,6 +58,3 @@ ${color0}Disks:
  ${template2 /root /}
  ${template2 /home /home}
 
-${color0}Network:
- ${template3 eth0 eth0}
- ${template4 wlan0 wlan0}
