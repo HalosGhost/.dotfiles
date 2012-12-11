@@ -26,7 +26,7 @@ new_window none
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec termite
 
 # Map Special Keys
 bindcode 68 exec sudo /home/halosghost/.bin/enlighten increase display

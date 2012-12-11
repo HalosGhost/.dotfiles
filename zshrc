@@ -59,6 +59,9 @@ alias -s mkv='mplayer'
 alias -s mp4='mplayer'
 alias -s ogg='mplayer'
 
+alias -s com='firefox'
+alias -s org='firefox'
+
 #<- Functions ->
 dbdl () {
   export url="$(purl $*)dl=1"
