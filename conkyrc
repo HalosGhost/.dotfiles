@@ -53,7 +53,6 @@ ${color0}CPUS: Temp: ${execi 30 sensors | grep "Physical id 0:" | cut -d "+" -f2
  ${template0 7 cpu6}
  ${template0 8 cpu7}
 
-
 ${color0}Memory:
  ${template1 Mem mem}
 
