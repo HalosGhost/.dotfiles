@@ -16,8 +16,8 @@ default_color d9d9d9
 default_shade_color c80000
 default_outline_color 383838
 alignment bottom_right
-gap_x 25
-gap_y 15
+gap_x 15
+gap_y 5
 no_buffers yes
 cpu_avg_samples 2
 net_avg_samples 2
