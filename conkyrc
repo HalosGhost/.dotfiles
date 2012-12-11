@@ -41,15 +41,18 @@ template4 ${if_up \2}${color0}\1 ${color}${addr \2}@${wireless_essid \2} | ${wir
 
 
 TEXT
-${exec date}
 ${color0}UpTime: ${color}$uptime
-${color0}Kernel: ${color}$kernel
 
 ${color0}CPUS: Temp: ${execi 30 sensors | grep "Physical id 0:" | cut -d "+" -f2 | cut -c1-4,6-7}
  ${template0 1 cpu0}
  ${template0 2 cpu1}
  ${template0 3 cpu2}
  ${template0 4 cpu3}
+ ${template0 5 cpu4}
+ ${template0 6 cpu5}
+ ${template0 7 cpu6}
+ ${template0 8 cpu7}
+
 
 ${color0}Memory:
  ${template1 Mem mem}
