@@ -169,4 +169,10 @@ bar {
         status_command i3status
 	font -*-roboto-medium-r-normal-*-12-*-100-100-*-*-iso10646-1
         position top
+
+    colors {
+	    background #333333
+	    focused_workspace  #4c7899 #0088cc #ffffff
+    }
+
 }
