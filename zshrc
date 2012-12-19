@@ -87,3 +87,6 @@ dbdl () {
   export url="$(purl $*)dl=1"
   echo $url; unset url
 }
+
+#<- Source ZSh Syntax Highlighting ->
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
