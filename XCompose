@@ -1,14 +1,4 @@
-# for Emacs: -*- coding: utf-8 -*-
 include "%L"
-
-# def emit(keys, codepoint, word):
-#     print ('<Multi_key> %s <period>\t: "%s"\tU%04X\t\t# CIRCLED DIGIT %s' % 
-#            (keys, unichr(codepoint), codepoint, word)).encode('utf8')
-# numbers = 'one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty'
-# words = numbers.upper().split()
-# emit('<0>', 0x24EA, "ZERO")
-# for num, word in zip(range(1, 21), words):
-#     emit(' '.join("<%s>" % char for char in str(num)), 0x245f + num, word)
 
 # Custom additions: Typography
 <Multi_key> <period> <period> <period>	: "…"	U2026		# HORIZONTAL ELLIPSIS
@@ -26,7 +16,7 @@ include "%L"
 # <Multi_key> <minus> <minus> <minus>	: "—"	U2014		# EM DASH
 # <Multi_key> <minus> <minus> <period>	: "–"	U2013		# EN DASH
 <Multi_key> <minus> <minus> <space>	: "– "			# EN DASH (followed by space)
-<Multi_key> <minus> <asciitilde> <minus> : "―" U2015 # HORIZONTAL BAR
+<Multi_key> <minus> <asciitilde> <minus> : "―"	U2015		# HORIZONTAL BAR
 <Multi_key> <backslash> <minus>		: "­"	U00AD		# SOFT HYPHEN
 <Multi_key> <comma> <space>		: "‚"	U201A		# SINGLE LOW-9 QUOTATION MARK
 <Multi_key> <comma> <comma>		: "„"	U201E		# DOUBLE LOW-9 QUOTATION MARK
@@ -43,19 +33,15 @@ include "%L"
 <Multi_key> <comma> <apostrophe>	: "‚"	U201A		# SINGLE LOW-9 QUOTATION MARK (quote resembling a comma)
 <Multi_key> <comma> <quotedbl>		: "„"	U201E		# DOUBLE LOW-9 QUOTATION MARK
 <Multi_key> <less> <bar>		: "↵"	U21B5		# DOWNWARDS ARROW WITH CORNER LEFTWARDS
-# The bullet was <o> <period>, but it clashes with ꙭ
+<Multi_key> <bar> <greater>		: ""	USOME		# DOWNWARDS ARROW WITH CORNER RIGHTWARDS
 <Multi_key> <asterisk> <1>		: "•"	U2022		# BULLET
-# By default <Multi_key> <period> <period> does this, but we broke that with the ... binding.
 <Multi_key> <o> <underscore>		: "⁃"   U2043		# HYPHEN BULLET
 <Multi_key> <o> <comma>			: "·"	periodcentered	# MIDDLE DOT
 <Multi_key> <space> <minus>		: "‑"	U2011		# NON-BREAKING HYPHEN
-# Already present for me:
-# <Multi_key> <space> <space>		: " "	U00A0		# NO-BREAK SPACE
-# Do we want/need these?
 <Multi_key> <d> <a> <g>			: "†"	U2020		# DAGGER
 <Multi_key> <d> <d> <a> <g>		: "‡"	U2021		# DOUBLE DAGGER
 # We already have THIN SPACE below, as <space> <apostrophe>!  Keep both?
-<Multi_key> <backslash> <comma>		: " "	U2009		# THIN SPACE
+<Multi_key> <backslash> <comma>		: " "	U2009		# THIN SPACE 
 <Multi_key> <s> <e> <c> : "§"   U00A7   # SECTION SIGN
 
 <Multi_key> <minus> <less>		: "←"	leftarrow	# LEFTWARDS ARROW

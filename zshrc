@@ -62,7 +62,6 @@ alias bc='bc -lq'
 alias locate='locate -d /home/halosghost/.mlocate/mlocate.db'
 alias matrix='cmatrix -f -l -a'
 alias netcfg='sudo netcfg'
-alias packer='packer --auronly'
 alias whereami='pwd -P'
 
 #<- Suffixes ->

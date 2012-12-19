@@ -5,3 +5,5 @@ export PATH=$PATH:/home/halosghost/.bin
 
 #<- Environment Declarations ->
 export EDITOR=/usr/bin/vim
+export GTK_IM_MODULE=xim
+export QT_IM_MODULE=xim
