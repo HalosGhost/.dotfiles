@@ -63,6 +63,7 @@ alias locate='locate -d /home/halosghost/.mlocate/mlocate.db'
 alias matrix='cmatrix -f -l -a'
 alias netcfg='sudo netcfg'
 alias whereami='pwd -P'
+alias cower='cower --color=always'
 
 #<- Suffixes ->
 alias -s pdf='zathura'
@@ -79,6 +80,7 @@ alias -s ogg='mplayer'
 
 alias -s com='firefox'
 alias -s org='firefox'
+alias -s edu='firefox'
 
 #<- Functions ->
 dbdl () {
