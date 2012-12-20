@@ -12,6 +12,8 @@ zstyle ':completion:*' menu select
 setopt completealiases
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit
+autoload -U edit-command-line
+zle -N edit-command-line
 compinit
 export PS1="[%~]%% "
 export RPROMPT="%(?.%F{cyan}^_^%f.%F{red}o_O%f)"
@@ -19,7 +21,8 @@ source $HOME/.zprofile
 source $HOME/.zsh_env
 
 #<- Keybinds ->
-bindkey -v
+bindkey -M vicmd v edit-command-line
+bindkey "^X" edit-command-line
 typeset -A key
 
 key[Home]=${terminfo[khome]}
