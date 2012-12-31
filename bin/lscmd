@@ -8,7 +8,7 @@ E_HELP=44
 
 #<-Function Declaration->
 usage () {
-  echo Usage: `basename $0` \[-h\|--help\] \[-s\|seek \<query\>\]
+  echo Usage: `basename $0` \[-h\|--help\] \[-s\|--seek \<query\>\]
   echo Example: `basename $0` seek ls
   exit "$E_HELP"
 }
