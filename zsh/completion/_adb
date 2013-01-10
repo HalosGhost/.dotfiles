@@ -1,0 +1,19 @@
+#compdef adb
+_adb() {
+    local start state
+    _arguments '1: :->start'
+    case $state in
+    start)
+        _arguments "1:Commands:(push pull help shell emu logcat forward jdwp install uninstall bugreport help version wait-for-device start-server kill-server get-state get-serialno status-window remount reboot reboot-bootloader root usb tcpip ppp sync)"
+    ;;
+    *)
+        case $words[2] in
+            install)
+            _files -g '*.apk'
+        ;;
+            push)
+            _files
+        ;;
+        esac
+    esac
+}
