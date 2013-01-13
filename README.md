@@ -3,4 +3,4 @@ Personal Dotfiles
 Miscellaneous Config Files
 
 TODO:
-- Customize XCompose
+- Finish Customization of XCompose

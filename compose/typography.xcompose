@@ -1,0 +1,45 @@
+#<- Punctuation ->
+<Multi_key> <question> <question>               : "¿"   U00BF   #Inverted Interro
+<Multi_key> <exclam> <exclam>                   : "¡"   U00A1   #Inverted Exclam
+<Multi_key> <exclam> <question>                 : "‽"   U203D   #Interrobang
+<Multi_key> <question> <exclam>                 : "⸘"   U2E18   #Inverted Interrobang
+<Multi_key> <question> <asterisk>               : "⸮"   U2E2E   #Irony Mark
+
+<Multi_key> <period> <period> <period>          : "…"   U2026   #Horizontal Ellipsis
+<Multi_key> <bar> <period> <period>             : "⋮"   U22EE   #Vertical Ellipsis
+<Multi_key> <minus> <period> <period>           : "⋯"   U22EF   #Midline Ellipsis
+
+<Multi_key> <grave> <space>                     : "‘"   U2018   #Left Single Quotation
+<Multi_key> <apostrophe> <space>                : "’"   U2019   #Right Single Quotation
+<Multi_key> <grave> <grave>                     : "“"   U201C   #Left Double Quotation
+<Multi_key> <apostrophe> <apostrophe>           : "”"   U201D   #Right Double Quotation
+<Multi_key> <less> <less>                       : "«"   U0171   #Left Guillemet
+<Multi_key> <greater> <greater>                 : "»"   U0187   #Right Guillemet
+
+#<- Spacing Modfiers ->
+<Multi_key> <space> <minus>                     : "­"   U00AD   #Soft Hyphen
+<Multi_key> <minus> <minus> <minus>             : "—"   U2014   #Em Dash
+<Multi_key> <minus> <minus> <period>            : "–"   U2013   #En Dash
+
+<Multi_key> <space> <space>                     : " "   U00A0   #Non Breaking Space
+<Multi_key> <period> <space>                    : " "   U2009   #Thin Space
+
+#<- Ligatures ->
+<Multi_key> <a> <e>                             : "æ"   U00E6   #ae
+<Multi_key> <A> <E>                             : "Æ"   U00C6   #AE
+<Multi_key> <o> <e>                             : "œ"   U0153   #oe
+<Multi_key> <O> <E>                             : "Œ"   U0152   #OE
+<Multi_key> <u> <e>                             : "ᵫ"   U1D6B   #ue
+
+<Multi_key> <e> <t>                             : "&"   U0026   #et
+
+<Multi_key> <f> <f> <period>                    : "ﬀ"   UFB00   #ff
+<Multi_key> <f> <i>                             : "ﬁ"   UFB01   #fi
+<Multi_key> <f> <f> <i>                         : "ﬃ"   UFB03   #ffi
+<Multi_key> <f> <l>                             : "ﬂ"   UFB02   #fl
+<Multi_key> <f> <f> <l>                         : "ﬄ"   UFB04   #ffl
+
+<Multi_key> <s> <t>                             : "ﬅ"   UFB05   #Long s with t
+<Multi_key> <s> <s>                             : "ß"   U00DF   #Small Double S
+<Multi_key> <S> <S>                             : "ẞ"   U1E9E   #Capital Double S
+<Multi_key> <s> <asciicircum> <t>               : "ﬆ"   UFB06   #Modern st
