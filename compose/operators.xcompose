@@ -1,29 +1,29 @@
 #<- Logical Operators ->
-<Multi_key> <asciicircum> <period> <period>     : "∴"   U2234   #Therefore
-<Multi_key> <period> <period> <asciicircum>     : "∵"   U2235   #Because
-<Multi_key> <slash> <o>                         : "ø"   U2205   #Not
-<Multi_key> <slash> <O>                         : "Ø    U00D8   #Empty Set
+<Multi_key> <asciicircum> <period> <period>     : "∴"   U2234   # Therefore
+<Multi_key> <period> <period> <asciicircum>     : "∵"   U2235   # Because
+<Multi_key> <slash> <o>                         : "ø"   U2205   # Not
+<Multi_key> <slash> <O>                         : "Ø    U00D8   # Empty Set
 
 #<- Mathematical Operators ->
-<Multi_key> <period> <minus> <period>           : "÷"   U00F7   #Obelus
-<Multi_key> <x> <x>                             : "×"   U000D7  #Multiply
-<Multi_key> <*> <x>                             : "·"   U00B7   #Interpunct
+<Multi_key> <period> <minus> <period>           : "÷"   U00F7   # Obelus
+<Multi_key> <x> <x>                             : "×"   U000D7  # Multiply
+<Multi_key> <*> <x>                             : "·"   U00B7   # Interpunct
 
-<Multi_key> <asciitilde> <asciitilde>           : "≈"   U2248   #Approximately Equal
-<Multi_key> <exclam> <equal>                    : "≠"   U2260   #Not Equal
-<Multi_key> <less> <equal>                      : "≤"   U2264   #Less Than or Equal
-<Multi_key> <greater> <equal>                   : "≥"   U2265   #Greater or Equal
-<Multi_key> <less> <slash> <greater>            : "≸"   U2278   #Neither Less or Greater
-<Multi_key> <less> <plus>                       : "≪"   U226A   #Much Less
-<Multi_key> <plus> <greater>                    : "≫"   U226B   #Much Greater
-<Multi_key> <plus> <plus> <less>                : "⋘"   U22D8   #Much Much Less
-<Multi_key> <plus> <plus> <greater>             : "⋙"   U22D9   #Much Much Greater
+<Multi_key> <asciitilde> <asciitilde>           : "≈"   U2248   # Approximately Equal
+<Multi_key> <exclam> <equal>                    : "≠"   U2260   # Not Equal
+<Multi_key> <less> <equal>                      : "≤"   U2264   # Less Than or Equal
+<Multi_key> <greater> <equal>                   : "≥"   U2265   # Greater or Equal
+<Multi_key> <less> <slash> <greater>            : "≸"   U2278   # Neither Less or Greater
+<Multi_key> <less> <plus>                       : "≪"   U226A   # Much Less
+<Multi_key> <plus> <greater>                    : "≫"   U226B   # Much Greater
+<Multi_key> <plus> <plus> <less>                : "⋘"   U22D8   # Much Much Less
+<Multi_key> <plus> <plus> <greater>             : "⋙"   U22D9   # Much Much Greater
 
-<Multi_key> <plus> <minus>                      : "±"   U00B1   #Plus or Minus
-<Multi_key> <minus> <plus>                      : "∓"   U2213   #Minus or Plus
+<Multi_key> <plus> <minus>                      : "±"   U00B1   # Plus or Minus
+<Multi_key> <minus> <plus>                      : "∓"   U2213   # Minus or Plus
 
-<Multi_key> <s> <q>                             : "√"   U221A   #Square Root
-<Multi_key> <3> <s> <q>                         : "∛"   U221B   #Cube Root
-<Multi_key> <4> <s> <q>                         : "∜"   U221C   #Fourth Root
+<Multi_key> <s> <q>                             : "√"   U221A   # Square Root
+<Multi_key> <3> <s> <q>                         : "∛"   U221B   # Cube Root
+<Multi_key> <4> <s> <q>                         : "∜"   U221C   # Fourth Root
 
-<Multi_key> <i> <n> <t>                         : "∫"   U222B   #Integral
+<Multi_key> <i> <n> <t>                         : "∫"   U222B   # Integral

@@ -1,33 +1,33 @@
 #<- Scientific Inferiors ->
-<Multi_key> <underscore> <1>            : "₁"   U2081   #One
-<Multi_key> <underscore> <2>            : "₂"   U2082   #Two
-<Multi_key> <underscore> <3>            : "₃"   U2083   #Three
-<Multi_key> <underscore> <4>            : "₄"   U2084   #Four
-<Multi_key> <underscore> <5>            : "₅"   U2085   #Five
-<Multi_key> <underscore> <6>            : "₆"   U2086   #Six
-<Multi_key> <underscore> <7>            : "₇"   U2087   #Seven
-<Multi_key> <underscore> <8>            : "₈"   U2088   #Eight
-<Multi_key> <underscore> <9>            : "₉"   U2089   #Nine
-<Multi_key> <underscore> <0>            : "₀"   U2080   #Zero
-<Multi_key> <underscore> <plus>         : "₊"   U208A   #Plus
-<Multi_key> <underscore> <minus>        : "₋"   U208B   #Minus
-<Multi_key> <underscore> <equal>        : "₌"   U208C   #Equal
-<Multi_key> <underscore> <parenleft>    : "₍"   U208D   #Left Parenthesis
-<Multi_key> <underscore> <parenright>   : "₎"   U208E   #Right Parenthesis
+<Multi_key> <underscore> <1>            : "₁"   U2081   # One
+<Multi_key> <underscore> <2>            : "₂"   U2082   # Two
+<Multi_key> <underscore> <3>            : "₃"   U2083   # Three
+<Multi_key> <underscore> <4>            : "₄"   U2084   # Four
+<Multi_key> <underscore> <5>            : "₅"   U2085   # Five
+<Multi_key> <underscore> <6>            : "₆"   U2086   # Six
+<Multi_key> <underscore> <7>            : "₇"   U2087   # Seven
+<Multi_key> <underscore> <8>            : "₈"   U2088   # Eight
+<Multi_key> <underscore> <9>            : "₉"   U2089   # Nine
+<Multi_key> <underscore> <0>            : "₀"   U2080   # Zero
+<Multi_key> <underscore> <plus>         : "₊"   U208A   # Plus
+<Multi_key> <underscore> <minus>        : "₋"   U208B   # Minus
+<Multi_key> <underscore> <equal>        : "₌"   U208C   # Equal
+<Multi_key> <underscore> <parenleft>    : "₍"   U208D   # Left Parenthesis
+<Multi_key> <underscore> <parenright>   : "₎"   U208E   # Right Parenthesis
 
 #<- Scientific Superiors ->
-<Multi_key> <asciicircum> <1>           : "¹"   U00B9   #One
-<Multi_key> <asciicircum> <2>           : "²"   U00B2   #Two
-<Multi_key> <asciicircum> <3>           : "³"   U20B3   #Three
-<Multi_key> <asciicircum> <4>           : "⁴"   U2074   #Four
-<Multi_key> <asciicircum> <5>           : "⁵"   U2075   #Five
-<Multi_key> <asciicircum> <6>           : "⁶"   U2076   #Six
-<Multi_key> <asciicircum> <7>           : "⁷"   U2077   #Seven
-<Multi_key> <asciicircum> <8>           : "⁸"   U2078   #Eight
-<Multi_key> <asciicircum> <9>           : "⁹"   U2079   #Nine
-<Multi_key> <asciicircum> <0>           : "⁰"   U2070   #Zero
-<Multi_key> <asciicircum> <plus>        : "⁺"   U207A   #Plus
-<Multi_key> <asciicircum> <minus>       : "⁻"   U207B   #Minus
-<Multi_key> <asciicircum> <equal>       : "⁼"   U207C   #Equal
-<Multi_key> <asciicircum> <parenleft>   : "⁽"   U207D   #Left Parenthesis
-<Multi_key> <asciicircum> <parenright>  : "⁾"   U207E   #Right Parenthesis
+<Multi_key> <asciicircum> <1>           : "¹"   U00B9   # One
+<Multi_key> <asciicircum> <2>           : "²"   U00B2   # Two
+<Multi_key> <asciicircum> <3>           : "³"   U20B3   # Three
+<Multi_key> <asciicircum> <4>           : "⁴"   U2074   # Four
+<Multi_key> <asciicircum> <5>           : "⁵"   U2075   # Five
+<Multi_key> <asciicircum> <6>           : "⁶"   U2076   # Six
+<Multi_key> <asciicircum> <7>           : "⁷"   U2077   # Seven
+<Multi_key> <asciicircum> <8>           : "⁸"   U2078   # Eight
+<Multi_key> <asciicircum> <9>           : "⁹"   U2079   # Nine
+<Multi_key> <asciicircum> <0>           : "⁰"   U2070   # Zero
+<Multi_key> <asciicircum> <plus>        : "⁺"   U207A   # Plus
+<Multi_key> <asciicircum> <minus>       : "⁻"   U207B   # Minus
+<Multi_key> <asciicircum> <equal>       : "⁼"   U207C   # Equal
+<Multi_key> <asciicircum> <parenleft>   : "⁽"   U207D   # Left Parenthesis
+<Multi_key> <asciicircum> <parenright>  : "⁾"   U207E   # Right Parenthesis

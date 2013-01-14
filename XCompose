@@ -1,4 +1,4 @@
-include "/home/halosghost/.compose/diacritics.xcompose"
+include "%L"
 include "/home/halosghost/.compose/typography.xcompose"
 include "/home/halosghost/.compose/operators.xcompose"
 include "/home/halosghost/.compose/sinfsext.xcompose"
