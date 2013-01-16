@@ -23,6 +23,9 @@
 <Multi_key> <equal> <right>                     : "⇒"   U21D2   # Right Double Arrow
 <Multi_key> <equal> <left>                      : "⇐"   U21D0   # Left Double Arrow
 
+<Multi_key> <less> <3>                          : "♥"   U2665   # Black Heart Suit
+<Multi_key> <p> <e> <a> <c> <e>                 : "☮"   U262E   # Peace Sign
+
 #<- Currency ->
 <Multi_key> <e> <u> <r>                         : "€"   U20AC   # Euro
 <Multi_key> <g> <b> <p>                         : "£"   U00A3   # British Pound Sterling

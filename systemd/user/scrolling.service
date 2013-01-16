@@ -1,0 +1,9 @@
+[Unit]
+Description=Create Natural Scrolling
+After=xorg.target
+
+[Service]
+ExecStart=/usr/bin/xmodmap %h/.Xmodmap
+
+[Install]
+WantedBy=initrc.target

@@ -1,0 +1,9 @@
+[Unit]
+Description=X Screen Locker
+After=xorg.target
+
+[Service]
+ExecStart=/usr/bin/xautolock -time 15 -locker 'i3lock --color=000000'
+
+[Install]
+WantedBy=initrc.target

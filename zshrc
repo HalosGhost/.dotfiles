@@ -64,7 +64,7 @@ alias ls='ls --color=auto -CF'
 alias bc='bc -lq'
 alias locate='locate -d /home/halosghost/.mlocate/mlocate.db'
 alias matrix='cmatrix -f -l -a'
-alias netcfg='sudo netcfg'
+alias netctl='sudo netctl'
 alias whereami='pwd -P'
 alias cower='cower --color=always'
 
