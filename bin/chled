@@ -1,0 +1,47 @@
+#!/bin/zsh
+
+#<- Error Handling ->
+E_HELP=44
+
+
+#<- Function Declarations ->
+usage () {
+   echo Usage: chled \[-h\|--help\] \[switch \<on\|off\>\]
+   echo Example: chled switch on
+   exit "$E_HELP"
+}
+
+capsOn () {
+   sudo su -c 'setleds -L +caps < /dev/console'
+   exit 0
+}
+
+capsOff () {
+   sudo su -c 'setleds -L -caps < /dev/console'
+   exit 0
+}
+
+
+#<- Run Contents ->
+case $1 in
+   -h|--help)
+      usage
+      ;;
+   switch)
+      case $2 in
+         on)
+            capsOn
+            ;;
+         off)
+            capsOff
+            ;;
+         *)
+            usage
+            ;;
+      esac
+      ;;
+   *)
+      usage
+      ;;
+   esac
+esac
