@@ -4,11 +4,11 @@
 "<- General Settings ->
 filetype indent plugin on
 set smartindent
-set tabstop=2
-set shiftwidth=2
+set tabstop=3
+set shiftwidth=3
 set expandtab
 set showcmd
-set softtabstop=2
+set softtabstop=3
 set number
 set showmatch
 set matchtime=1

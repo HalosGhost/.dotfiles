@@ -80,6 +80,9 @@ alias -s webm='mplayer'
 alias -s mkv='mplayer'
 alias -s mp4='mplayer'
 alias -s ogg='mplayer'
+
+alias -s gba='mednafen'
+alias -s gcm='dolphin-emu -e'
 alias -s z64='mupen64plus'
 
 alias -s com='firefox'

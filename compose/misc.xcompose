@@ -20,8 +20,8 @@
 <Multi_key> <o> <c>                             : "©"   U00A9   # Copyright
 <Multi_key> <t> <m>                             : "™"   U2122   # Trade Mark
 
-<Multi_key> <equal> <right>                     : "⇒"   U21D2   # Right Double Arrow
-<Multi_key> <equal> <left>                      : "⇐"   U21D0   # Left Double Arrow
+<Multi_key> <equal> <equal> <greater>           : "⇒"   U21D2   # Right Double Arrow
+<Multi_key> <equal> <equal> <less>              : "⇐"   U21D0   # Left Double Arrow
 
 <Multi_key> <less> <3>                          : "♥"   U2665   # Black Heart Suit
 <Multi_key> <p> <e> <a> <c> <e>                 : "☮"   U262E   # Peace Sign
