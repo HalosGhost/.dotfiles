@@ -1,7 +1,7 @@
 #<- Miscellaneous ->
 <Multi_key> <asterisk> <period>                 : "•"   U2022   # Bullet
 <Multi_key> <asterisk> <minus>                  : "⁃"   U2043   # Hypen Bullet
-<Multi_key> <bar> <minus>                       : "†"   U2020   # Dagger
+<Multi_key> <minus> <bar>                       : "†"   U2020   # Dagger
 <Multi_key> <bar> <minus> <minus>               : "‡"   U2021   # Double Dagger
 <Multi_key> <asterisk> <asterisk> <asterisk>    : "⁂"   U2042   # Asterism
 <Multi_key> <asciicircum> <asciicircum>         : "‸"   U2038   # Caret
