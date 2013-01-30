@@ -20,7 +20,7 @@ set $shft Shift
 font -*-inconsolata-medium-r-normal-*-13-*-100-100-m-*-iso10646-1
 
 # New Windows will be borderless
-new_window none
+new_window 1pixel
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -169,9 +169,9 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
-	font -*-roboto-medium-r-normal-*-12-*-100-100-*-*-iso10646-1
-        position top
+    status_command i3status
+    font xft:Inconsolata Medium 11
+    position top
 
     colors {
 	    background #333333
