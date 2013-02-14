@@ -82,11 +82,14 @@ alias -s mp4='mplayer'
 alias -s ogg='mplayer'
 
 alias -s doc='loffice'
+alias -s md='vim'
 
 alias -s gba='mednafen'
 alias -s gcm='dolphin-emu -e'
 alias -s z64='mupen64plus'
 
+alias -s html='firefox'
+alias -s htm='firefox'
 alias -s com='firefox'
 alias -s org='firefox'
 alias -s edu='firefox'
