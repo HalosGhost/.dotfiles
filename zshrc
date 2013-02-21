@@ -15,8 +15,9 @@ autoload -Uz compinit
 autoload -U edit-command-line
 zle -N edit-command-line
 compinit
-export PS1="[%~]%% "
-export RPROMPT="%(?.%F{cyan}^_^%f.%F{red}o_O%f)"
+export RPROMPT='%(?.%F{cyan}^_^%f.%F{red}o_O%f)'
+export PROMPT="╒[%~]%%
+└╼ "
 source $HOME/.zprofile
 source $HOME/.zsh_env
 
@@ -83,6 +84,7 @@ alias -s ogg='mplayer'
 
 alias -s doc='loffice'
 alias -s md='vim'
+alias -s rst='vim'
 
 alias -s gba='mednafen'
 alias -s gcm='dolphin-emu -e'
