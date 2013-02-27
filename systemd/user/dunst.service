@@ -1,0 +1,10 @@
+[Unit]
+Description=A dmenu-esque notification daemon
+After=xorg.target
+
+[Service]
+ExecStart=/usr/bin/dunst -conf %h/.dunstrc
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=initrc.target

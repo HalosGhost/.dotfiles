@@ -1,0 +1,15 @@
+[Unit]
+Description=ttwm
+Before=initrc.target
+After=xorg.target
+ 
+[Service]
+Requires=xorg.target
+Environment=DISPLAY=:0
+Environment=PATH=/usr/bin/core_perl:/home/halosghost/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=/usr/bin/ttwm "while :; do date +%%H:%M:%S\ \|\ %A\,\ %d\ %B\ %Y; sleep 1; done"
+Restart=always
+RestartSec=10
+  
+[Install]
+WantedBy=wm.target

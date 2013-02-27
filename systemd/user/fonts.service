@@ -1,0 +1,12 @@
+[Unit]
+Description=Add exotic locations to font path
+After=xorg.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/xset +fp /usr/share/fonts/local/
+ExecStart=/usr/bin/xset fp rehash
+RemainAfterExit=yes
+
+[Install]
+WantedBy=initrc.target
