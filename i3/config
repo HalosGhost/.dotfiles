@@ -35,9 +35,6 @@ bindcode 69 exec steam
 bindcode 70 exec netflix-desktop 
 bindcode 72 exec sudo /home/halosghost/.bin/enlighten increase keyboard
 bindcode 71 exec sudo /home/halosghost/.bin/enlighten decrease keyboard
-bindcode 73 exec /usr/bin/mplayctl seek -60
-bindcode 74 exec /usr/bin/mplayctl pause
-bindcode 75 exec /usr/bin/mplayctl seek +60
 bindcode 76 exec ponymix toggle -c 0
 bindcode 95 exec ponymix decrease 5
 bindcode 96 exec ponymix increase 5
