@@ -1,0 +1,11 @@
+[Unit]
+Description=Load Feh Background
+After=ttwm.service
+Type=oneshot
+
+[Service]
+ExecStart=/usr/bin/bash %h/.fehbg
+RemainAfterExit=yes
+
+[Install]
+WantedBy=initrc.target
