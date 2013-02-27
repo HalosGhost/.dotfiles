@@ -1,7 +1,6 @@
 #<- ZSH ENV ->
 
 #<- PATH Declarations ->
-export PATH=$PATH:/home/halosghost/.bin
 export PATH=$PATH:/opt/android-sdk/platform-tools:/opt/android-sdk/tools
 
 #<- Environment Declarations ->

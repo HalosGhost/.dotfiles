@@ -1,0 +1,37 @@
+#!/bin/zsh
+
+#<- Variables ->
+BAT=/sys/class/power_supply/BAT0
+
+#<- Functions ->
+calc () {
+   echo "$@" | bc
+}
+
+clock () {
+   date +%H:%M:%S\ \|\ %A\,\ %d\ %B\ %Y
+}
+
+aud () {
+   if ponymix is-muted; then
+      echo "A: X%"
+   else
+      echo "A: $(ponymix get-volume)%"
+   fi
+}
+
+batt () {
+   case "$(cat $BAT/status)" in
+      Discharging)
+         echo "$(calc "scale=4;$(cat $BAT/energy_now)/$(cat $BAT/energy_full)*100")%"
+         ;;
+      Charging)
+         echo "+$(calc "scale=4;$(cat $BAT/energy_now)/$(cat $BAT/energy_full)*100")%"
+         ;;
+   esac
+}
+
+#<- Run Contents ->
+echo "$(aud) | $(batt) | $(clock)"
+
+exit 0

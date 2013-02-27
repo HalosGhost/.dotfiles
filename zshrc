@@ -102,5 +102,9 @@ dbdl () {
   echo $url; unset url
 }
 
+calc () {
+  echo "$@" | bc
+}
+
 #<- Source ZSh Syntax Highlighting ->
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
