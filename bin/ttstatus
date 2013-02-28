@@ -11,7 +11,7 @@ LNKQUAL="$(iwconfig $INF | grep 'Link Quality' | sed 's/\s*Link Quality=//; s/\s
 
 #<- Functions ->
 clock () {
-   date +%H:%M:%S\ \|\ %A\,\ %d\ %B\ %Y
+   date +{#DDDDDD}%H:%M:%S\ {$DEF}\|{#DDDDDD}\ %A\,\ %d\ %B\ %Y
 }
 
 aud () {
