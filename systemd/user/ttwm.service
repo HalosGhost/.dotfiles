@@ -7,7 +7,7 @@ After=xorg.target
 Requires=xorg.target
 Environment=DISPLAY=:0
 Environment=PATH=/usr/bin/core_perl:%h/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-ExecStart=/usr/bin/ttwm "while :; do %h/.bin/ttstatus; sleep 1; done"
+ExecStart=/usr/bin/ttwm "%h/.bin/ttstatus"
 Restart=always
 RestartSec=10
   

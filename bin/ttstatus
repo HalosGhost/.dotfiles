@@ -85,4 +85,7 @@ inet () {
 
 
 #<- Run Contents ->
-echo "$(inet) | $(audIcn) $(aud) | $(battIcn) $(batt) | $(clock)"
+while :
+   do echo "$(inet) | $(audIcn) $(aud) | $(battIcn) $(batt) | $(clock)"
+   sleep 1
+done
