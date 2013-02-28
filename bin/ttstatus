@@ -4,8 +4,6 @@
 BAT="/sys/class/power_supply/BAT0"
 DEF="#C6C6C6"
 INF=wlan0
-IPADD="$(curl -s 'http://checkip.dyndns.org' | sed 's/.*Current IP Address: \([0-9\.]*\).*/\1/g')"
-LNKQUAL="$(iwconfig $INF | grep 'Link Quality' | sed 's/\s*Link Quality=//; s/\s.*//')"
 
 
 #<- Functions ->
@@ -21,9 +19,9 @@ audIcn () {
    if ponymix is-muted; then
       echo "{i 6}:{#FF0000}"
    else
-      if [[ "$(ponymix get-volume)" -ge 100 ]]; then
+      if [[ "$(ponymix get-volume)" -gt 100 ]]; then
          echo "{#FF0000}{i 3}:"
-      elif [[ "$(ponymix get-volume)" -lt 100 && "$(ponymix get-volume)" -ge 66 ]]; then
+      elif [[ "$(ponymix get-volume)" -le 100 && "$(ponymix get-volume)" -ge 66 ]]; then
          echo "{i 3}:{#FFAA00}"
       elif [[ "$(ponymix get-volume)" -lt 66 && "$(ponymix get-volume)" -gt 33 ]]; then
          echo "{i 4}:{#FFFF00}"
@@ -70,16 +68,17 @@ battIcn () {
 }
 
 inet () {
+   LNKQUAL="$(iwconfig $INF | grep 'Link Quality' | sed 's/\s*Link Quality=//; s/\s.*//')"
    if [[ "$LNKQUAL" =~ "no wireless extensions" ]]; then
       echo "{#FF0000}$INF Down{$DEF}"
    elif [[ "$LNKQUAL" -ge 55/70 ]]; then
-      echo "{#55FF00}{i 7}:("$IPADD"){$DEF}"
+      echo "{#55FF00}{i 7}{$DEF}"
    elif [[ "$LNKQUAL" -lt 55/70 && "$LNKQUAL" -ge 30/70 ]]; then
-      echo "{#FFFF00}{i 8}:("$IPADD"){$DEF}"
+      echo "{#FFFF00}{i 8}{$DEF}"
    elif [[ "$LNKQUAL" -lt 30/70 && "$LNKQUAL" -ge 15/70 ]]; then
-      echo "{#FF9900}{i 9}:("$IPADD"){$DEF}"
+      echo "{#FF9900}{i 9}{$DEF}"
    elif [[ "$LNKQUAL" -lt 15/70 ]]; then
-      echo "{#FF5500}{i 10}:("$IPADD"){$DEF}"
+      echo "{#FF5500}{i 10}{$DEF}"
    fi
 }
 
