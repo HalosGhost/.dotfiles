@@ -3,7 +3,6 @@
 #<- Variables ->
 BAT="/sys/class/power_supply/BAT0"
 DEF="#C6C6C6"
-BATLVL="$(echo "scale=1;$(cat $BAT/energy_now)*100/$(cat $BAT/energy_full)" | bc)"
 INF=wlan0
 IPADD="$(curl -s 'http://checkip.dyndns.org' | sed 's/.*Current IP Address: \([0-9\.]*\).*/\1/g')"
 LNKQUAL="$(iwconfig $INF | grep 'Link Quality' | sed 's/\s*Link Quality=//; s/\s.*//')"
@@ -35,10 +34,11 @@ audIcn () {
 }
 
 batt () {
-   echo "$BATLVL%{$DEF}"
+   echo "$(echo "scale=1;$(cat $BAT/energy_now)*100/$(cat $BAT/energy_full)" | bc)%{$DEF}"
 }
 
 battIcn () {
+   BATLVL="$(echo "scale=1;$(cat $BAT/energy_now)*100/$(cat $BAT/energy_full)" | bc)"
    case "$(cat $BAT/status)" in
       Charging)
          if [[ "$BATLVL" -ge 100 ]]; then
