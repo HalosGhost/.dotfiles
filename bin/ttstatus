@@ -1,37 +1,88 @@
 #!/bin/zsh
 
 #<- Variables ->
-BAT=/sys/class/power_supply/BAT0
+BAT="/sys/class/power_supply/BAT0"
+DEF="#C6C6C6"
+BATLVL="$(echo "scale=1;$(cat $BAT/energy_now)*100/$(cat $BAT/energy_full)" | bc)"
+INF=wlan0
+IPADD="$(curl -s 'http://checkip.dyndns.org' | sed 's/.*Current IP Address: \([0-9\.]*\).*/\1/g')"
+LNKQUAL="$(iwconfig $INF | grep 'Link Quality' | sed 's/\s*Link Quality=//; s/\s.*//')"
+
 
 #<- Functions ->
-calc () {
-   echo "$@" | bc
-}
-
 clock () {
    date +%H:%M:%S\ \|\ %A\,\ %d\ %B\ %Y
 }
 
 aud () {
+   echo "$(ponymix get-volume)%{"$DEF"}"
+}
+
+audIcn () {
    if ponymix is-muted; then
-      echo "A: X%"
+      echo "{i 6}:{#FF0000}"
    else
-      echo "A: $(ponymix get-volume)%"
+      if [[ "$(ponymix get-volume)" -ge 100 ]]; then
+         echo "{#FF0000}{i 3}:"
+      elif [[ "$(ponymix get-volume)" -lt 100 && "$(ponymix get-volume)" -ge 66 ]]; then
+         echo "{i 3}:{#FFAA00}"
+      elif [[ "$(ponymix get-volume)" -lt 66 && "$(ponymix get-volume)" -gt 33 ]]; then
+         echo "{i 4}:{#FFFF00}"
+      else
+         echo "{i 5}:{#55FF00}"
+      fi
    fi
 }
 
 batt () {
+   echo "$BATLVL%{$DEF}"
+}
+
+battIcn () {
    case "$(cat $BAT/status)" in
-      Discharging)
-         echo "$(calc "scale=4;$(cat $BAT/energy_now)/$(cat $BAT/energy_full)*100")%"
-         ;;
       Charging)
-         echo "+$(calc "scale=4;$(cat $BAT/energy_now)/$(cat $BAT/energy_full)*100")%"
+         if [[ "$BATLVL" -ge 100 ]]; then
+            echo "{i 18}{i 13}:{#00FF00}"
+         elif [[ "$BATLVL" -lt 100 && "$BATLVL" -ge 75 ]]; then
+            echo "{i 18}{i 14}:{#55FF00}"
+         elif [[ "$BATLVL" -lt 75 && "$BATLVL" -ge 45 ]]; then
+            echo "{i 18}{i 15}:{#FFFF00}"
+         elif [[ "$BATLVL" -lt 45 && "$BATLVL" -ge 15 ]]; then
+            echo "{i 18}{i 16}:{#FF9900}"
+         elif [[ "$BATLVL" -lt 25 ]]; then
+            echo "{i 18}{i 17}:{#FF5500}"
+         fi
+         ;;
+      *)
+         if [[ "$BATLVL" -ge 100 ]]; then
+            echo "{i 13}:{#00FF00}"
+         elif [[ "$BATLVL" -lt 100 && "$BATLVL" -ge 75 ]]; then
+            echo "{i 14}:{#55FF00}"
+         elif [[ "$BATLVL" -lt 75 && "$BATLVL" -ge 45 ]]; then
+            echo "{i 15}:{#FFFF00}"
+         elif [[ "$BATLVL" -lt 45 && "$BATLVL" -ge 15 ]]; then
+            echo "{i 16}:{#FF9900}"
+         elif [[ "$BATLVL" -lt 25 ]]; then
+            echo "{i 17}:{#FF5500}"
+         fi
          ;;
    esac
 }
 
-#<- Run Contents ->
-echo "$(aud) | $(batt) | $(clock)"
+inet () {
+   if [[ "$LNKQUAL" =~ "no wireless extensions" ]]; then
+      echo "{#FF0000}$INF Down{$DEF}"
+   elif [[ "$LNKQUAL" -ge 55/70 ]]; then
+      echo "{#55FF00}{i 7}:("$IPADD"){$DEF}"
+   elif [[ "$LNKQUAL" -lt 55/70 && "$LNKQUAL" -ge 30/70 ]]; then
+      echo "{#FFFF00}{i 8}:("$IPADD"){$DEF}"
+   elif [[ "$LNKQUAL" -lt 30/70 && "$LNKQUAL" -ge 15/70 ]]; then
+      echo "{#FF9900}{i 9}:("$IPADD"){$DEF}"
+   elif [[ "$LNKQUAL" -lt 15/70 ]]; then
+      echo "{#FF5500}{i 10}:("$IPADD"){$DEF}"
+   fi
+}
 
-exit 0
+
+#<- Run Contents ->
+echo "$(inet) | $(audIcn) $(aud) | $(battIcn) $(batt) | $(clock)"

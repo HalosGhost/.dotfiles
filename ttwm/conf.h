@@ -18,6 +18,7 @@ static const char colors[LASTColor][9] = {
 static const char 	ttwm_cursor			= XC_left_ptr;
 static const int	borderwidth			= 1;
 static const int	tilegap				= 0;
+static const Bool   classictabs         = False;
 static const int	max_status_line		= 256;
 static const int	win_min				= 20;
 static const Bool	focusfollowmouse	= True;
@@ -53,8 +54,8 @@ static Key keys[] = {
 	{ MOD1,				XK_Return,	spawn,		CMD(TERM)		},
 	{ MOD1,				XK_d,		spawn,		CMD(DMENU)		},
 	{ MOD1,				XK_w,		spawn,		CMD("firefox")	},
-	{ MOD1|ShiftMask,	XK_q,		quit,		NULL			},
-    { MOD2|ShiftMask,   XK_q,       killclient, NULL            },
+	{ MOD2|ShiftMask,	XK_q,		quit,		NULL			},
+    { MOD1|ShiftMask,   XK_q,       killclient, NULL            },
 	{ MOD1,				XK_f,		fullscreen,	NULL			},
 	{ MOD1,				XK_a,		toggle,		"place bar"		},
 	{ MOD1,				XK_x,		toggle,		"visible bar"	},
