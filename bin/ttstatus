@@ -69,15 +69,15 @@ battIcn () {
 
 inet () {
    LNKQUAL="$(iwconfig $INF | grep 'Link Quality' | sed 's/\s*Link Quality=//; s/\s.*//')"
-   if [[ "$LNKQUAL" =~ "no wireless extensions" ]]; then
-      echo "{#FF0000}$INF Down{$DEF}"
-   elif [[ "$LNKQUAL" -ge 55/70 ]]; then
+   if [[ "$(iwconfig)" =~ "ESSID:off" ]]; then
+      echo "{#FF0000}W{$DEF}"
+   elif [[ "$LNKQUAL" -ge 65/70 ]]; then
       echo "{#55FF00}{i 7}{$DEF}"
-   elif [[ "$LNKQUAL" -lt 55/70 && "$LNKQUAL" -ge 30/70 ]]; then
+   elif [[ "$LNKQUAL" -lt 65/70 && "$LNKQUAL" -ge 45/70 ]]; then
       echo "{#FFFF00}{i 8}{$DEF}"
-   elif [[ "$LNKQUAL" -lt 30/70 && "$LNKQUAL" -ge 15/70 ]]; then
+   elif [[ "$LNKQUAL" -lt 45/70 && "$LNKQUAL" -ge 20/70 ]]; then
       echo "{#FF9900}{i 9}{$DEF}"
-   elif [[ "$LNKQUAL" -lt 15/70 ]]; then
+   elif [[ "$LNKQUAL" -lt 20/70 ]]; then
       echo "{#FF5500}{i 10}{$DEF}"
    fi
 }
