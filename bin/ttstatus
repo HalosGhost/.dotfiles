@@ -3,7 +3,6 @@
 #<- Variables ->
 BAT="/sys/class/power_supply/BAT0"
 DEF="#C6C6C6"
-INF=wlan0
 
 
 #<- Functions ->
@@ -32,11 +31,11 @@ audIcn () {
 }
 
 batt () {
-   echo "$(echo "scale=1;$(cat $BAT/energy_now)*100/$(cat $BAT/energy_full)" | bc)%{$DEF}"
+   echo "$(echo "scale=0;$(cat $BAT/energy_now)*100/$(cat $BAT/energy_full)" | bc)%{$DEF}"
 }
 
 battIcn () {
-   BATLVL="$(echo "scale=1;$(cat $BAT/energy_now)*100/$(cat $BAT/energy_full)" | bc)"
+   BATLVL="$(echo "scale=0;$(cat $BAT/energy_now)*100/$(cat $BAT/energy_full)" | bc)"
    case "$(cat $BAT/status)" in
       Charging)
          if [[ "$BATLVL" -ge 100 ]]; then
@@ -47,20 +46,20 @@ battIcn () {
             echo "{i 18}{i 15}:{#FFFF00}"
          elif [[ "$BATLVL" -lt 45 && "$BATLVL" -ge 15 ]]; then
             echo "{i 18}{i 16}:{#FF9900}"
-         elif [[ "$BATLVL" -lt 25 ]]; then
+         elif [[ "$BATLVL" -lt 15 ]]; then
             echo "{i 18}{i 17}:{#FF5500}"
          fi
          ;;
       *)
-         if [[ "$BATLVL" -ge 100 ]]; then
+         if [[ "$BATLVL" -ge 98 ]]; then
             echo "{i 13}:{#00FF00}"
-         elif [[ "$BATLVL" -lt 100 && "$BATLVL" -ge 75 ]]; then
+         elif [[ "$BATLVL" -lt 98 && "$BATLVL" -ge 75 ]]; then
             echo "{i 14}:{#55FF00}"
          elif [[ "$BATLVL" -lt 75 && "$BATLVL" -ge 45 ]]; then
             echo "{i 15}:{#FFFF00}"
          elif [[ "$BATLVL" -lt 45 && "$BATLVL" -ge 15 ]]; then
             echo "{i 16}:{#FF9900}"
-         elif [[ "$BATLVL" -lt 25 ]]; then
+         elif [[ "$BATLVL" -lt 15 ]]; then
             echo "{i 17}:{#FF5500}"
          fi
          ;;
@@ -68,16 +67,17 @@ battIcn () {
 }
 
 inet () {
-   LNKQUAL="$(iwconfig $INF | grep 'Link Quality' | sed 's/\s*Link Quality=//; s/\s.*//')"
-   if [[ "$(iwconfig)" =~ "ESSID:off" ]]; then
+   LNKUP="$(iwconfig wlan0 | grep 'Access Point')"
+   LNKQUAL="$(iwconfig wlan0 | grep 'Link Quality' | sed 's/\s*Link Quality=//; s/\s.*//; s/\s*\/70//')"
+   if [[ "$LNKUP" =~ "Not-Associated" ]]; then
       echo "{#FF0000}W{$DEF}"
-   elif [[ "$LNKQUAL" -ge 65/70 ]]; then
+   elif [[ "$LNKQUAL" -ge 65 ]]; then
       echo "{#55FF00}{i 7}{$DEF}"
-   elif [[ "$LNKQUAL" -lt 65/70 && "$LNKQUAL" -ge 45/70 ]]; then
+   elif [[ "$LNKQUAL" -lt 65 && "$LNKQUAL" -ge 45 ]]; then
       echo "{#FFFF00}{i 8}{$DEF}"
-   elif [[ "$LNKQUAL" -lt 45/70 && "$LNKQUAL" -ge 20/70 ]]; then
+   elif [[ "$LNKQUAL" -lt 45 && "$LNKQUAL" -ge 20 ]]; then
       echo "{#FF9900}{i 9}{$DEF}"
-   elif [[ "$LNKQUAL" -lt 20/70 ]]; then
+   elif [[ "$LNKQUAL" -lt 20 ]]; then
       echo "{#FF5500}{i 10}{$DEF}"
    fi
 }

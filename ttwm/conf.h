@@ -123,7 +123,7 @@ static Key keys[] = {
 
 static Button buttons[] = {
 	/* modifier			button		function 	arg */
-	{MOD1,				1,			mouse,		"move"		},
+	/*{MOD1,				1,			mouse,		"move"		},*/
 	{MOD1,				2,			tile,		"cycle"		},
 	{MOD1,				3,			mouse,		"resize"	},
 	{MOD1,				4,			window,		"s prev"	},
