@@ -7,7 +7,7 @@ update_interval         1
 total_run_times         0
 
 TEXT
-# Print green "E" if wired is connected; Print red "E" if down
+# Paint relevant wired status icon and select color based on disconnected/connected
 ${if_up enp2s0f0}{\#22cc00}{i 20}${else}{\#cc2200}{i 19}${endif}{\#c6c6c6} | \
 # Paint relevant wireless status icon and select color based on signal strength; print ESSID; Print red "W" if down
 ${if_up wlan0}${if_match ${wireless_link_qual wlan0}<=20}{\#cc2200}{i 10}${else}${if_match ${wireless_link_qual wlan0}<=45}{\#ff9900}{i 9}${else}${if_match ${wireless_link_qual wlan0}<=65}{\#ffff00}{i 8}${else}${if_match ${wireless_link_qual wlan0}>65}{\#22cc00}{i 7}${endif}${endif}${endif}${endif}{\#c6c6c6}${else}{\#ff0000}W{\#c6c6c6}${endif} | \
