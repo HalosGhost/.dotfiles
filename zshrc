@@ -15,7 +15,7 @@ autoload -Uz compinit
 autoload -U edit-command-line
 zle -N edit-command-line
 compinit
-export RPROMPT='%(?.%F{cyan}^_^%f.%F{red}o_O%f)'
+export RPROMPT='%B%(?.%F{cyan}^_^%f.%F{red}o_O%f)%b'
 export PROMPT="╒[%~]%#
 └╼ "
 source $HOME/.zprofile
