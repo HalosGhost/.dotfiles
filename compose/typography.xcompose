@@ -23,6 +23,7 @@
 
 <Multi_key> <space> <space>             : " "   U00A0   # Non Breaking Space
 <Multi_key> <period> <space>            : " "   U2009   # Thin Space
+<Multi_key> <space> <period>            : "﻿"    UFEFF   # Zero-Width NBSP
 
 #<- Ligatures ->
 <Multi_key> <a> <e>                     : "æ"   U00E6   # ae
@@ -42,7 +43,7 @@
 <Multi_key> <s> <t>                     : "ﬅ"   UFB05   # Long s with t
 <Multi_key> <s> <s>                     : "ß"   U00DF   # Small Double S
 <Multi_key> <S> <S>                     : "ẞ"   U1E9E   # Capital Double S
-<Multi_key> <s> <asciicircum> <t>       : "ﬆ"   UFB06   # Modern st
+<Multi_key> <s> <asciicircum> <t>       : "ﬆ"   UFB06   # Historic st
 
 #<- Small Caps ->
 <Multi_key> <Multi_key> <a>             : "ᴀ"   U1D00   # A

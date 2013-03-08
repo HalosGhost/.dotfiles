@@ -12,7 +12,7 @@ ${if_up enp2s0f0}{\#22cc00}{i 20}${else}{\#cc2200}{i 19}${endif}{\#c6c6c6} | \
 # Paint relevant wireless status icon and select color based on signal strength; print ESSID; Print red "W" if down
 ${if_up wlan0}${if_match ${wireless_link_qual wlan0}<=20}{\#cc2200}{i 10}${else}${if_match ${wireless_link_qual wlan0}<=45}{\#ff9900}{i 9}${else}${if_match ${wireless_link_qual wlan0}<=65}{\#ffff00}{i 8}${else}${if_match ${wireless_link_qual wlan0}>65}{\#22cc00}{i 7}${endif}${endif}${endif}${endif}{\#c6c6c6}${else}{\#ff0000}W{\#c6c6c6}${endif} | \
 # Paint CPU icon (in red if overheating); print CPU frequency
-${if_match ${execi 5 sensors coretemp-isa-0000 | grep 'id 0' | sed 's/\s*Physical id 0:  +//; s/\s.*//; s/\s*°C//'}>90}{\#cc2200}${endif}{i 1}{\#c6c6c6}: ${freq_g} G | \
+${if_match ${execi 5 sensors coretemp-isa-0000 | grep 'id 0' | sed 's/\s*Physical id 0:  +//; s/\s.*//; s/\s*°C//'}>90}{\#cc2200}${endif}{i 1}{\#c6c6c6}:${freq_g} G | \
 # Paint relevant audio status icon and select color based on percent and if-muted; print percent volume
 ${if_match ${exec ponymix is-muted; echo $?}==0}{\#ff0000}{i 6}:${else}${if_match ${exec ponymix get-volume}<=35}{i 5}:{\#22cc00}${else}${if_match ${exec ponymix get-volume}<=65}{i 4}:{\#ffff00}${else}${if_match ${exec ponymix get-volume}<90}{i 3}:{\#ff9900}${else}{if_match ${exec ponymix get-volume}>=90}{i 3}:{\#cc2200}${endif}${endif}${endif}${endif}${exec ponymix get-volume}%{\#c6c6c6} | \
 # Paint relevant battery status icon(s) and select color based on battery percent; print time remaining for charge/discharge
