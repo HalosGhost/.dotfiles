@@ -68,6 +68,7 @@ alias matrix='cmatrix -f -l -a'
 alias netctl='sudo netctl'
 alias whereami='pwd -P'
 alias cower='cower --color=always'
+alias pacman='pacman --color=always'
 alias keytest="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
 
 #<- Suffixes ->
@@ -91,11 +92,11 @@ alias -s gba='mednafen'
 alias -s gcm='dolphin-emu -e'
 alias -s z64='mupen64plus'
 
-alias -s html='firefox'
-alias -s htm='firefox'
-alias -s com='firefox'
-alias -s org='firefox'
-alias -s edu='firefox'
+alias -s html='dwb'
+alias -s htm='dwb'
+alias -s com='dwb'
+alias -s org='dwb'
+alias -s edu='dwb'
 
 #<- Functions ->
 dbdl () {

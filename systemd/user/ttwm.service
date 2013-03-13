@@ -6,7 +6,7 @@ After=xorg.target
 [Service]
 Requires=xorg.target
 Environment=DISPLAY=:0
-Environment=PATH=/usr/bin/core_perl:%h/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+Environment=PATH=%h/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/core_perl
 ExecStart=/usr/bin/ttwm "conky -c %h/.conkyrc"
 Restart=always
 RestartSec=10
