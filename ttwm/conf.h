@@ -33,7 +33,7 @@ static const char    *video_location      = "below";
 #include "icons.h"
 
 #define DMENU        "dmenu_run -b"
-#define TERM	     "termite"
+#define TERM         "termite"
 #define LOCK         "xautolock -locknow"
 #define SCRN         "scrot $HOME/Pictures/Scrn/shot-%d-%m-%Y.png"
 #define CMD(app)     app "&"
