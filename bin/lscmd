@@ -1,14 +1,15 @@
 #!/bin/bash
 
 #<-Variable Declaration->
-cmds=`echo -n $PATH | xargs -d : -I {} find {} -maxdepth 1 \
-  -executable -type f -printf '%P\n'`
-aliases=`alias | cut -d '=' -f 1`
+cmds="$(echo -n $PATH | xargs -d : -I {} find {} -maxdepth 1 \
+       -executable -type f -printf '%P\n')"
+aliases="$(alias | cut -d '=' -f 1)"
+self="$(basename $0)"
 E_HELP=44
 
 #<-Function Declaration->
 usage () {
-  echo Usage: `basename $0` \[-h\|--help\]
+  echo "Usage: $self [-h|--help]"
   exit "$E_HELP"
 }
 

@@ -1,8 +1,9 @@
 #!/bin/zsh
 
-#<- Configuration ->
+#<- Variable Declarations ->
 INTERNAL="LVDS"
 EXTERNAL="DisplayPort-0"
+self="$(basename $0)"
 
 
 #<- Error Handling ->
@@ -11,15 +12,15 @@ E_HELP=44
 
 #<- Function Declarations ->
 usage () {
-    echo Usage: toggle-display \[-h\|--help\]
+    echo "Usage: $self [-h|--help]"
     exit "$E_HELP"
 }
 
 toggle () {
-    if (xrandr -q|grep "$EXTERNAL"|grep "+"); then
-        xrandr --output $EXTERNAL --off --output $INTERNAL --auto
+    if (xrandr -q|grep "$EXTERNAL"|grep +); then
+        xrandr --output "$EXTERNAL" --off --output "$INTERNAL" --auto
     elif (xrandr -q|grep "$EXTERNAL connected"); then
-        xrandr --output $INTERNAL --off --output $EXTERNAL --auto
+        xrandr --output "$INTERNAL" --off --output "$EXTERNAL" --auto
     fi
 }
 

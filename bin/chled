@@ -4,10 +4,13 @@
 E_HELP=44
 
 
+#<- Variable Declarations ->
+self="$(basename $0)"
+
+
 #<- Function Declarations ->
 usage () {
-   echo Usage: chled \[-h\|--help\] \[switch \<on\|off\>\]
-   echo Example: chled switch on
+   echo "Usage: $self [-h|--help] [switch <on|off>]"
    exit "$E_HELP"
 }
 
