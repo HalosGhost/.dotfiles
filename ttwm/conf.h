@@ -89,10 +89,10 @@ static Key keys[] = {
    { SUPR,           XK_i,          tile,          "increase"     },
    { SUPR,           XK_o,          tile,          "decrease"     },
    /* external monitor commands */
-   { SUPR|SHFT,      XK_a,          vga,           "activate"     },
-   { SUPR|SHFT,      XK_d,          vga,           "deactivate"   },
-   { SUPR|SHFT,      XK_s,          vga,           "send"         },
-   { SUPR|SHFT,      XK_r,          vga,           "return"       },
+   { SUPR|SHFT,      XK_a,          monitor,       "activate"     },
+   { SUPR|SHFT,      XK_d,          monitor,       "deactivate"   },
+   { SUPR|SHFT,      XK_s,          monitor,       "send"         },
+   { SUPR|SHFT,      XK_r,          monitor,       "return"       },
    /* tagging:
       s=set current active tag
       t=toggle toggle tag visibility

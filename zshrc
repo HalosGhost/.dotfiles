@@ -68,7 +68,6 @@ alias matrix='cmatrix -f -l -a'
 alias netctl='sudo netctl'
 alias whereami='pwd -P'
 alias cower='cower --color=always'
-alias pacman='pacman --color=always'
 alias keytest="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
 
 #<- Suffixes ->
