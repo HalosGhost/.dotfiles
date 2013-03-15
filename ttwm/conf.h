@@ -2,7 +2,7 @@
 static const char font[] = 
    "-xos4-terminus-medium-r-normal--13-*-*-*-*-*-iso10646-1";
 static const char *tag_name[] = 
-   {"0", "1", "2", "3", "4", "5", NULL};
+   {"1", "2", "3", "4", "5", "6", NULL};
 static const char *tile_modes[] = 
    {"monocle","R_ttwm", "B_ttwm", "rstack", "bstack", NULL};
 
