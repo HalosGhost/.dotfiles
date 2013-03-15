@@ -12,7 +12,7 @@ static const char colors[LASTColor][9] = {
    [Occupied]        = "#6C6C6C",
    [Selected]        = "#4C7899",
    [Urgent]          = "#FF8880",
-   [Title]           = "#6C6C6C",
+   [Title]           = "#DDDDDD",
 };
 
 static const char    ttwm_cursor          = XC_left_ptr;
