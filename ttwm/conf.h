@@ -2,7 +2,7 @@
 static const char font[] = 
    "-xos4-terminus-medium-r-normal--13-*-*-*-*-*-iso10646-1";
 static const char *tag_name[] = 
-   {"1", "2", "3", "4", "5", NULL};
+   {"0", "1", "2", "3", "4", "5", NULL};
 static const char *tile_modes[] = 
    {"monocle","R_ttwm", "B_ttwm", "rstack", "bstack", NULL};
 
@@ -26,8 +26,8 @@ static Bool          showbar              = True;
 static Bool          topbar               = True;
 static int           tilebias             = 0;
 
-static const char    *video1              = "LVDS1";
-static const char    *video2              = "VGA1";
+static const char    *video1              = "LVDS";
+static const char    *video2              = "DisplayPort-0";
 static const char    *video_location      = "below";
 
 #include "icons.h"
@@ -50,25 +50,25 @@ static const char    *video_location      = "below";
 #define FNC          "ponymix increase 5"
 
 /* key definitions */
-#define SUPR Mod4Mask
-#define LALT Mod1Mask
-#define CTRL ControlMask
-#define SHFT ShiftMask
+#define MOD1 Mod4Mask
+#define MOD2 Mod1Mask
+#define MOD3 ControlMask
+#define MOD4 ShiftMask
 
 static Key keys[] = {
    /* modifier       key            function       argument       */
    /* launchers + misc: */
-   { SUPR,           XK_Return,     spawn,         CMD(TERM)      },
-   { SUPR,           XK_d,          spawn,         CMD(DMENU)     },
-   { SUPR,           XK_w,          spawn,         CMD("firefox") },
-   { LALT|SHFT,      XK_q,          quit,          NULL           },
-   { SUPR|SHFT,      XK_q,          killclient,    NULL           },
-   { SUPR,           XK_f,          fullscreen,    NULL           },
-   { SUPR,           XK_a,          toggle,        "place bar"    },
-   { SUPR,           XK_x,          toggle,        "visible bar"  },
-   { SUPR|LALT,      XK_f,          toggle,        "floating"     },
-   { LALT|CTRL,      XK_l,          spawn,         CMD(LOCK)      },
-   { SUPR,           0x60,          spawn,         CMD(SCRN)      },
+   { MOD1,           XK_Return,     spawn,         CMD(TERM)      },
+   { MOD1,           XK_d,          spawn,         CMD(DMENU)     },
+   { MOD1,           XK_w,          spawn,         CMD("firefox") },
+   { MOD2|MOD4,      XK_q,          quit,          NULL           },
+   { MOD1|MOD4,      XK_q,          killclient,    NULL           },
+   { MOD1,           XK_f,          fullscreen,    NULL           },
+   { MOD1,           XK_a,          toggle,        "place bar"    },
+   { MOD1,           XK_x,          toggle,        "visible bar"  },
+   { MOD1|MOD2,      XK_f,          toggle,        "floating"     },
+   { MOD2|MOD3,      XK_l,          spawn,         CMD(LOCK)      },
+   { MOD1,           0x60,          spawn,         CMD(SCRN)      },
    /* fn remaps */
    { 0,              XK_F1,         spawn,         CMD(FN1)       },
    { 0,              XK_F2,         spawn,         CMD(FN2)       },
@@ -81,67 +81,71 @@ static Key keys[] = {
    { 0,              XK_F12,        spawn,         CMD(FNC)       },
    { 0,              0x1008ff2c,    spawn,         CMD("eject")   },
    /* tiling: */
-   { SUPR,           XK_space,      tile,          "cycle"        },
-   { SUPR|LALT,      XK_t,          tile,          "R_ttwm"       },
-   { SUPR|LALT,      XK_b,          tile,          "bstack"       },
-   { SUPR|LALT,      XK_r,          tile,          "rstack"       },
-   { SUPR,           XK_m,          tile,          "monocle"      },
-   { SUPR,           XK_i,          tile,          "increase"     },
-   { SUPR,           XK_o,          tile,          "decrease"     },
+   { MOD1,           XK_space,      tile,          "cycle"        },
+   { MOD1|MOD2,      XK_t,          tile,          "R_ttwm"       },
+   { MOD1|MOD2,      XK_b,          tile,          "bstack"       },
+   { MOD1|MOD2,      XK_r,          tile,          "rstack"       },
+   { MOD1,           XK_m,          tile,          "monocle"      },
+   { MOD1,           XK_i,          tile,          "increase"     },
+   { MOD1,           XK_o,          tile,          "decrease"     },
    /* external monitor commands */
-   { SUPR|SHFT,      XK_a,          monitor,       "activate"     },
-   { SUPR|SHFT,      XK_d,          monitor,       "deactivate"   },
-   { SUPR|SHFT,      XK_s,          monitor,       "send"         },
-   { SUPR|SHFT,      XK_r,          monitor,       "return"       },
+   { MOD1|MOD4,      XK_a,          monitor,       "activate"     },
+   { MOD1|MOD4,      XK_d,          monitor,       "deactivate"   },
+   { MOD1|MOD4,      XK_s,          monitor,       "send"         },
+   { MOD1|MOD4,      XK_r,          monitor,       "return"       },
    /* tagging:
       s=set current active tag
       t=toggle toggle tag visibility
       a=assign window - toggle focused window's tag membership
       m=move win - assign focused window to a single tag          */
-   { SUPR,           XK_1,          tag,           "s 1"          },
-   { SUPR,           XK_2,          tag,           "s 2"          },
-   { SUPR,           XK_3,          tag,           "s 3"          },
-   { SUPR,           XK_4,          tag,           "s 4"          },
-   { SUPR,           XK_5,          tag,           "s 5"          },
-   { SUPR|LALT,      XK_1,          tag,           "t 1"          },
-   { SUPR|LALT,      XK_2,          tag,           "t 2"          },
-   { SUPR|LALT,      XK_3,          tag,           "t 3"          },
-   { SUPR|LALT,      XK_4,          tag,           "t 4"          },
-   { SUPR|LALT,      XK_5,          tag,           "t 5"          },
-   { SUPR|SHFT,      XK_1,          tag,           "a 1"          },
-   { SUPR|SHFT,      XK_2,          tag,           "a 2"          },
-   { SUPR|SHFT,      XK_3,          tag,           "a 3"          },
-   { SUPR|SHFT,      XK_4,          tag,           "a 4"          },
-   { SUPR|SHFT,      XK_5,          tag,           "a 5"          },
-   { SUPR|CTRL,      XK_1,          tag,           "m 1"          },
-   { SUPR|CTRL,      XK_2,          tag,           "m 2"          },
-   { SUPR|CTRL,      XK_3,          tag,           "m 3"          },
-   { SUPR|CTRL,      XK_4,          tag,           "m 4"          },
-   { SUPR|CTRL,      XK_5,          tag,           "m 5"          },
+   { MOD1,           XK_1,          tag,           "s 1"          },
+   { MOD1,           XK_2,          tag,           "s 2"          },
+   { MOD1,           XK_3,          tag,           "s 3"          },
+   { MOD1,           XK_4,          tag,           "s 4"          },
+   { MOD1,           XK_5,          tag,           "s 5"          },
+   { MOD1,           XK_6,          tag,           "s 6"          },
+   { MOD1|MOD2,      XK_1,          tag,           "t 1"          },
+   { MOD1|MOD2,      XK_2,          tag,           "t 2"          },
+   { MOD1|MOD2,      XK_3,          tag,           "t 3"          },
+   { MOD1|MOD2,      XK_4,          tag,           "t 4"          },
+   { MOD1|MOD2,      XK_5,          tag,           "t 5"          },
+   { MOD1|MOD2,      XK_6,          tag,           "t 6"          },
+   { MOD1|MOD4,      XK_1,          tag,           "a 1"          },
+   { MOD1|MOD4,      XK_2,          tag,           "a 2"          },
+   { MOD1|MOD4,      XK_3,          tag,           "a 3"          },
+   { MOD1|MOD4,      XK_4,          tag,           "a 4"          },
+   { MOD1|MOD4,      XK_5,          tag,           "a 5"          },
+   { MOD1|MOD4,      XK_6,          tag,           "a 6"          },
+   { MOD1|MOD3,      XK_1,          tag,           "m 1"          },
+   { MOD1|MOD3,      XK_2,          tag,           "m 2"          },
+   { MOD1|MOD3,      XK_3,          tag,           "m 3"          },
+   { MOD1|MOD3,      XK_4,          tag,           "m 4"          },
+   { MOD1|MOD3,      XK_5,          tag,           "m 5"          },
+   { MOD1|MOD3,      XK_6,          tag,           "m 6"          },
    /* window focus/movement:
       f=focus previous, next, or alternate  window in tag(s)
       s=swap window with previous, next, or alternate  window     */
-   { SUPR,           XK_k,          window,        "f prev"       },
-   { SUPR,           XK_j,          window,        "f next"       },
-   { SUPR,           XK_Left,       window,        "f prev"       },
-   { SUPR,           XK_Right,      window,        "f next"       },
-   { SUPR,           XK_h,          window,        "s prev"       },
-   { SUPR,           XK_l,          window,        "s next"       },
-   { SUPR,           XK_Up,         window,        "s prev"       },
-   { SUPR,           XK_Down,       window,        "s next"       },
-   { SUPR,           XK_Tab,        window,        "f alt"        },
-   { SUPR|SHFT,      XK_Tab,        window,        "s alt"        },
+   { MOD1,           XK_k,          window,        "f prev"       },
+   { MOD1,           XK_j,          window,        "f next"       },
+   { MOD1,           XK_Left,       window,        "f prev"       },
+   { MOD1,           XK_Right,      window,        "f next"       },
+   { MOD1,           XK_h,          window,        "s prev"       },
+   { MOD1,           XK_l,          window,        "s next"       },
+   { MOD1,           XK_Up,         window,        "s prev"       },
+   { MOD1,           XK_Down,       window,        "s next"       },
+   { MOD1,           XK_Tab,        window,        "f alt"        },
+   { MOD1|MOD4,      XK_Tab,        window,        "s alt"        },
 };
 
 static Button buttons[] = {
    /* modifier       button         function       arg            */
- /*{ SUPR,           1,             mouse,         "move"         },*/
-   { SUPR,           2,             tile,          "cycle"        },
-   { SUPR,           3,             mouse,         "resize"       },
-   { SUPR,           4,             window,        "s prev"       },
-   { SUPR,           5,             window,        "s next"       },
-   { SUPR,           6,             window,        "f prev"       },
-   { SUPR,           7,             window,        "f next"       },
+ /*{ MOD1,           1,             mouse,         "move"         },*/
+   { MOD1,           2,             tile,          "cycle"        },
+   { MOD1,           3,             mouse,         "resize"       },
+   { MOD1,           4,             window,        "s prev"       },
+   { MOD1,           5,             window,        "s next"       },
+   { MOD1,           6,             window,        "f prev"       },
+   { MOD1,           7,             window,        "f next"       },
 };
 
 
