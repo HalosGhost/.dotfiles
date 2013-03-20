@@ -2,7 +2,7 @@
 static const char font[] = 
    "-xos4-terminus-medium-r-normal--13-*-*-*-*-*-iso10646-1";
 static const char *tag_name[] = 
-   {"1", "2", "3", "4", "5", "6", "7", NULL};
+   {"1", "2", "3", "4", "5", "6", NULL};
 static const char *tile_modes[] = 
    {"rstack", "monocle", NULL};
 
@@ -102,7 +102,6 @@ static Key keys[] = {
      TAGK(           XK_4,                         "4"            )
      TAGK(           XK_5,                         "5"            )
      TAGK(           XK_6,                         "6"            )
-     TAGK(           XK_7,                         "7"            )
    /* external monitor commands: */
    { MOD1|MOD4,      XK_a,          monitor,       "activate"     },
    { MOD1|MOD4,      XK_d,          monitor,       "deactivate"   },
