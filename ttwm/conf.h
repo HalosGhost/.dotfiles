@@ -2,9 +2,9 @@
 static const char font[] = 
    "-xos4-terminus-medium-r-normal--13-*-*-*-*-*-iso10646-1";
 static const char *tag_name[] = 
-   {"1", "2", "3", "4", "5", "6", NULL};
+   {"1", "2", "3", "4", "5", "6", "7", NULL};
 static const char *tile_modes[] = 
-   {"monocle","R_ttwm", "B_ttwm", "rstack", "bstack", NULL};
+   {"rstack", "monocle", NULL};
 
 static const char colors[LASTColor][9] = {
    [Background]      = "#101010",
@@ -18,13 +18,14 @@ static const char colors[LASTColor][9] = {
 static const char    ttwm_cursor          = XC_left_ptr;
 static const int     borderwidth          = 1;
 static const int     tilegap              = 0;
-static const Bool    classictabs          = True;
 static const int     max_status_line      = 256;
 static const int     win_min              = 20;
 static const Bool    focusfollowmouse     = True;
 static Bool          showbar              = True;
 static Bool          topbar               = True;
 static int           tilebias             = 0;
+static const int     attachmode           = 1;
+static int           stackcount           = 2;
 
 static const char    *video1              = "LVDS";
 static const char    *video2              = "DisplayPort-0";
@@ -38,7 +39,17 @@ static const char    *video_location      = "below";
 #define SCRN         "scrot $HOME/Pictures/Scrn/shot-%d-%m-%Y.png"
 #define CMD(app)     app "&"
 
-/* Fn assignments */
+/* key definitions: */
+#define MOD1 Mod4Mask
+#define MOD2 Mod1Mask
+#define MOD3 ControlMask
+#define MOD4 ShiftMask
+#define TAGK(KEY,TAG) \
+   { MOD1,           KEY,           tag,           "t " TAG       }, \
+   { MOD1|MOD2,      KEY,           tag,           "m " TAG       }, \
+   { MOD1|MOD3,      KEY,           tag,           "s " TAG       }, \
+   { MOD1|MOD4,      KEY,           tag,           "a " TAG       },
+
 #define FN1          "sudo enlighten decrease display"
 #define FN2          "sudo enlighten increase display"
 #define FN3          "steam"
@@ -49,11 +60,6 @@ static const char    *video_location      = "below";
 #define FNB          "ponymix decrease 5"
 #define FNC          "ponymix increase 5"
 
-/* key definitions */
-#define MOD1 Mod4Mask
-#define MOD2 Mod1Mask
-#define MOD3 ControlMask
-#define MOD4 ShiftMask
 
 static Key keys[] = {
    /* modifier       key            function       argument       */
@@ -69,7 +75,7 @@ static Key keys[] = {
    { MOD1|MOD2,      XK_f,          toggle,        "floating"     },
    { MOD2|MOD3,      XK_l,          spawn,         CMD(LOCK)      },
    { MOD1,           0x60,          spawn,         CMD(SCRN)      },
-   /* fn remaps */
+   /* function keys */
    { 0,              XK_F1,         spawn,         CMD(FN1)       },
    { 0,              XK_F2,         spawn,         CMD(FN2)       },
    { 0,              XK_F3,         spawn,         CMD(FN3)       },
@@ -82,59 +88,38 @@ static Key keys[] = {
    { 0,              0x1008ff2c,    spawn,         CMD("eject")   },
    /* tiling: */
    { MOD1,           XK_space,      tile,          "cycle"        },
-   { MOD1|MOD2,      XK_t,          tile,          "R_ttwm"       },
-   { MOD1|MOD2,      XK_b,          tile,          "bstack"       },
-   { MOD1|MOD2,      XK_r,          tile,          "rstack"       },
-   { MOD1,           XK_m,          tile,          "monocle"      },
-   { MOD1,           XK_i,          tile,          "increase"     },
-   { MOD1,           XK_o,          tile,          "decrease"     },
-   /* external monitor commands */
+   { MOD1,           XK_i,          tile_conf,     "increase"     },
+   { MOD1,           XK_o,          tile_conf,     "decrease"     },
+   { MOD1|MOD4,      XK_equal,      tile_conf,     "+"            },
+   { MOD1,           XK_minus,      tile_conf,     "-"            },
+   { MOD1,           XK_period,     tile_conf,     "all"          },
+   { MOD1,           XK_comma,      tile_conf,     "one"          },
+   /* tags and views: */
+   { MOD1,           XK_Tab,        tag,           "flip"         },
+     TAGK(           XK_1,                         "1"            )
+     TAGK(           XK_2,                         "2"            )
+     TAGK(           XK_3,                         "3"            )
+     TAGK(           XK_4,                         "4"            )
+     TAGK(           XK_5,                         "5"            )
+     TAGK(           XK_6,                         "6"            )
+     TAGK(           XK_7,                         "7"            )
+   /* external monitor commands: */
    { MOD1|MOD4,      XK_a,          monitor,       "activate"     },
    { MOD1|MOD4,      XK_d,          monitor,       "deactivate"   },
    { MOD1|MOD4,      XK_s,          monitor,       "send"         },
    { MOD1|MOD4,      XK_r,          monitor,       "return"       },
-   /* tagging:
-      s=set current active tag
-      t=toggle toggle tag visibility
-      a=assign window - toggle focused window's tag membership
-      m=move win - assign focused window to a single tag          */
-   { MOD1,           XK_1,          tag,           "s 1"          },
-   { MOD1,           XK_2,          tag,           "s 2"          },
-   { MOD1,           XK_3,          tag,           "s 3"          },
-   { MOD1,           XK_4,          tag,           "s 4"          },
-   { MOD1,           XK_5,          tag,           "s 5"          },
-   { MOD1,           XK_6,          tag,           "s 6"          },
-   { MOD1|MOD2,      XK_1,          tag,           "t 1"          },
-   { MOD1|MOD2,      XK_2,          tag,           "t 2"          },
-   { MOD1|MOD2,      XK_3,          tag,           "t 3"          },
-   { MOD1|MOD2,      XK_4,          tag,           "t 4"          },
-   { MOD1|MOD2,      XK_5,          tag,           "t 5"          },
-   { MOD1|MOD2,      XK_6,          tag,           "t 6"          },
-   { MOD1|MOD4,      XK_1,          tag,           "a 1"          },
-   { MOD1|MOD4,      XK_2,          tag,           "a 2"          },
-   { MOD1|MOD4,      XK_3,          tag,           "a 3"          },
-   { MOD1|MOD4,      XK_4,          tag,           "a 4"          },
-   { MOD1|MOD4,      XK_5,          tag,           "a 5"          },
-   { MOD1|MOD4,      XK_6,          tag,           "a 6"          },
-   { MOD1|MOD3,      XK_1,          tag,           "m 1"          },
-   { MOD1|MOD3,      XK_2,          tag,           "m 2"          },
-   { MOD1|MOD3,      XK_3,          tag,           "m 3"          },
-   { MOD1|MOD3,      XK_4,          tag,           "m 4"          },
-   { MOD1|MOD3,      XK_5,          tag,           "m 5"          },
-   { MOD1|MOD3,      XK_6,          tag,           "m 6"          },
    /* window focus/movement:
-      f=focus previous, next, or alternate  window in tag(s)
-      s=swap window with previous, next, or alternate  window     */
+      f=focus, s=swap                                             */
    { MOD1,           XK_k,          window,        "f prev"       },
-   { MOD1,           XK_j,          window,        "f next"       },
    { MOD1,           XK_Left,       window,        "f prev"       },
+   { MOD1,           XK_j,          window,        "f next"       },
    { MOD1,           XK_Right,      window,        "f next"       },
+   { MOD2,           XK_Tab,        window,        "f alt"        },
    { MOD1,           XK_h,          window,        "s prev"       },
-   { MOD1,           XK_l,          window,        "s next"       },
    { MOD1,           XK_Up,         window,        "s prev"       },
+   { MOD1,           XK_l,          window,        "s next"       },
    { MOD1,           XK_Down,       window,        "s next"       },
-   { MOD1,           XK_Tab,        window,        "f alt"        },
-   { MOD1|MOD4,      XK_Tab,        window,        "s alt"        },
+   { MOD2|MOD4,      XK_Tab,        window,        "s alt"        },
 };
 
 static Button buttons[] = {
