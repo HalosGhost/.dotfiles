@@ -58,6 +58,7 @@ alias lla='ls -lhA'
 alias db='dropbox'
 alias purl='db puburl'
 alias ytdl='youtube-dl'
+alias ytv='youtube-viewer'
 
 alias sudo='sudo '
 alias grep='grep --color=auto'
@@ -69,6 +70,7 @@ alias netctl='sudo netctl'
 alias whereami='pwd -P'
 alias cower='cower --color=always'
 alias keytest="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
+alias alsi='alsi -u -f $XDG_CONFIG_HOME/alsi/arch.logo'
 
 #<- Suffixes ->
 alias -s pdf='zathura'
@@ -82,6 +84,7 @@ alias -s webm='mplayer'
 alias -s mkv='mplayer'
 alias -s mp4='mplayer'
 alias -s ogg='mplayer'
+alias -s flv='mplayer'
 
 alias -s doc='loffice'
 alias -s md='vim'
