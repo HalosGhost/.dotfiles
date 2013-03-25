@@ -1,3 +1,4 @@
+/* Copyright (c) J.McClure 2012–2013 */
 
 static const char font[] = 
    "-xos4-terminus-medium-r-normal--13-*-*-*-*-*-iso10646-1";
@@ -13,6 +14,12 @@ static const char colors[LASTColor][9] = {
    [Selected]        = "#4C7899",
    [Urgent]          = "#FF8880",
    [Title]           = "#DDDDDD",
+   [TabFocused]      = "#4C7899",
+   [TabFocusedBG]    = "#242424",
+   [TabTop]          = "#6C6C6C",
+   [TabTopBG]        = "#242424",
+   [TabDefault]      = "#C6C6C6",
+   [TabDefaultBG]    = "#181818",
 };
 
 static const char    ttwm_cursor          = XC_left_ptr;
@@ -26,14 +33,11 @@ static Bool          topbar               = True;
 static int           tilebias             = 0;
 static const int     attachmode           = 1;
 static int           stackcount           = 2;
-
-static const char    *video1              = "LVDS";
-static const char    *video2              = "DisplayPort-0";
-static const char    *video_location      = "below";
+/*static const char    *xrandr              = "xrandr --auto";*/
 
 #include "icons.h"
 
-#define DMENU        "dmenu_run -b"
+#define DMENU        "interrobang"
 #define TERM         "termite"
 #define LOCK         "xautolock -locknow"
 #define SCRN         "scrot $HOME/Pictures/Scrn/shot-%d-%m-%Y.png"
@@ -102,11 +106,10 @@ static Key keys[] = {
      TAGK(           XK_4,                         "4"            )
      TAGK(           XK_5,                         "5"            )
      TAGK(           XK_6,                         "6"            )
-   /* external monitor commands: */
-   { MOD1|MOD4,      XK_a,          monitor,       "activate"     },
-   { MOD1|MOD4,      XK_d,          monitor,       "deactivate"   },
+   /* external monitor commands:
+   { MOD1|MOD4,      XK_x,          monitor,       "auto"         },
    { MOD1|MOD4,      XK_s,          monitor,       "send"         },
-   { MOD1|MOD4,      XK_r,          monitor,       "return"       },
+   { MOD1|MOD4,      XK_r,          monitor,       "return"       },*/
    /* window focus/movement:
       f=focus, s=swap                                             */
    { MOD1,           XK_k,          window,        "f prev"       },
