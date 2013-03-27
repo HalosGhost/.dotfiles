@@ -33,15 +33,16 @@ static Bool          topbar               = True;
 static int           tilebias             = 0;
 static const int     attachmode           = 1;
 static int           stackcount           = 2;
-/*static const char    *xrandr              = "xrandr --auto";*/
 
 #include "icons.h"
 
-#define DMENU        "interrobang"
+#define LAUNCH        "interrobang"
 #define TERM         "termite"
 #define LOCK         "xautolock -locknow"
 #define SCRN         "scrot $HOME/Pictures/Scrn/shot-%d-%m-%Y.png"
 #define CMD(app)     app "&"
+#define XRANDR_CMD   "xrandr --output LVDS --auto --output DisplayPort-0 --auto --left-of LVDS"
+#define WALLPAPER    "source $HOME/.fehbg"
 
 /* key definitions: */
 #define MOD1 Mod4Mask
@@ -69,7 +70,7 @@ static Key keys[] = {
    /* modifier       key            function       argument       */
    /* launchers + misc: */
    { MOD1,           XK_Return,     spawn,         CMD(TERM)      },
-   { MOD1,           XK_d,          spawn,         CMD(DMENU)     },
+   { MOD1,           XK_d,          spawn,         CMD(LAUNCH)    },
    { MOD1,           XK_w,          spawn,         CMD("firefox") },
    { MOD2|MOD4,      XK_q,          quit,          NULL           },
    { MOD1|MOD4,      XK_q,          killclient,    NULL           },
@@ -79,6 +80,7 @@ static Key keys[] = {
    { MOD1|MOD2,      XK_f,          toggle,        "floating"     },
    { MOD2|MOD3,      XK_l,          spawn,         CMD(LOCK)      },
    { MOD1,           0x60,          spawn,         CMD(SCRN)      },
+   { 0,              0x1008ff59,    spawn,         XRANDR_CMD,    },
    /* function keys */
    { 0,              XK_F1,         spawn,         CMD(FN1)       },
    { 0,              XK_F2,         spawn,         CMD(FN2)       },
