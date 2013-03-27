@@ -18,4 +18,4 @@ ${if_match ${execi 5 ponymix is-muted; echo $?}==0}{\#a6a6a6}{i 6}${else}${if_ma
 # Paint relevant battery status icon(s) and select color based on battery percent; print time remaining for charge/discharge
 ${if_existing /sys/class/power_supply/BAT0/status Charging}{\#a6a6a6}{i 16}${else}${endif}${if_match ${battery_percent}<5}{\#ff8880}{i 15}${else}${if_match ${battery_percent}<=15}{\#ff8880}{i 14}${else}${if_match ${battery_percent}<=40}{\#b7c9d6}{i 14}${else}${if_match ${battery_percent}<=70}{\#94aec2}{i 13}${else}${if_match ${battery_percent}<=95}{\#7093ad}{i 12}${else}${if_match ${battery_percent}>95}{\#4c7899}{i 11}${endif}${endif}${endif}${endif}${endif}${endif}${battery_percent}%{\#c6c6c6} | \
 # Print beautifully simple and unambiguous time format
-${time %H:%M | %A, %d %B %Y}
+${time %H.%M | %A, %d %B %Y}
