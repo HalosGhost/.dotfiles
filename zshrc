@@ -12,9 +12,11 @@ zstyle ':completion:*' menu select
 setopt completealiases
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit
+autoload -U bashcompinit
 autoload -U edit-command-line
 zle -N edit-command-line
 compinit
+bashcompinit
 export RPROMPT='%B%(?.%F{cyan}^_^%f.%F{red}o_O%f)%b'
 export PROMPT="╒[%~]%#
 └╼ "
