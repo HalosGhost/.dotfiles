@@ -5,7 +5,7 @@
 ## not processed by a shell interpreter.
 
 
-font            -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
+font            -xos4-terminus-medium-r-normal--13-*-*-*-*-*-iso10646-1
 geometry        bottom
 foreground      #68B0E0
 background      #000000
