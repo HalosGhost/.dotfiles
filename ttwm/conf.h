@@ -15,11 +15,11 @@ static const char colors[LASTColor][9] = {
    [Urgent]          = "#FF8880",
    [Title]           = "#DDDDDD",
    [TabFocused]      = "#4C7899",
-   [TabFocusedBG]    = "#242424",
+   [TabFocusedBG]    = "#333333",
    [TabTop]          = "#6C6C6C",
-   [TabTopBG]        = "#242424",
-   [TabDefault]      = "#C6C6C6",
-   [TabDefaultBG]    = "#181818",
+   [TabTopBG]        = "#333333",
+   [TabDefault]      = "#101010",
+   [TabDefaultBG]    = "#333333",
 };
 
 static const char    ttwm_cursor          = XC_left_ptr;
