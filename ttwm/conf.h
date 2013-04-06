@@ -1,4 +1,3 @@
-/* Copyright (c) J.McClure 2012–2013 */
 
 static const char font[] = 
    "-xos4-terminus-medium-r-normal--13-*-*-*-*-*-iso10646-1";
@@ -6,6 +5,8 @@ static const char *tag_name[] =
    {"1", "2", "3", "4", "5", "6", NULL};
 static const char *tile_modes[] = 
    {"rstack", "monocle", NULL};
+
+#include "icons.h"
 
 static const char colors[LASTColor][9] = {
    [Background]      = "#101010",
@@ -34,9 +35,7 @@ static int           tilebias             = 0;
 static const int     attachmode           = 1;
 static int           stackcount           = 2;
 
-#include "icons.h"
-
-#define LAUNCH        "interrobang"
+#define LAUNCH       "interrobang"
 #define TERM         "termite"
 #define LOCK         "xautolock -locknow"
 #define SCRN         "scrot $HOME/Pictures/Scrn/shot-%d-%m-%Y.png"
@@ -128,7 +127,7 @@ static Key keys[] = {
 static Button buttons[] = {
    /* modifier       button         function       arg               */
  /*{ MOD1,           1,             mouse,         "move"            },*/
-   { MOD1,           2,             tile,          "cycle"           },
+   { MOD1,           2,             toggle,        "floating"        },
    { MOD1,           3,             mouse,         "resize"          },
    { MOD1,           4,             window,        "s prev"          },
    { MOD1,           5,             window,        "s next"          },
@@ -136,5 +135,9 @@ static Button buttons[] = {
    { MOD1,           7,             window,        "f next"          },
 };
 
+static Rule rules[] = {
+   /* name           class          tags           flags             */
+   { "float",        "float",       0,             TTWM_FLOATING     },
+};
 
 // vim: ts=4
