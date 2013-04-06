@@ -1,6 +1,10 @@
-<Multi_key> <a> <l> <p> <h> <a>     : "α"   U03B1   # Small Alpha
-<Multi_key> <b> <e> <t> <a>         : "β"   U03B2   # Small Beta
-<Multi_key> <d> <e> <l> <t> <a>     : "δ"   U03B4   # Small Delta
-<Multi_key> <g> <a> <m> <m> <a>     : "γ"   U03B3   # Small Gamma
-<Multi_key> <p> <i>                 : "π"   U03C0   # Small Pi
-<Multi_key> <m> <u>                 : "µ"   U03BC   # Small Mu
+# Lower case
+<Multi_key> <a> <l> <p> <h> <a>     : "α"   U03B1   # Alpha
+<Multi_key> <b> <e> <t> <a>         : "β"   U03B2   # Beta
+<Multi_key> <d> <e> <l> <t> <a>     : "δ"   U03B4   # Delta
+<Multi_key> <g> <a> <m> <m> <a>     : "γ"   U03B3   # Gamma
+<Multi_key> <p> <i>                 : "π"   U03C0   # Pi
+<Multi_key> <m> <u>                 : "µ"   U03BC   # Mu
+
+# Upper case
+<Multi_key> <s> <u> <m>             : "Σ"   U03A3   # Sigma
