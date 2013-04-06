@@ -1,0 +1,47 @@
+#!/bin/zsh
+
+#<- Variable Declarations ->
+DOTS="$HOME/.dotfiles"
+self="$(basename $0)"
+
+#<- Error Handling ->
+E_HELP=44
+
+#<- Function Declarations ->
+usage () {
+    echo "Usage: $self [-h|--help] <install>"
+    exit "$E_HELP"
+}
+
+install-links () {
+    # $HOME/.folders
+    for i in bin compose zsh; do
+        ln -sd "$DOTS/$i" "$HOME/.$i"
+    done
+
+    # $HOME/.files
+    for i in $(find "$DOTS" -maxdepth 1 -type f -printf "%f\n"|grep -ve README -e termite); do
+        ln -s "$DOTS/$i" "$HOME/.$i"
+    done
+
+    # $XDG_CONFIG_HOME/folders
+    for i in ttwm systemd; do
+        ln -sd "$DOTS/$i" "$XDG_CONFIG_HOME/$i"
+    done
+
+    # $XDG_CONFIG_HOME/files
+    ln -s "$DOTS/termite.cfg" "$XDG_CONFIG_HOME/termite/config"
+}
+
+#<- Run Contents ->
+case "$1" in
+    -h|--help)
+        usage
+        ;;
+    install)
+        install-links
+        ;;
+    *)
+        usage
+        ;;
+esac
