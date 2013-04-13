@@ -2,7 +2,7 @@
 static const char font[] = 
    "-xos4-terminus-medium-r-normal--13-*-*-*-*-*-iso10646-1";
 static const char *tag_name[] = 
-   {"1", "2", "3", "4", "5", "6", NULL};
+   {"1", "2", "3", "4", "5", "6","7", NULL};
 static const char *tile_modes[] = 
    {"rstack", "monocle", NULL};
 
@@ -70,7 +70,7 @@ static Key keys[] = {
    /* launchers + misc: */
    { MOD1,           XK_Return,     spawn,         CMD(TERM)         },
    { MOD1,           XK_d,          spawn,         CMD(LAUNCH)       },
-   { MOD1,           XK_w,          spawn,         CMD("firefox")    },
+   { MOD1,           XK_w,          spawn,         CMD("$BROWSER")   },
    { MOD2|MOD4,      XK_q,          quit,          NULL              },
    { MOD1|MOD4,      XK_q,          killclient,    NULL              },
    { MOD1,           XK_f,          fullscreen,    NULL              },
@@ -107,6 +107,7 @@ static Key keys[] = {
      TAGK(           XK_4,                         "4"               )
      TAGK(           XK_5,                         "5"               )
      TAGK(           XK_6,                         "6"               )
+     TAGK(           XK_7,                         "7"               )
    /* window focus/movement:
       f=focus, s=swap                                                */
    { MOD1,           XK_k,          window,        "f prev"          },
@@ -137,7 +138,8 @@ static Button buttons[] = {
 
 static Rule rules[] = {
    /* name           class          tags           flags             */
-   { "float",        "float",       0,             TTWM_FLOATING     },
+   { "float",        NULL,          0,             TTWM_FLOATING     },
+   { NULL,           "float",       0,             TTWM_FLOATING     },
+   /*{ NULL,           "dwb",         0x04,          NULL              },*/
 };
 
-// vim: ts=4
