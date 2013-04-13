@@ -11,16 +11,16 @@ foreground      #68B0E0
 background      #101010
 border          #4C7899
 bangchar        :
-completion      compgen -P "%s" -fc %s | sort -u | while read s; do [[ -d ${s##* } ]] && echo "$s/" || echo "$s "; done
+show options
+
+TAB()           compgen -P "%s" -cf %s | sort -u | while read s; do [[ -d ${s##* } ]] && echo "$s/" || echo "$s "; done
 
 # BANGS
 # The first listed bang is the default
 :exec           termite -e "%s"
-:term           termite
 :web            dwb "%s"
-:pdf            mupdf "%s"
+:pdf            zathura "%s"
 :man            termite -e "man %s"
 :archbbs        dwb "https://bbs.archlinux.org/search.php?action=search&show_as=topics&sort_dir=DESC&keywords=%s"
 :archwiki       dwb "https://wiki.archlinux.org/index.php?search=%s"
-
 
