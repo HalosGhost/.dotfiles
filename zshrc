@@ -17,7 +17,7 @@ autoload -U edit-command-line
 zle -N edit-command-line
 compinit
 bashcompinit
-export RPROMPT='%B%(?.%F{cyan}^_^%f.%F{red}o_O%f)%b'
+export RPROMPT='%B%(?.%F{cyan}^_^%f.%F{red}o_O%f)%b' 
 export PROMPT="╒[%~]%#
 └╼ "
 source $HOME/.zprofile
@@ -106,13 +106,26 @@ alias -s org='dwb'
 alias -s edu='dwb'
 
 #<- Functions ->
+curlip () {
+    curl http://icanhazip.com
+}
+
 dbdl () {
-  export url="$(purl $*)dl=1"
-  echo $url; unset url
+    export url="$(purl $*)dl=1"
+    echo $url; unset url
 }
 
 calc () {
-  echo "$@" | bc
+    echo "$@" | bc
+}
+
+clock () {
+    while sleep 1;do 
+        tput sc
+        tput cup 0 $(($(tput cols)-29))
+        date +"%H.%M.%S | %A, %d %B %Y"
+        tput rc
+    done &
 }
 
 #<- Source ZSh Syntax Highlighting ->
