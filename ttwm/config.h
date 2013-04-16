@@ -26,6 +26,7 @@ static const char colors[LASTColor][9] = {
 static const char    ttwm_cursor          = XC_left_ptr;
 static const int     borderwidth          = 1;
 static const int     tilegap              = 0;
+static const int     tagspace             = 0;
 static const int     max_status_line      = 256;
 static const int     win_min              = 20;
 static const Bool    focusfollowmouse     = True;
@@ -140,6 +141,6 @@ static Rule rules[] = {
    /* name           class          tags           flags             */
    { "float",        NULL,          0,             TTWM_FLOATING     },
    { NULL,           "float",       0,             TTWM_FLOATING     },
-   /*{ NULL,           "dwb",         0x04,          NULL              },*/
+   { NULL,           "dwb",         2,             0                 },
 };
 
