@@ -27,7 +27,9 @@ static const XPoint template_icon[] = {
    {0,9},   {1,9},   {2,9},   {3,9},   {4,9},   {5,9},   {6,9},   {7,9},   {8,9},   {9,9},
 };
 
-static const XPoint clock_icon[] = {
+/* Hardware Representations */
+
+static const XPoint clock[] = {
                      {2,0},   {3,0},   {4,0},   {5,0},   {6,0},   {7,0},
             {1,1},                                                         {8,1},
    {0,2},                              {4,2},                                       {9,2},
@@ -40,7 +42,7 @@ static const XPoint clock_icon[] = {
                      {2,9},   {3,9},   {4,9},   {5,9},   {6,9},   {7,9},
 };
 
-static const XPoint cpu_icon[] = {
+static const XPoint cpu[] = {
    {0,0},   {1,0},   {2,0},   {3,0},   {4,0},   {5,0},   {6,0},   {7,0},   {8,0},   {9,0},
    {0,1},                                                                           {9,1},
    {0,2},                     {3,2},   {4,2},   {5,2},   {6,2},                     {9,2},
@@ -54,7 +56,7 @@ static const XPoint cpu_icon[] = {
 
 };
 
-static const XPoint mem_icon[] = {
+static const XPoint mem[] = {
             {1,0},   {2,0},   {3,0},   {4,0},   {5,0},   {6,0},   {7,0},   {8,0},
    {0,1},                                                                           {9,1},
    {0,2},   {1,2},            {3,2},   {4,2},   {5,2},   {6,2},            {8,2},   {9,2},
@@ -67,7 +69,9 @@ static const XPoint mem_icon[] = {
    {0,9},                                                                           {9,9},
 };
 
-static const XPoint speaker_hi_icon[] = {
+/* Status */
+
+static const XPoint speaker_high[] = {
                                        {4,0},
                               {3,1},   {4,1},                     {7,1},
                      {2,2},   {3,2},   {4,2},                              {8,2},
@@ -80,7 +84,7 @@ static const XPoint speaker_hi_icon[] = {
                                        {4,9},
 };
 
-static const XPoint speaker_mid_icon[] = {
+static const XPoint speaker_mid[] = {
                                        {4,0},
                               {3,1},   {4,1},
                      {2,2},   {3,2},   {4,2},                     {7,2},
@@ -93,7 +97,7 @@ static const XPoint speaker_mid_icon[] = {
                                        {4,9},			
 };
 
-static const XPoint speaker_low_icon[] = {
+static const XPoint speaker_low[] = {
                                        {4,0},
                               {3,1},   {4,1},
                      {2,2},   {3,2},   {4,2},
@@ -106,7 +110,7 @@ static const XPoint speaker_low_icon[] = {
                                        {4,9},			
 };
 
-static const XPoint speaker_mute_icon[] = {
+static const XPoint speaker_mute[] = {
                                                 {5,0},                              {9,0},
                               {3,1},            {5,1},                              {9,1},
                      {2,2},   {3,2},   {4,2},            {6,2},            {8,2},
@@ -119,7 +123,7 @@ static const XPoint speaker_mute_icon[] = {
                                                 {5,9},                              {9,9},
 };
 
-static const XPoint wifi_full_icon[] = {
+static const XPoint wifi_full[] = {
                                                                            {8,0},
                                                                            {8,1},
                                                          {6,2},            {8,2},
@@ -132,7 +136,7 @@ static const XPoint wifi_full_icon[] = {
    {0,9},            {2,9},            {4,9},            {6,9},            {8,9},
 };
 
-static const XPoint wifi_hi_icon[] = {
+static const XPoint wifi_high[] = {
 
 
                                                          {6,2},
@@ -145,7 +149,7 @@ static const XPoint wifi_hi_icon[] = {
    {0,9},            {2,9},            {4,9},            {6,9},
 };
 
-static const XPoint wifi_mid_icon[] = {
+static const XPoint wifi_mid[] = {
 
 
 
@@ -158,7 +162,7 @@ static const XPoint wifi_mid_icon[] = {
    {0,9},            {2,9},            {4,9},                                                   
 };
 
-static const XPoint wifi_low_icon[] = {
+static const XPoint wifi_low[] = {
 
 
 
@@ -170,7 +174,7 @@ static const XPoint wifi_low_icon[] = {
    {0,9},            {2,9},
 };
 
-static const XPoint batt_full_icon[] = {
+static const XPoint batt_full[] = {
                                        {4,0},   {5,0},
                      {2,1},   {3,1},   {4,1},   {5,1},   {6,1},   {7,1},
                      {2,2},   {3,2},   {4,2},   {5,2},   {6,2},   {7,2},
@@ -183,7 +187,7 @@ static const XPoint batt_full_icon[] = {
                      {2,9},   {3,9},   {4,9},   {5,9},   {6,9},   {7,9},
 };
 
-static const XPoint batt_hi_icon[] = {
+static const XPoint batt_high[] = {
                                        {4,0},   {5,0},
                      {2,1},   {3,1},                     {6,1},   {7,1},
                      {2,2},                              {6,2},   {7,2},
@@ -196,7 +200,7 @@ static const XPoint batt_hi_icon[] = {
                      {2,9},   {3,9},   {4,9},   {5,9},   {6,9},   {7,9},
 };
 
-static const XPoint batt_mid_icon[] = {
+static const XPoint batt_mid[] = {
                                        {4,0},   {5,0},
                      {2,1},   {3,1},                     {6,1},   {7,1},
                      {2,2},                                       {7,2},
@@ -209,7 +213,7 @@ static const XPoint batt_mid_icon[] = {
                      {2,9},   {3,9},   {4,9},   {5,9},   {6,9},   {7,9},
 };
 
-static const XPoint batt_low_icon[] = {
+static const XPoint batt_low[] = {
                                        {4,0},   {5,0},
                      {2,1},   {3,1},                     {6,1},   {7,1},
                      {2,2},                                       {7,2},
@@ -222,7 +226,7 @@ static const XPoint batt_low_icon[] = {
                      {2,9},   {3,9},   {4,9},   {5,9},   {6,9},   {7,9},
 };
 
-static const XPoint batt_zero_icon[] = {
+static const XPoint batt_empty[] = {
                                        {4,0},	{5,0},
                      {2,1},   {3,1},                     {6,1},   {7,1},
                      {2,2},                                       {7,2},
@@ -235,7 +239,7 @@ static const XPoint batt_zero_icon[] = {
                      {2,9},   {3,9},   {4,9},   {5,9},   {6,9},   {7,9},
 };
 
-static const XPoint batt_charge_icon[] = {
+static const XPoint batt_charge[] = {
                                                          {6,0},   {7,0},
                                                 {5,1},   {6,1},
                                        {4,2},   {5,2},	
@@ -248,7 +252,7 @@ static const XPoint batt_charge_icon[] = {
                      {2,9},   {3,9},
 };
 
-static const XPoint wired_disconnected_icon[] = { 
+static const XPoint wired_disconnected[] = { 
                      {2,0},   {3,0},   {4,0},   {5,0},   {6,0},   {7,0},
             {1,1},   {2,1},   {3,1},   {4,1},   {5,1},   {6,1},   {7,1},   {8,1},
    {0,2},   {1,2},   {2,2},                                       {7,2},   {8,2},   {9,2},
@@ -261,7 +265,7 @@ static const XPoint wired_disconnected_icon[] = {
                      {2,9},   {3,9},   {4,9},   {5,9},   {6,9},   {7,9},
 };
 
-static const XPoint wired_connected_icon[] = {
+static const XPoint wired_connected[] = {
                      {2,0},   {3,0},   {4,0},   {5,0},   {6,0},   {7,0},
             {1,1},   {2,1},   {3,1},   {4,1},   {5,1},   {6,1},   {7,1},   {8,1},
    {0,2},   {1,2},   {2,2},                                       {7,2},   {8,2},   {9,2},
@@ -274,7 +278,9 @@ static const XPoint wired_connected_icon[] = {
                      {2,9},   {3,9},   {4,9},   {5,9},   {6,9},   {7,9},
 };
 
-static const XPoint bargraph_full_icon[] = {
+/* Bargraph */
+
+static const XPoint bar_full[] = {
                               {3,0},   {4,0},   {5,0},   {6,0},
                               {3,1},   {4,1},   {5,1},   {6,1},
                               {3,2},   {4,2},   {5,2},   {6,2},
@@ -287,7 +293,7 @@ static const XPoint bargraph_full_icon[] = {
                               {3,9},   {4,9},   {5,9},   {6,9},
 };
 
-static const XPoint bargraph_high_icon[] = {
+static const XPoint bar_high[] = {
 
 
 
@@ -300,7 +306,7 @@ static const XPoint bargraph_high_icon[] = {
                               {3,9},   {4,9},   {5,9},   {6,9},
 };
 
-static const XPoint bargraph_mid_icon[] = {
+static const XPoint bar_mid[] = {
 
 
 
@@ -313,7 +319,7 @@ static const XPoint bargraph_mid_icon[] = {
                               {3,9},   {4,9},   {5,9},   {6,9},
 };
 
-static const XPoint bargraph_low_icon[] = {
+static const XPoint bar_low[] = {
 
 
 
@@ -324,32 +330,120 @@ static const XPoint bargraph_low_icon[] = {
 
 
                               {3,9},   {4,9},   {5,9},   {6,9},
-}; 
+};
+
+/* Generic Applications */
+
+static const XPoint app_term[] = { 
+   {0,0},   {1,0},   {2,0},   {3,0},   {4,0},   {5,0},   {6,0},   {7,0},   {8,0},   {9,0},
+   {0,1},   {1,1},   {2,1},   {3,1},   {4,1},   {5,1},   {6,1},   {7,1},   {8,1},   {9,1},
+   {0,2},                                                                           {9,2},
+   {0,3},            {2,3},                                                         {9,3},
+   {0,4},            {2,4},   {3,4},                                                {9,4},
+   {0,5},                     {3,5},                                                {9,5},
+   {0,6},            {2,6},   {3,6},                                                {9,6},
+   {0,7},            {2,7},                     {5,7},   {6,7},   {7,7},            {9,7},
+   {0,8},                                                                           {9,8},
+   {0,9},   {1,9},   {2,9},   {3,9},   {4,9},   {5,9},   {6,9},   {7,9},   {8,9},   {9,9},
+};
+
+static const XPoint app_web[] = { 
+                     {2,0},   {3,0},   {4,0},   {5,0},            {7,0},
+            {1,1},                     {4,1},   {5,1},                     {8,1},
+   {0,2},                                                                           {9,2},
+   {0,3},                              {4,3},   {5,3},                              {9,3},
+   {0,4},                              {4,4},   {5,4},                              {9,4},
+            {1,5},                     {4,5},   {5,5},                     {8,5},
+                     {2,6},            {4,6},   {5,6},   {6,6},   {7,6},
+                                       {4,7},   {5,7},
+                                       {4,8},   {5,8},
+                                       {4,9},   {5,9},
+};
+
+static const XPoint app_docs[] = { 
+            {1,0},   {2,0},   {3,0},   {4,0},   {5,0},
+            {1,1},                                       {6,1},
+            {1,2},                                                {7,2},
+            {1,3},            {3,3},   {4,3},   {5,3},                     {8,3},
+            {1,4},                                                         {8,4},
+            {1,5},            {3,5},   {4,5},   {5,5},   {6,5},            {8,5},
+            {1,6},                                                         {8,6},
+            {1,7},            {3,7},   {4,7},   {5,7},   {6,7},            {8,7},
+            {1,8},                                                         {8,8},
+            {1,9},   {2,9},   {3,9},   {4,9},   {5,9},   {6,9},   {7,9},   {8,9},
+};
+
+static const XPoint app_music[] = { 
+                              {3,0},   {4,0},   {5,0},   {6,0},   {7,0},   {8,0},   {9,0},
+                              {3,1},   {4,1},   {5,1},   {6,1},   {7,1},   {8,1},   {9,1},
+                              {3,2},                                                {9,2},
+                              {3,3},                                                {9,3},
+                              {3,4},                                                {9,4},
+            {1,5},   {2,5},   {3,5},                                                {9,5},
+   {0,6},   {1,6},   {2,6},   {3,6},                              {7,6},   {8,6},   {9,6},
+   {0,7},   {1,7},   {2,7},   {3,7},                     {6,7},   {7,7},   {8,7},   {9,7},
+            {1,8},   {2,8},                              {6,8},   {7,8},   {8,8},   {9,8},
+                                                                  {7,9},   {8,9},
+};
+
+static const XPoint app_video[] = { 
+   {0,0},            {2,0},                                       {7,0},            {9,0},
+   {0,1},   {1,1},   {2,1},                                       {7,1},   {8,1},   {9,1},
+   {0,2},            {2,2},   {3,2},   {4,2},   {5,2},   {6,2},   {7,2},            {9,2},
+   {0,3},   {1,3},   {2,3},                                       {7,3},   {8,3},   {9,3},
+   {0,4},            {2,4},                                       {7,4},            {9,4},
+   {0,5},   {1,5},   {2,5},                                       {7,5},   {8,5},   {9,5},
+   {0,6},            {2,6},                                       {7,6},            {9,6},
+   {0,7},   {1,7},   {2,7},   {3,7},   {4,7},   {5,7},   {6,7},   {7,7},   {8,7},   {9,7},
+   {0,8},            {2,8},                                       {7,8},            {9,8},
+   {0,9},   {1,9},   {2,9},                                       {7,9},   {8,9},   {9,9},
+};
+
+
+static const XPoint app_stats[] = { 
+   {0,0},
+   {0,1},
+   {0,2},                     {3,2},
+   {0,3},            {2,3},            {4,3},
+   {0,4},            {2,4},                     {4,4},
+   {0,5},   {1,5},                              {5,5},
+   {0,6},   {1,6},                                    {5,6},   {6,6},
+   {0,7},                                                         {7,7},
+   {0,8},                                                                  {8,8},   {9,8},
+   {0,9},   {1,9},   {2,9},   {3,9},   {4,9},   {5,9},   {6,9},   {7,9},   {8,9},   {9,9},
+};
+
 
 static const Icon icons[] = {
-   MAKE_ICON(clock_icon),
-   MAKE_ICON(cpu_icon),
-   MAKE_ICON(mem_icon),
-   MAKE_ICON(speaker_hi_icon),
-   MAKE_ICON(speaker_mid_icon),
-   MAKE_ICON(speaker_low_icon),
-   MAKE_ICON(speaker_mute_icon),
-   MAKE_ICON(wifi_full_icon),
-   MAKE_ICON(wifi_hi_icon),
-   MAKE_ICON(wifi_mid_icon),
-   MAKE_ICON(wifi_low_icon),
-   MAKE_ICON(batt_full_icon),
-   MAKE_ICON(batt_hi_icon),
-   MAKE_ICON(batt_mid_icon),
-   MAKE_ICON(batt_low_icon),
-   MAKE_ICON(batt_zero_icon),
-   MAKE_ICON(batt_charge_icon),
-   MAKE_ICON(wired_disconnected_icon),
-   MAKE_ICON(wired_connected_icon),
-   MAKE_ICON(bargraph_full_icon),
-   MAKE_ICON(bargraph_high_icon),
-   MAKE_ICON(bargraph_mid_icon),
-   MAKE_ICON(bargraph_low_icon),
+   [0]   =  MAKE_ICON(clock),
+   [1]   =  MAKE_ICON(cpu),
+   [2]   =  MAKE_ICON(mem),
+   [3]   =  MAKE_ICON(speaker_high),
+   [4]   =  MAKE_ICON(speaker_mid),
+   [5]   =  MAKE_ICON(speaker_low),
+   [6]   =  MAKE_ICON(speaker_mute),
+   [7]   =  MAKE_ICON(wifi_full),
+   [8]   =  MAKE_ICON(wifi_high),
+   [9]   =  MAKE_ICON(wifi_mid),
+   [10]  =  MAKE_ICON(wifi_low),
+   [11]  =  MAKE_ICON(batt_full),
+   [12]  =  MAKE_ICON(batt_high),
+   [13]  =  MAKE_ICON(batt_mid),
+   [14]  =  MAKE_ICON(batt_low),
+   [15]  =  MAKE_ICON(batt_empty),
+   [16]  =  MAKE_ICON(batt_charge),
+   [17]  =  MAKE_ICON(wired_disconnected),
+   [18]  =  MAKE_ICON(wired_connected),
+   [19]  =  MAKE_ICON(bar_full),
+   [20]  =  MAKE_ICON(bar_high),
+   [21]  =  MAKE_ICON(bar_mid),
+   [22]  =  MAKE_ICON(bar_low),
+   [23]  =  MAKE_ICON(app_term),
+   [24]  =  MAKE_ICON(app_web),
+   [25]  =  MAKE_ICON(app_docs),
+   [26]  =  MAKE_ICON(app_music),
+   [27]  =  MAKE_ICON(app_video),
+   [28]  =  MAKE_ICON(app_stats),
 };
 
 // vim: ts=4
