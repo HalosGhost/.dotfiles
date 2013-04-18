@@ -1,17 +1,25 @@
 
 static const char font[] = 
-   "-xos4-terminus-medium-r-normal--13-*-*-*-*-*-iso10646-1";
-static const char *tag_name[] = 
-   {"1", "2", "3", "4", "5", "6","7", NULL};
+    "-xos4-terminus-medium-r-normal--13-*-*-*-*-*-iso10646-1";
 static const char *tile_modes[] = 
-   {"rstack", "monocle", NULL};
+    {"rstack", "monocle", NULL};
+static const Tagcon tagcons[] = {
+    /*  prefix  icon    suffix  */
+    {   NULL,   23,     NULL    },
+    {   NULL,   24,     NULL    },
+    {   NULL,   27,     NULL    },
+    {   NULL,   25,     NULL    },
+    {   "5",    -1,     NULL    },
+    {   "6",    -1,     NULL    },
+    {   "7",    -1,     NULL    },
+};
 
 #include "icons.h"
 
 static const char colors[LASTColor][9] = {
    [Background]      = "#101010",
-   [Default]         = "#C6C6C6",
-   [Occupied]        = "#6C6C6C",
+   [Default]         = "#6C6C6C",
+   [Occupied]        = "#C6C6C6",
    [Selected]        = "#4C7899",
    [Urgent]          = "#FF8880",
    [Title]           = "#DDDDDD",
