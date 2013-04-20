@@ -399,6 +399,18 @@ static const XPoint app_video[] = {
    {0,9},   {1,9},   {2,9},                                       {7,9},   {8,9},   {9,9},
 };
 
+static const XPoint app_games[] = { 
+                     {2,0},   {3,0},   {4,0},   {5,0},   {6,0},   {7,0},
+                     {2,1},                                       {7,1},
+   {0,2},   {1,2},   {2,2},                                       {7,2},   {8,2},   {9,2},
+   {0,3},                              {4,3},                                       {9,3},
+   {0,4},                              {4,4},   {5,4},                              {9,4},
+   {0,5},                              {4,5},   {5,5},                              {9,5},
+   {0,6},                              {4,6},                                       {9,6},
+   {0,7},   {1,7},   {2,7},                                       {7,7},   {8,7},   {9,7},
+                     {2,8},                                       {7,8},
+                     {2,9},   {3,9},   {4,9},   {5,9},   {6,9},   {7,9},
+};
 
 static const XPoint app_stats[] = { 
    {0,0},
@@ -443,7 +455,8 @@ static const Icon icons[] = {
    [25]  =  MAKE_ICON(app_docs),
    [26]  =  MAKE_ICON(app_music),
    [27]  =  MAKE_ICON(app_video),
-   [28]  =  MAKE_ICON(app_stats),
+   [28]  =  MAKE_ICON(app_games),
+   [29]  =  MAKE_ICON(app_stats),
 };
 
 // vim: ts=4
