@@ -8,8 +8,8 @@ static const Tagcon tagcons[] = {
     {   NULL,   23,     NULL    },
     {   NULL,   24,     NULL    },
     {   NULL,   27,     NULL    },
+    {   NULL,   28,     NULL    },
     {   NULL,   25,     NULL    },
-    {   "5",    -1,     NULL    },
     {   "6",    -1,     NULL    },
     {   "7",    -1,     NULL    },
 };
