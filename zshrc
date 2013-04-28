@@ -88,6 +88,7 @@ alias -s flac='mplayer'
 alias -s webm='mplayer'
 alias -s mkv='mplayer'
 alias -s mp4='mplayer'
+alias -s m4a='mplayer'
 alias -s ogg='mplayer'
 alias -s flv='mplayer'
 
@@ -106,7 +107,7 @@ alias -s org='dwb'
 alias -s edu='dwb'
 
 #<- Functions ->
-curlip () {
+lsip () {
     curl http://icanhazip.com
 }
 
