@@ -10,8 +10,8 @@ static const Tagcon tagcons[] = {
     {   NULL,   27,     NULL    },
     {   NULL,   28,     NULL    },
     {   NULL,   25,     NULL    },
-    {   "6",    -1,     NULL    },
-    {   "7",    -1,     NULL    },
+    {   NULL,   29,     NULL    },
+    {   NULL,   30,     NULL    },
 };
 
 #include "icons.h"
@@ -31,7 +31,7 @@ static const char colors[LASTColor][9] = {
    [TabDefaultBG]    = "#333333",
 };
 
-static const char    ttwm_cursor          = XC_left_ptr;
+static const char    alopex_cursor        = XC_left_ptr;
 static const int     borderwidth          = 1;
 static const int     tilegap              = 0;
 static const int     tagspace             = 0;
@@ -136,7 +136,7 @@ static Key keys[] = {
 
 static Button buttons[] = {
    /* modifier       button         function       arg               */
- /*{ MOD1,           1,             mouse,         "move"            },*/
+   { MOD1|MOD2,      1,             mouse,         "move"            },
    { MOD1,           2,             toggle,        "floating"        },
    { MOD1,           3,             mouse,         "resize"          },
    { MOD1,           4,             window,        "s prev"          },
@@ -147,8 +147,8 @@ static Button buttons[] = {
 
 static Rule rules[] = {
    /* name           class          tags           flags             */
-   { "float",        NULL,          0,             TTWM_FLOATING     },
-   { NULL,           "float",       0,             TTWM_FLOATING     },
+   { "float",        NULL,          0,             FLAG_FLOATING     },
+   { NULL,           "float",       0,             FLAG_FLOATING     },
    { NULL,           "dwb",         2,             0                 },
 };
 
