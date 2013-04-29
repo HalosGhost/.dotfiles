@@ -5,13 +5,13 @@ static const char *tile_modes[] =
     {"rstack", "monocle", NULL};
 static const Tagcon tagcons[] = {
     /*  prefix  icon    suffix  */
+    {   NULL,   19,     NULL    },
+    {   NULL,   20,     NULL    },
     {   NULL,   23,     NULL    },
     {   NULL,   24,     NULL    },
-    {   NULL,   27,     NULL    },
-    {   NULL,   28,     NULL    },
+    {   NULL,   21,     NULL    },
     {   NULL,   25,     NULL    },
-    {   NULL,   29,     NULL    },
-    {   NULL,   30,     NULL    },
+    {   NULL,   26,     NULL    },
 };
 
 #include "icons.h"
