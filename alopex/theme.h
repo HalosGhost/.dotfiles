@@ -15,7 +15,7 @@ static const char colors[LASTColor][9] = {
 	    [TabDefault]	= "#686858",
 	    [TabDefaultBG]	= "#181818",
 	    [TagLine]		= "#FF4400",
-    #ifdef WinterCoat
+    #elif defined WinterCoat
 	    [Background]	= "#101010",
 	    [Default]		= "#686868",
 	    [Occupied]		= "#68A0DD",
@@ -43,6 +43,6 @@ static const char colors[LASTColor][9] = {
         [TabDefault]      = "#101010",
         [TabDefaultBG]    = "#333333",
         [TagLine]         = "#4C7899",
-#endif
+    #endif
 };
 
