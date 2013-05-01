@@ -17,7 +17,7 @@ TAB()           compgen -P "%s" -cf %s | sort -u | while read s; do [[ -d ${s##*
 
 # BANGS
 # The first listed bang is the default
-:exec           termite -e "%s"
+:exec           termite -e "zsh -ic %s"
 :web            dwb "%s"
 :pdf            zathura "%s"
 :man            termite -e "man %s"
