@@ -14,9 +14,6 @@ static const Tagcon tagcons[] = {
     {   NULL,   26,     NULL    },
 };
 
-#include "icons.h"
-#include "theme.h"
-
 static const char    alopex_cursor        = XC_left_ptr;
 static const int     borderwidth          = 1;
 static const int     tilegap              = 0;
