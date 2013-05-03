@@ -60,7 +60,6 @@ alias lla='ls -lhA'
 alias db='dropbox'
 alias purl='db puburl'
 alias ytdl='youtube-dl'
-alias ytv='youtube-viewer'
 
 alias sudo='sudo '
 alias grep='grep --color=auto'
