@@ -4,6 +4,6 @@
 Needed Updates:
 
 - Clean up and verify ``bin/dotinstall`` for functionality
-- Complete PATH declaration in ``systemd/user/ttwm.service``
+- Complete PATH declaration in ``systemd/user/alopex.service``
 - Various additions to ``compose/*.xcompose``
-- Update ``ttwm/config.h`` and ``bin/*`` for multi-head monitor setup
+- Update ``alopex/config.h`` and ``bin/*`` for multi-head monitor setup
