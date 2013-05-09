@@ -75,6 +75,7 @@ alias keytest="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /
 alias alsi='alsi -u -f $XDG_CONFIG_HOME/alsi/arch.logo'
 alias count='wc -l'
 alias sloc='cloc'
+alias mplayer='mpv'
 
 #<- Suffixes ->
 alias -s pdf='zathura'
