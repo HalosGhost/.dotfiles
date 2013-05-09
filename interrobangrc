@@ -19,9 +19,7 @@ TAB()           compgen -P "%s" -cf %s | sort -u | while read s; do [[ -d ${s##*
 # The first listed bang is the default
 :exec           termite -e "zsh -c %s"
 :calc           notify-send "$(echo '%s'|bc -l)"
+:echo           notify-send "%s"
 :web            dwb "%s"
 :pdf            zathura "%s"
 :man            termite -e "man %s"
-:archbbs        dwb "https://bbs.archlinux.org/search.php?action=search&show_as=topics&sort_dir=DESC&keywords=%s"
-:archwiki       dwb "https://wiki.archlinux.org/index.php?search=%s"
-
