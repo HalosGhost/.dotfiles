@@ -19,6 +19,7 @@ TAB()           compgen -P "%s" -cf %s | sort -u | while read s; do [[ -d ${s##*
 # The first listed bang is the default
 :exec           termite -e "zsh -c %s"
 :calc           notify-send "$(echo '%s'|bc -l)"
+TAB(calc)       S1="%s%s"; S2="${S1/\:calc/}"; echo ":calc $(echo $S2 | bc -l)"
 :echo           notify-send "%s"
 :web            dwb "%s"
 :pdf            zathura "%s"
