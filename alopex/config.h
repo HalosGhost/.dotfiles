@@ -5,13 +5,13 @@ static const char *tile_modes[] =
     {"rstack", "monocle", NULL};
 static const Tagcon tagcons[] = {
     /*  prefix  icon    suffix  */
-    {   NULL,   19,     NULL    },
-    {   NULL,   20,     NULL    },
-    {   NULL,   23,     NULL    },
-    {   NULL,   24,     NULL    },
-    {   NULL,   21,     NULL    },
-    {   NULL,   25,     NULL    },
-    {   NULL,   26,     NULL    },
+    {   NULL,   11,     NULL    },
+    {   NULL,   12,     NULL    },
+    {   NULL,   15,     NULL    },
+    {   NULL,   16,     NULL    },
+    {   NULL,   13,     NULL    },
+    {   NULL,   17,     NULL    },
+    {   NULL,   18,     NULL    },
 };
 
 static const char    alopex_cursor        = XC_left_ptr;
