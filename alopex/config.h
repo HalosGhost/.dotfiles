@@ -71,7 +71,7 @@ static Key keys[] = {
    { MOD1|MOD2,      XK_f,          toggle,        "floating"        },
    { MOD2|MOD3,      XK_l,          spawn,         CMD(LOCK)         },
    { MOD1,           0x60,          spawn,         CMD(SCRN)         },
-   { 0,              0x1008ff59,    spawn,         XRANDR_CMD,       },
+   { MOD1,           XK_F4,         spawn,         XRANDR_CMD,       },
    /* function keys */
    { 0,              XK_F1,         spawn,         CMD(FN1)          },
    { 0,              XK_F2,         spawn,         CMD(FN2)          },
