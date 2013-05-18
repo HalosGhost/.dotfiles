@@ -120,6 +120,11 @@ calc () {
     echo "$@" | bc
 }
 
+lsupdate () {
+    checkupdates
+    cower -u
+}
+
 clock () {
     while sleep 1;do 
         tput sc
