@@ -107,10 +107,6 @@ alias -s org='dwb'
 alias -s edu='dwb'
 
 #<- Functions ->
-lsip () {
-    curl http://icanhazip.com
-}
-
 dbdl () {
     export url="$(purl $*)dl=1"
     echo $url; unset url
@@ -120,12 +116,12 @@ calc () {
     echo "$@" | bc
 }
 
-lsupdate () {
+lsupd () {
     checkupdates
     cower -u
 }
 
-clock () {
+clck () {
     while sleep 1;do 
         tput sc
         tput cup 0 $(($(tput cols)-29))
