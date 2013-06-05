@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#<-Variable Declaration->
+self="$(basename $0)"
+E_HELP=44
+
+#<-Function Declaration->
+usage () {
+  echo "Usage: $self [-q] [-h|--help]"
+  exit "$E_HELP"
+}
+
+#<-Run Content->
+case "$1" in
+  -h|--help) usage;;
+  *) notify-send "$(curl -s http://icanhazip.com)";;
+esac
+
+exit 0
