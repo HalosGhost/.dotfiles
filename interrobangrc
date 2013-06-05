@@ -11,7 +11,8 @@ foreground      #68B0E0
 background      #101010
 border          #4C7899
 bangchar        :
-show options
+show            options
+options         #242424 #48E084 #484848 #64FFAA
 
 TAB()           compgen -P "%s" -cf %s | sort -u | while read s; do [[ -d ${s##* } ]] && echo "$s/" || echo "$s "; done
 
@@ -24,3 +25,5 @@ TAB(calc)       S1="%s%s"; S2="${S1/\:calc/}"; echo ":calc $(echo $S2 | bc -l)"
 :web            dwb "%s"
 :pdf            zathura "%s"
 :man            termite -e "man %s"
+:play           mpv "%s"
+:muse           mpv --no-video "%s"
