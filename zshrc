@@ -20,7 +20,6 @@ bashcompinit
 export RPROMPT='%B%(?.%F{cyan}^_^%f.%F{red}o_O%f)%b' 
 export PROMPT="╒[%~]%#
 └╼ "
-source $HOME/.zprofile
 source $HOME/.zsh_env
 
 #<- Keybinds ->
@@ -131,4 +130,4 @@ clck () {
 }
 
 #<- Source ZSh Syntax Highlighting ->
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
