@@ -4,7 +4,7 @@
 HISTFILE=~/.zsh_hist
 HISTSIZE=1000
 SAVEHIST=1000
-setopt appendhistory autocd notify
+setopt appendhistory histignorealldups autocd notify
 #setopt correctall
 unsetopt beep
 zstyle :compinstall filename '/home/halosghost/.zshrc'
@@ -80,16 +80,17 @@ alias mplayer='mpv'
 alias -s pdf='zathura'
 alias -s jpg='feh'
 alias -s png='feh'
-alias -s gif='mplayer -loop 0'
-alias -s mp3='mplayer'
-alias -s avi='mplayer'
-alias -s flac='mplayer'
-alias -s webm='mplayer'
-alias -s mkv='mplayer'
-alias -s mp4='mplayer'
-alias -s m4a='mplayer'
-alias -s ogg='mplayer'
-alias -s flv='mplayer'
+alias -s gif='mpv --loop=inf'
+alias -s mp3='mpv'
+alias -s avi='mpv'
+alias -s flac='mpv'
+alias -s webm='mpv'
+alias -s mkv='mpv'
+alias -s mp4='mpv'
+alias -s m4a='mpv'
+alias -s ogg='mpv'
+alias -s flv='mpv'
+alias -s opus='mpv'
 
 alias -s doc='loffice'
 alias -s md='vim'
@@ -99,11 +100,11 @@ alias -s gba='mednafen'
 alias -s gcm='dolphin-emu -e'
 alias -s z64='mupen64plus'
 
-alias -s html='dwb'
-alias -s htm='dwb'
-alias -s com='dwb'
-alias -s org='dwb'
-alias -s edu='dwb'
+alias -s html="$BROWSER"
+alias -s htm="$BROWSER"
+alias -s com="$BROWSER"
+alias -s org="$BROWSER"
+alias -s edu="$BROWSER"
 
 #<- Functions ->
 dbdl () {
@@ -111,22 +112,9 @@ dbdl () {
     echo $url; unset url
 }
 
-calc () {
-    echo "$@" | bc
-}
-
 lsupd () {
     checkupdates
     cower -u
-}
-
-clck () {
-    while sleep 1;do 
-        tput sc
-        tput cup 0 $(($(tput cols)-29))
-        date +"%H.%M.%S | %A, %d %B %Y"
-        tput rc
-    done &
 }
 
 #<- Source ZSh Syntax Highlighting ->
