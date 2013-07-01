@@ -1,10 +1,4 @@
-
-## InterobangRC
-##
-## Lines starting with a # are ignored as comments, but this file is
-## not processed by a shell interpreter.
-
-
+# Configuration
 font            -xos4-terminus-medium-r-normal--13-*-*-*-*-*-iso10646-1
 geometry        bottom
 foreground      #68B0E0
@@ -13,17 +7,17 @@ border          #4C7899
 bangchar        :
 show            options
 options         #242424 #48E084 #484848 #64FFAA
-
-TAB()           compgen -P "%s" -cf %s | sort -u | while read s; do [[ -d ${s##* } ]] && echo "$s/" || echo "$s "; done
+autocomp        1
+run_hook        cmd="%s"; ($cmd && echo $cmd >> $XDG_CONFIG_HOME/interrobang/history) || (notify-send "Error: command not found")
 
 # BANGS
-# The first listed bang is the default
 :exec           termite -e "zsh -c %s"
 :calc           notify-send "$(echo '%s'|bc -l)"
-TAB(calc)       S1="%s%s"; S2="${S1/\:calc/}"; echo ":calc $(echo $S2 | bc -l)"
 :echo           notify-send "%s"
-:web            dwb "%s"
+:web            $BROWSER "%s"
 :pdf            zathura "%s"
 :man            termite -e "man %s"
-:play           mpv "%s"
-:muse           mpv --no-video "%s"
+
+# TABS
+TAB()           pre="%s"; str="%s"; [[ -z "$pre" ]] && (grep "$str" $XDG_CONFIG_HOME/interrobang/history | sort | uniq -c | sort -r | awk '{print $2}'; percontation "$pre" $str) | awk ' !x[$0]++' | head -7
+TAB(calc)       S1="%s%s"; S2="${S1/\:calc/}"; echo ":calc $(echo $S2 | bc -l)"
