@@ -25,7 +25,7 @@ install-links () {
     done
 
     # $XDG_CONFIG_HOME/folders
-    for i in ttwm systemd; do
+    for i in alopex systemd; do
         ln -sd "$DOTS/$i" "$XDG_CONFIG_HOME/$i"
     done
 
