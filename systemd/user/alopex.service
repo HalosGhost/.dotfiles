@@ -2,13 +2,15 @@
 Description=Alopex Window Manager
 Before=initrc.target
 After=xorg.target,fonts.service
- 
-[Service]
 Requires=xorg.target
+
+[Service]
 Environment=DISPLAY=:0
 Environment=PATH=%h/.bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:%h/.gem/ruby/2.0.0/bin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools
 Environment=BROWSER=/usr/bin/aurora
 Environment=EDITOR=/usr/bin/vim
+Environment=PAGER=/usr/bin/vimpager
+Environment=INTERROHIST=%h/.config/interrobang/history
 ExecStart=/usr/bin/alopex "/usr/bin/vulpes"
 Restart=always
 RestartSec=10
