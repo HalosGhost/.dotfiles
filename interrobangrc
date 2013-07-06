@@ -1,23 +1,21 @@
-# Configuration
-font            -xos4-terminus-medium-r-normal--13-*-*-*-*-*-iso10646-1
-geometry        bottom
-foreground      #68B0E0
-background      #101010
-border          #4C7899
-bangchar        :
-show            options
-options         #242424 #48E084 #484848 #64FFAA
-autocomp        1
-run_hook        cmd="%s"; ($cmd && echo $cmd >> $XDG_CONFIG_HOME/interrobang/history) || (notify-send "Error: command not found")
+# Set Options
+set font       = -xos4-terminus-medium-r-normal--13-*-*-*-*-*-iso10646-1
+set geometry   = bottom
+set colors     = #68B0E0 #101010 #242424 #48E084 #484848 #64FFAA
+set border     = 1px #4C7899
+set bangchar   = :
+set run_hook   = cmd="%s"; ($cmd && echo $cmd >> $INTERROHIST) || (notify-send "Error: command not found")
+set autocomp   = 1
+set list       = true
+set last       = true
 
-# BANGS
-:exec           termite -e "zsh -c %s"
-:calc           notify-send "$(echo '%s'|bc -l)"
-:echo           notify-send "%s"
-:web            $BROWSER "%s"
-:pdf            zathura "%s"
-:man            termite -e "man %s"
+# Define Bangs
+bang exec      = termite -e "zsh -c %s"
+bang calc      = notify-send "$(echo '%s'|bc -l)"
+bang echo      = notify-send "%s"
+bang web       = $BROWSER "%s"
+bang man       = termite -e "man %s"
 
-# TABS
-TAB()           pre="%s"; str="%s"; [[ -z "$pre" ]] && (grep "$str" $XDG_CONFIG_HOME/interrobang/history | sort | uniq -c | sort -r | awk '{print $2}'; percontation "$pre" $str) | awk ' !x[$0]++' | head -7
-TAB(calc)       S1="%s%s"; S2="${S1/\:calc/}"; echo ":calc $(echo $S2 | bc -l)"
+# Define Tabs
+tab default    = pre="%s"; str="%s"; [[ -z "$pre" ]] && (grep "$str" $INTERROHIST|sort|uniq -c|sort -r|awk '{print $2}'; percontation "$pre" $str) | awk ' !x[$0]++' | head -7
+tab calc       = S1="%s%s"; S2="${S1/\:calc/}"; echo ":calc $(echo $S2 | bc -l)"
