@@ -17,5 +17,5 @@ bang web       = $BROWSER "%s"
 bang man       = termite -e "man %s"
 
 # Define Tabs
-tab default    = pre="%s"; str="%s"; [[ -z "$pre" ]] && (grep "$str" $INTERROHIST|sort|uniq -c|sort -r|awk '{print $2}'; percontation "$pre" $str) | awk ' !x[$0]++' | head -7
+tab default    = pre="%s"; str="%s"; [[ -z "$pre" ]] && (grep "$str" $INTERROHIST|sort|uniq -c|sort -r|awk '{print $2}'; percontation "$pre" $str) | awk ' !x[$0]++' | head -14
 tab calc       = S1="%s%s"; S2="${S1/\:calc/}"; echo ":calc $(echo $S2 | bc -l)"
