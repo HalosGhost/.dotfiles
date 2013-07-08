@@ -1,9 +1,9 @@
 [Unit]
 Description=Load Feh Background
-After=ttwm.service
-Type=oneshot
+After=alopex.service
 
 [Service]
+Type=oneshot
 ExecStart=/usr/bin/bash %h/.fehbg
 RemainAfterExit=yes
 

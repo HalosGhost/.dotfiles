@@ -1,7 +1,8 @@
 [Unit]
 Description=Alopex Window Manager
 Before=initrc.target
-After=xorg.target,fonts.service
+After=xorg.target
+After=fonts.service
 Requires=xorg.target
 
 [Service]
