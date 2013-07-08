@@ -66,10 +66,8 @@ static Key keys[] = {
    { SUPR|SHFT,      XK_q,          quit,          NULL              },
    { ALTR|SHFT,      XK_q,          killclient,    NULL              },
    { ALTR,           XK_f,          fullscreen,    NULL              },
-   { ALTR,           XK_a,          toggle,        "place bar"       },
-   { ALTR,           XK_x,          toggle,        "visible bar"     },
    { ALTR|SUPR,      XK_f,          toggle,        "floating"        },
-   { SUPR|CTRL,      XK_l,          spawn,         CMD(LOCK)         },
+   { ALTR|CTRL,      XK_l,          spawn,         CMD(LOCK)         },
    { ALTR,           0x60,          spawn,         CMD(SCRN)         },
    { ALTR,           XK_F4,         spawn,         XRANDR_CMD        },
    /* function keys */
