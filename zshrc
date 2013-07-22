@@ -20,7 +20,6 @@ bashcompinit
 export RPROMPT='%B%(?.%F{cyan}^_^%f.%F{red}o_O%f)%b' 
 export PROMPT="╒[%~]%#
 └╼ "
-source $HOME/.zsh_env
 
 #<- Keybinds ->
 bindkey -M vicmd v edit-command-line
@@ -96,15 +95,7 @@ alias -s doc='loffice'
 alias -s md='vim'
 alias -s rst='vim'
 
-alias -s gba='mednafen'
-alias -s gcm='dolphin-emu -e'
-alias -s z64='mupen64plus'
-
-alias -s html="$BROWSER"
-alias -s htm="$BROWSER"
-alias -s com="$BROWSER"
-alias -s org="$BROWSER"
-alias -s edu="$BROWSER"
+alias -s nds='retroarch -L /usr/lib/libretro/desmume_libretro.so'
 
 #<- Functions ->
 dbdl () {
