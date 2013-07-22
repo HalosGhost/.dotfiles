@@ -4,7 +4,7 @@ set geometry   = bottom
 set colors     = #68B0E0 #101010 #242424 #48E084 #484848 #64FFAA
 set border     = 1px #4C7899
 set bangchar   = :
-set run_hook   = cmd="%s"; ($cmd && echo $cmd >> $INTERROHIST) || (notify-send "Error: command not found")
+#set run_hook   = cmd="%s"; ($cmd && echo $cmd >> $INTERROHIST) || (notify-send "Error: command not found")
 set autocomp   = 1
 set list       = true
 set last       = true
@@ -15,7 +15,9 @@ bang calc      = notify-send "$(echo '%s'|bc -l)"
 bang echo      = notify-send "%s"
 bang web       = $BROWSER "%s"
 bang man       = termite -e "man %s"
+bang logout    = case "%s" in shutdown) sudo systemctl poweroff ;; sleep) sudo systemctl suspend ;; reboot) sudo systemctl reboot ;; logout) killall xinit ;; cancel) exit ;; esac
 
 # Define Tabs
-tab default    = pre="%s"; str="%s"; [[ -z "$pre" ]] && (grep "$str" $INTERROHIST|sort|uniq -c|sort -r|awk '{print $2}'; percontation "$pre" $str) | awk ' !x[$0]++' | head -14
+tab default    = percontation "%s" %s | sort -u
 tab calc       = S1="%s%s"; S2="${S1/\:calc/}"; echo ":calc $(echo $S2 | bc -l)"
+tab logout     = echo -e ":logout cancel\n!logout shutdown\n!logout sleep\n!logout reboot\n!logout logout" | grep "^%s%s"
