@@ -1,5 +1,0 @@
-#<- ZSH ENV ->
-
-#<- Environment Declarations ->
-export EDITOR=/usr/bin/vim
-export BROWSER=/usr/bin/dwb
