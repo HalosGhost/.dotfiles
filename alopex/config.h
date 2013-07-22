@@ -51,11 +51,9 @@ static int           stackcount           = 2;
 #define FN2          "sudo enlighten increase display"
 #define FN3          "steam"
 #define FN4          "netflix-desktop"
-#define FN5          "sudo enlighten decrease keyboard"
-#define FN6          "sudo enlighten increase keyboard"
 #define FNA          "ponymix toggle -c 0"
-#define FNB          "ponymix decrease 5"
-#define FNC          "ponymix increase 5"
+#define FNB          "ponymix decrease 5&&mpv $XDG_CONFIG_HOME/alopex/pop-sound.flac --no-video"
+#define FNC          "ponymix increase 5&&mpv $XDG_CONFIG_HOME/alopex/pop-sound.flac --no-video"
 
 static Key keys[] = {
    /* modifier       key            function       argument          */
@@ -71,8 +69,8 @@ static Key keys[] = {
    { ALTR,           0x60,          spawn,         CMD(SCRN)         },
    { ALTR,           XK_F4,         spawn,         XRANDR_CMD        },
    /* function keys */
-   { 0,              XK_F1,         spawn,         CMD(FN1)          },
-   { 0,              XK_F2,         spawn,         CMD(FN2)          },
+   { 0,              0x1008ff03,    spawn,         CMD(FN1)          },
+   { 0,              0x1008ff02,    spawn,         CMD(FN2)          },
    { 0,              XK_F9,         spawn,         CMD(FNA)          },
    { 0,              XK_F11,        spawn,         CMD(FN3)          },
    { 0,              XK_F12,        spawn,         CMD(FN4)          },
