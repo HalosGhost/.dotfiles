@@ -11,14 +11,12 @@ usage () {
 }
 
 fail() {
-   echo "No connection"
-   exit 1
+   echo "Cannot check IP address"&&exit 1
 }
 
 #<-Run Content->
 case "$1" in
    -h|--help) usage;;
-   -n|--notify) notify-send "$(curl -s http://icanhazip.com||fail)";;
    *) curl -s http://icanhazip.com||fail;;
 esac
 
