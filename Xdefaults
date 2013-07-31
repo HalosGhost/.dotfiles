@@ -29,7 +29,7 @@ URxvt*cursorBlink:         True
 URxvt*cursorColor:         #dcdccc
 URxvt*cursorColor2:        #000000
 URxvt*perl-ext-common:     default,matcher
-URxvt*urlLauncher:         $BROWSER
+URxvt*url-launcher:        /usr/bin/aurora
 URxvt*matcher.button:      1
 URxvt.underlineURLs:       true
 
