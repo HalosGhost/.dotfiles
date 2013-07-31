@@ -1,0 +1,67 @@
+!<- XDefaults ->
+Xft*dpi:                   100
+Xft*antialias:             True
+Xft*rgba:                  vrgb
+Xft.autohint:              0
+Xft.lcdfilter:             lcddefault
+Xft.hintstyle:             hintfull
+Xft.hinting:               1
+Xcursor.theme:             Bluecurve
+
+URxvt*skipBuiltinGlyphs:   False
+URxvt*font:                xft:Source Code Pro:size=9
+URxvt*boldfont:            xft:DejaVu Sans Bold:pixelsize=9
+					
+URxvt*buffered:            True
+URxvt*scrollBar:           False
+URxvt*loginShell:          True
+URxvt*saveLines:           262144
+URxvt*boldMode:            True
+URxvt*jumpScroll:          True
+URxvt*scrollTtyKeypress:   True
+URxvt*scrollWithBuffer:    False
+URxvt*scrollTtyOutput:     False
+URxvt*urgentOnBell:        True
+URxvt*visualBell:          False
+urxvt*depth:               32
+
+URxvt*cursorBlink:         True
+URxvt*cursorColor:         #dcdccc
+URxvt*cursorColor2:        #000000
+URxvt*perl-ext-common:     default,matcher
+URxvt*urlLauncher:         $BROWSER
+URxvt*matcher.button:      1
+URxvt.underlineURLs:       true
+
+URxvt.fading:              20
+URxvt.fadeColor:           #002b36
+
+*foreground:               #dcdccc
+*background:               #333333
+
+highlightTextColor:        black
+
+*color0:                   #3f3f3f
+*color8:                   #709080
+
+*color1:                   #705050
+*color9:                   #dca3a3
+
+*color2:                   #60b48a
+*color10:                  #c3bf9f
+
+*color3:                   #dfaf8f
+*color11:                  #f0dfaf
+
+*color4:                   #506070
+*color12:                  #94bff3
+
+*color5:                   #dc8cc3
+*color13:                  #ec93d3
+
+*color6:                   #8cd0d3
+*color14:                  #93e0e3
+
+*color7:                   #dcdccc
+*color15:                  #ffffff
+! vim: syn=xdefaults et sw=2

@@ -1,9 +1,0 @@
-[Unit]
-Description=Normalize Graphical Style
-After=xorg.target
-
-[Service]
-ExecStart=/usr/bin/xrdb %h/.Xresources
-
-[Install]
-WantedBy=initrc.target
