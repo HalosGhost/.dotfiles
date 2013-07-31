@@ -15,7 +15,7 @@ static const Tagcon tagcons[] = {
 };
 
 static const char    alopex_cursor        = XC_left_ptr;
-static const int     borderwidth          = 1;
+static const int     borderwidth          = 0;
 static const int     tilegap              = 0;
 static const int     tagspace             = 0;
 static const int     max_status_line      = 256;
@@ -28,7 +28,7 @@ static const int     attachmode           = 1;
 static int           stackcount           = 2;
 
 #define LAUNCH       "interrobang"
-#define TERM         "termite"
+#define TERM         "$TERMINAL"
 #define LOCK         "xautolock -locknow"
 #define WNDWLST      "interrobang -opt \"set last = false\" alopex"
 #define SCRN         "scrot $HOME/Pictures/Scrn/shot-%d-%m-%Y.png"
