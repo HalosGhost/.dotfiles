@@ -1,0 +1,8 @@
+[Unit]
+Description=URxvt Daemon
+
+[Service]
+ExecStart=/usr/bin/urxvtd
+
+[Install]
+WantedBy=initrc.target
