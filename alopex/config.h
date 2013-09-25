@@ -5,13 +5,12 @@ static const char *tile_modes[] =
     {"rstack", "monocle", NULL};
 static const Tagcon tagcons[] = {
     /*  prefix  icon    suffix  */
-    {   NULL,   11,     NULL    },
-    {   NULL,   12,     NULL    },
-    {   NULL,   15,     NULL    },
-    {   NULL,   16,     NULL    },
-    {   NULL,   13,     NULL    },
-    {   NULL,   17,     NULL    },
-    {   NULL,   18,     NULL    },
+    {   NULL,   11,     NULL    }, // Terminal
+    {   NULL,   12,     NULL    }, // Internet
+    {   NULL,   15,     NULL    }, // Media
+    {   NULL,   13,     NULL    }, // Documents
+    {   NULL,   17,     NULL    }, // Image Work
+    {   NULL,   18,     NULL    }, // Et cetera
 };
 
 static const char    alopex_cursor        = XC_left_ptr;
@@ -23,7 +22,7 @@ static const int     win_min              = 20;
 static const Bool    focusfollowmouse     = True;
 static Bool          showbar              = True;
 static Bool          topbar               = True;
-static int           tilebias             = 0;
+static int           tilebias             = 143;
 static const int     attachmode           = 1;
 static int           stackcount           = 2;
 
