@@ -9,8 +9,8 @@ Xft.hinting:               1
 Xcursor.theme:             Bluecurve
 
 URxvt*skipBuiltinGlyphs:   False
-URxvt*font:                xft:Source Code Pro:size=9
-URxvt*boldfont:            xft:DejaVu Sans Bold:pixelsize=9
+URxvt*font:                xft:Source Code Pro for Powerline:regular:size=9
+URxvt*boldfont:            xft:Source Code Pro for Powerline:bold:pixelsize=9
 					
 URxvt*buffered:            True
 URxvt*scrollBar:           False
@@ -19,11 +19,11 @@ URxvt*saveLines:           262144
 URxvt*boldMode:            True
 URxvt*jumpScroll:          True
 URxvt*scrollTtyKeypress:   True
-URxvt*scrollWithBuffer:    False
-URxvt*scrollTtyOutput:     False
+URxvt*scrollWithBuffer:    True
+URxvt*scrollTtyOutput:     True
 URxvt*urgentOnBell:        True
 URxvt*visualBell:          False
-urxvt*depth:               32
+!urxvt*depth:               32
 
 URxvt*cursorBlink:         True
 URxvt*cursorColor:         #dcdccc

@@ -28,6 +28,8 @@ set virtualedit=block
 set foldmethod=syntax
 set foldopen=all
 set nocp
+set encoding=utf-8
+set laststatus=2
 syntax on 
 hi Normal ctermfg=NONE ctermbg=NONE cterm=NONE
 map <F2> :call g:ClangUpdateQuickFix() <CR>

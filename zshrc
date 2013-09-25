@@ -17,6 +17,7 @@ autoload -U edit-command-line
 zle -N edit-command-line
 compinit
 bashcompinit
+export PYTHONPATH=/usr/lib/python3.3/site-packages
 export RPROMPT='%B%(?.%F{cyan}^_^%f.%F{red}o_O%f)%b' 
 export PROMPT="╒[%~]%#
 └╼ "
@@ -63,6 +64,7 @@ alias sudo='sudo '
 alias grep='grep --color=auto'
 alias ls='ls --color=auto -CF'
 alias bc='bc -lq'
+alias dd='dcfldd'
 alias locate='locate -d /home/halosghost/.mlocate/mlocate.db'
 alias matrix='cmatrix -f -l -a'
 alias netctl='sudo netctl'
@@ -72,8 +74,11 @@ alias pacman='pacman --color=always'
 alias keytest="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
 alias alsi='alsi -u -f $XDG_CONFIG_HOME/alsi/arch.logo'
 alias count='wc -l'
+alias lswap='netctl-auto current||echo "Netctl-auto is not connected to a network!"'
 alias sloc='cloc'
 alias mplayer='mpv'
+
+alias FTL='steam -applaunch 212680'
 
 #<- Suffixes ->
 alias -s pdf='zathura'
@@ -94,6 +99,7 @@ alias -s opus='mpv'
 alias -s doc='loffice'
 alias -s md='vim'
 alias -s rst='vim'
+alias -s tex='vim'
 
 alias -s nds='retroarch -L /usr/lib/libretro/desmume_libretro.so'
 
@@ -109,4 +115,7 @@ lsupd () {
 }
 
 #<- Source ZSh Syntax Highlighting ->
-#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+#<- Source Powerline ->
+[ ! "$XDG_VTNR" ] && source /usr/share/zsh/site-contrib/powerline.zsh
