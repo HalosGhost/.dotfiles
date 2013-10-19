@@ -1,6 +1,11 @@
 #<- ZSh RC ->
 
 #<- Primary Options ->
+RSEGF=""
+RSEG=""
+LSEGF=""
+LSEG=""
+BRNCH=""
 HISTFILE=~/.zsh_hist
 HISTSIZE=1000
 SAVEHIST=1000
@@ -18,9 +23,15 @@ zle -N edit-command-line
 compinit
 bashcompinit
 export PYTHONPATH=/usr/lib/python3.3/site-packages
-export RPROMPT='%B%(?.%F{cyan}^_^%f.%F{red}o_O%f)%b' 
-export PROMPT="╒[%~]%#
-└╼ "
+if [ ! "$XDG_VTNR" ]; then
+   export RPS1="%{%F{black}%}$LSEGF%{%f%}%{%K{black}%} %B%(?.%F{cyan}^_^ %f.%F{red}o_O %f)%b %{%k%}"
+   export PS1="%{%K{black}%} %{%F{white}%}%m%{%f%} %{%k%}%{%K{white}%}%{%F{black}%}$RSEGF%{%f%}%{%k%}%{%K{white}%} %{%F{black}%}%~%{%f%} %{%k%}$RSEGF
+%(!.%{%K{red}%} #.%{%K{blue}%} %%) %{%k%}%(!.%{%F{red}%}.%{%F{blue}%})$RSEGF%{%f%} "
+else
+   export RPS1='%B%(?.%F{cyan}^_^ %f.%F{red}o_O %f)%b'
+   export PS1='╒[%m]═[%~]%\
+└╼ '
+fi
 
 #<- Keybinds ->
 bindkey -M vicmd v edit-command-line
@@ -79,6 +90,7 @@ alias sloc='cloc'
 alias mplayer='mpv'
 
 alias FTL='steam -applaunch 212680'
+alias dinothawr='retroarch -L /usr/lib/libretro/dinothawr_libretro.so /home/halosghost/Games/dinothawr/dinothawr.game'
 
 #<- Suffixes ->
 alias -s pdf='zathura'
@@ -116,6 +128,3 @@ lsupd () {
 
 #<- Source ZSh Syntax Highlighting ->
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-#<- Source Powerline ->
-[ ! "$XDG_VTNR" ] && source /usr/share/zsh/site-contrib/powerline.zsh
