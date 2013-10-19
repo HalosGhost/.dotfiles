@@ -9,8 +9,8 @@ Xft.hinting:               1
 Xcursor.theme:             Bluecurve
 
 URxvt*skipBuiltinGlyphs:   False
-URxvt*font:                xft:Source Code Pro for Powerline:regular:size=9
-URxvt*boldfont:            xft:Source Code Pro for Powerline:bold:pixelsize=9
+URxvt*font:                xft:Inconsolata for Powerline:regular:size=10
+URxvt*boldfont:            xft:Inconsolata Pro for Powerline:bold:pixelsize=10
 					
 URxvt*buffered:            True
 URxvt*scrollBar:           False
