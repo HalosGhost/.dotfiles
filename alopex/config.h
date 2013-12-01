@@ -25,6 +25,7 @@ static Bool          topbar               = True;
 static int           tilebias             = 143;
 static const int     attachmode           = 1;
 static int           stackcount           = 2;
+static Bool          ignore_root_resize   = False;
 
 #define LAUNCH       "interrobang"
 #define TERM         "$TERMINAL"
@@ -51,8 +52,8 @@ static int           stackcount           = 2;
 #define FN3          "steam"
 #define FN4          "netflix-desktop"
 #define FNA          "ponymix toggle -c 0"
-#define FNB          "ponymix decrease 5&&mpv $XDG_CONFIG_HOME/alopex/pop-sound.flac --no-video"
-#define FNC          "ponymix increase 5&&mpv $XDG_CONFIG_HOME/alopex/pop-sound.flac --no-video"
+#define FNB          "ponymix decrease 5"
+#define FNC          "ponymix increase 5"
 
 static Key keys[] = {
    /* modifier       key            function       argument          */
