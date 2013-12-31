@@ -23,13 +23,13 @@ zle -N edit-command-line
 compinit
 bashcompinit
 export PYTHONPATH=/usr/lib/python3.3/site-packages
-if [ ! "$XDG_VTNR" ]; then
-   export RPS1="%{%F{black}%}$LSEGF%{%f%}%{%K{black}%} %B%(?.%F{cyan}^_^ %f.%F{red}o_O %f)%b %{%k%}"
-   export PS1="%{%K{black}%} %{%F{white}%}%m%{%f%} %{%k%}%{%K{white}%}%{%F{black}%}$RSEGF%{%f%}%{%k%}%{%K{white}%} %{%F{black}%}%~%{%f%} %{%k%}$RSEGF
+if [ "$DISPLAY" ]; then
+   export RPROMPT="%{%F{black}%}$LSEGF%{%f%}%{%K{black}%} %B%(?.%F{cyan}^_^ %f.%F{red}o_O %f)%b %{%k%}"
+   export PROMPT="%{%K{black}%} %{%F{white}%}%m%{%f%} %{%k%}%{%K{white}%}%{%F{black}%}$RSEGF%{%f%}%{%k%}%{%K{white}%} %{%F{black}%}%~%{%f%} %{%k%}$RSEGF
 %(!.%{%K{red}%} #.%{%K{blue}%} %%) %{%k%}%(!.%{%F{red}%}.%{%F{blue}%})$RSEGF%{%f%} "
 else
-   export RPS1='%B%(?.%F{cyan}^_^ %f.%F{red}o_O %f)%b'
-   export PS1='╒[%m]═[%~]%\
+   export RPROMPT='%B%(?.%F{cyan}^_^ %f.%F{red}o_O %f)%b'
+   export PROMPT='╒[%m]═[%~]%\
 └╼ '
 fi
 
@@ -127,4 +127,4 @@ lsupd () {
 }
 
 #<- Source ZSh Syntax Highlighting ->
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
