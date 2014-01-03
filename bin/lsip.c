@@ -17,7 +17,7 @@ int main (int argc, char ** argv)
         if ( ! res == CURLE_OK )
         {   curl_easy_cleanup(handle);
             curl_global_cleanup();
-            fputs("Could not check IP address", stderr);
+            fputs("Could not check IP address\n", stderr);
             exit(1);
         }
     }
