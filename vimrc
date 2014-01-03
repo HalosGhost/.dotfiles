@@ -41,6 +41,10 @@ let g:netrw_silent=1
 let g:clang_library_path = "/usr/lib"
 let g:clang_complete_copen=1
 
+"<- Airline ->
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'murmur'
+
 "<- AutoCmds ->
 au BufRead,BufNew /tmp/mutt* so ~/.mutt/mutt.vim
 au BufRead *.txt set tw=94
