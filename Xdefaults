@@ -28,8 +28,8 @@ URxvt*visualBell:          False
 URxvt*cursorBlink:         True
 URxvt*cursorColor:         #dcdccc
 URxvt*cursorColor2:        #000000
-URxvt*perl-ext-common:     default,matcher
-URxvt*url-launcher:        /usr/bin/aurora
+URxvt*perl-ext-common:     default,tabbed,matcher
+URxvt*url-launcher:        /usr/bin/nightly
 URxvt*matcher.button:      1
 URxvt.underlineURLs:       true
 
