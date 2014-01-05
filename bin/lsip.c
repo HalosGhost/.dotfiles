@@ -14,7 +14,7 @@ int main ()
         curl_easy_setopt(handle, CURLOPT_FOLLOWLOCATION, 1);
 
         res = curl_easy_perform(handle);
-        if ( ! res == CURLE_OK )
+        if ( res != CURLE_OK )
         {   curl_easy_cleanup(handle);
             curl_global_cleanup();
             fputs("Could not check IP address\n", stderr);
