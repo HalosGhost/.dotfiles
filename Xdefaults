@@ -10,7 +10,7 @@ Xcursor.theme:             Bluecurve
 
 URxvt*skipBuiltinGlyphs:   False
 URxvt*font:                xft:Inconsolata for Powerline:regular:size=10
-URxvt*boldfont:            xft:Inconsolata Pro for Powerline:bold:pixelsize=10
+URxvt*boldfont:            xft:Inconsolata for Powerline:bold:pixelsize=10
 					
 URxvt*buffered:            True
 URxvt*scrollBar:           False
