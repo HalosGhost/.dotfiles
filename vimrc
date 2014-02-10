@@ -44,6 +44,7 @@ let g:clang_complete_copen=1
 "<- Airline ->
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'murmur'
+let g:airline#extensions#tabline#enabled = 1
 
 "<- AutoCmds ->
 au BufRead,BufNew /tmp/mutt* so ~/.mutt/mutt.vim
@@ -64,3 +65,6 @@ au BufReadPost ~/pastes/* noremap q <esc>:q!<esc>
 au BufReadPost /tmp/* noremap q <esc>:q!<esc>
 au BufRead,BufNewFile *systemd* set filetype=systemd
 au BufWinEnter,BufRead,BufNewFile *.c set filetype=c ts=4 sw=4 noet
+
+"<- Keybinds ->
+map <Esc><Esc> :w<CR>
