@@ -1,6 +1,8 @@
 #<- ZSh RC ->
+[[ -z "${DISPLAY}" && "${XDG_VTNR}" -eq 1 ]] && exec startx
 
 #<- Primary Options ->
+export PATH=$PATH:$HOME/.bin
 RSEGF=""
 RSEG=""
 LSEGF=""
@@ -75,19 +77,13 @@ alias sudo='sudo '
 alias grep='grep --color=auto'
 alias ls='ls --color=auto -CF'
 alias bc='bc -lq'
-alias dd='dcfldd'
-alias locate='locate -d /home/halosghost/.mlocate/mlocate.db'
 alias matrix='cmatrix -f -l -a'
-alias netctl='sudo netctl'
 alias whereami='pwd -P'
 alias cower='cower --color=always'
 alias pacman='pacman --color=always'
-alias keytest="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
-alias alsi='alsi -u -f $XDG_CONFIG_HOME/alsi/arch.logo'
 alias count='wc -l'
-alias lswap='netctl-auto current||echo "Netctl-auto is not connected to a network!"'
 alias sloc='cloc'
-alias mplayer='mpv'
+alias lsbat='cat /sys/class/power_supply/BAT0/capacity'
 
 alias FTL='steam -applaunch 212680'
 alias dinothawr='retroarch -L /usr/lib/libretro/dinothawr_libretro.so /home/halosghost/Games/dinothawr/dinothawr.game'
@@ -108,7 +104,6 @@ alias -s ogg='mpv'
 alias -s flv='mpv'
 alias -s opus='mpv'
 
-alias -s doc='loffice'
 alias -s md='vim'
 alias -s rst='vim'
 alias -s tex='vim'
