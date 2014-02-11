@@ -62,7 +62,7 @@ int main (int argc, char ** argv)
         }
     }
 
-    if ( flagHelp ) _usage();
+    if ( flagHelp || !*uri ) _usage();
 
     CURL * handle;
     CURLcode res;
