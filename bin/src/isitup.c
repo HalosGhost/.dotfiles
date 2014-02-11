@@ -109,7 +109,7 @@ int main (int argc, char ** argv)
         else
         {   int port, httpResponse;
             double responseTime;
-            char ipAddress[36];
+            char ipAddress[43];
             sscanf(response, "%*[^,], %d, %d, %[^,], %d, %lg", &port, &status, ipAddress, &httpResponse, &responseTime);
 
             if ( !flagQuiet ) printf("%s:%d (%d after %lgs)\n", ipAddress, port, httpResponse, responseTime);
