@@ -12,9 +12,11 @@ char uri[BUFFER_SIZE] = {'\0'};
 
 // Usage //
 void _usage (void)
-{   fputs("Usage: isitup [-h] [-u URI]\n\n"
+{   fputs("Usage: isitup [-h] [-q] [-u URI]\n\n"
           "Options:\n"
           "-h, --help\tprint this help and exit\n"
+          "-q, --quiet\tprint nothing, exit code represents URI status\n"
+          "\t\t0 == URI is up\n\t\t1 == URI appears down\n\t\t2 == URI was invalid\n"
           "-u, --uri\tcheck status of URI\n\n"
           "URI should be given as the domain name and TLD only\n", stderr);
     exit(0);
@@ -30,6 +32,7 @@ size_t writeFunction (const char * buffer, size_t size, size_t nmemb, char * use
 // Main Function //
 int main (int argc, char ** argv)
 {   static int flagHelp;
+    static int flagQuiet;
 
     if ( argc <= 1 ) flagHelp = 1;
     else
@@ -39,6 +42,7 @@ int main (int argc, char ** argv)
         {   static struct option options[] =
             {   /* Flags */
                 { "help",  no_argument,         0, 'h' },
+                { "quiet", no_argument,         0, 'q' },
                 /* Switches */
                 { "uri",   required_argument,   0, 'u' },
                 { 0,       0,                   0, 0   },
@@ -46,13 +50,17 @@ int main (int argc, char ** argv)
 
             int optionIndex = 0;
 
-            c = getopt_long(argc, argv, "hu:", options, &optionIndex);
+            c = getopt_long(argc, argv, "hqu:", options, &optionIndex);
 
             if ( c == -1 ) break;
 
             switch (c)
             {   case 'h':
                     flagHelp = 1;
+                    break;
+
+                case 'q':
+                    flagQuiet = 1;
                     break;
                 
                 case 'u':
@@ -69,6 +77,7 @@ int main (int argc, char ** argv)
 
     curl_global_init(CURL_GLOBAL_ALL);
     handle = curl_easy_init();
+    int status = 0;
 
     if ( handle )
     {   char response[BUFFER_SIZE] = {'\0'};
@@ -87,13 +96,18 @@ int main (int argc, char ** argv)
             exit(1);
         }
         else
-        {   printf("%s\n", response);
+        {   int port, httpResponse;
+            double responseTime;
+            char ipAddress[36];
+            sscanf(response, "%*[^,], %d, %d, %[^,], %d, %lg", &port, &status, ipAddress, &httpResponse, &responseTime);
+
+            if ( !flagQuiet ) printf("%s:%d (%d after %lgs)\n", ipAddress, port, httpResponse, responseTime);
         }
     }
     
     curl_easy_cleanup(handle);
     curl_global_cleanup();
 
-    return 0;
+    return (status-1);
 }
 // vim: set tabstop=4 shiftwidth=4 expandtab:
