@@ -12,13 +12,15 @@ char uri[BUFFER_SIZE] = {'\0'};
 
 // Usage //
 void _usage (void)
-{   fputs("Usage: isitup [-h] [-q] [-u URI]\n\n"
+{   fputs("Usage: isitup [-h] [-q] [-v] [-u URI]\n\n"
           "Options:\n"
           "-h, --help\tprint this help and exit\n"
-          "-q, --quiet\tprint nothing, exit code represents URI status\n"
-          "\t\t0 == URI is up\n\t\t1 == URI appears down\n\t\t2 == URI was invalid\n"
-          "-u, --uri\tcheck status of URI\n\n"
-          "URI should be given as the domain name and TLD only\n", stderr);
+          "-q, --quiet\tprint nothing\n"
+          "-u, --uri\tcheck status of URI\n"
+          "-v, --verbose\tprint very verbosely\n\n"
+          "URI should be given as the domain name and TLD only\n\n"
+          "exit codes:\t0 == URI is up\n\t\t1 == URI appears down\n"
+          "\t\t2 == URI was invalid\n", stderr);
     exit(0);
 }
 
@@ -33,6 +35,7 @@ size_t writeFunction (const char * buffer, size_t size, size_t nmemb, char * use
 int main (int argc, char ** argv)
 {   static int flagHelp;
     static int flagQuiet;
+    static int flagVerbose;
 
     if ( argc <= 1 ) flagHelp = 1;
     else
@@ -41,16 +44,17 @@ int main (int argc, char ** argv)
         while ( 1 )
         {   static struct option options[] =
             {   /* Flags */
-                { "help",  no_argument,         0, 'h' },
-                { "quiet", no_argument,         0, 'q' },
+                { "help",     no_argument,         0, 'h' },
+                { "quiet",    no_argument,         0, 'q' },
+                { "verbose",  no_argument,         0, 'v' },
                 /* Switches */
-                { "uri",   required_argument,   0, 'u' },
-                { 0,       0,                   0, 0   },
+                { "uri",      required_argument,   0, 'u' },
+                { 0,          0,                   0, 0   },
             };
 
             int optionIndex = 0;
 
-            c = getopt_long(argc, argv, "hqu:", options, &optionIndex);
+            c = getopt_long(argc, argv, "hqvu:", options, &optionIndex);
 
             if ( c == -1 ) break;
 
@@ -61,11 +65,17 @@ int main (int argc, char ** argv)
 
                 case 'q':
                     flagQuiet = 1;
+                    flagVerbose = 0;
                     break;
                 
                 case 'u':
                     snprintf(uri, sizeof(uri), "http://isitup.org/%s.txt", optarg);
                     break;
+
+                case 'v':
+                    flagVerbose = 1;
+                    flagQuiet = 0;
+                    break;;
             }
         }
     }
@@ -87,6 +97,7 @@ int main (int argc, char ** argv)
         curl_easy_setopt(handle, CURLOPT_USERAGENT, "curl/7.35.0");
         curl_easy_setopt(handle, CURLOPT_WRITEFUNCTION, writeFunction);
         curl_easy_setopt(handle, CURLOPT_WRITEDATA, response);
+        curl_easy_setopt(handle, CURLOPT_VERBOSE, flagVerbose);
 
         res = curl_easy_perform(handle);
         if ( res != CURLE_OK )
