@@ -19,8 +19,7 @@ void _usage (void)
           "-u, --uri\tcheck status of URI\n"
           "-v, --verbose\tprint very verbosely\n\n"
           "URI should be given as the domain name and TLD only\n\n"
-          "exit codes:\t0 == URI is up\n\t\t1 == URI appears down\n"
-          "\t\t2 == URI was invalid\n", stderr);
+          "exit codes:\tURI appears {0: up, 1: down, 2: invalid}\n", stderr);
     exit(0);
 }
 
