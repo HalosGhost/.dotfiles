@@ -1,5 +1,4 @@
 CFLAGS  +=  -Os -Wall
-CC      =   clang
 LIBS    =   `pkg-config --libs-only-l libcurl`
 
 .PHONY: all isitup lsip clobber
