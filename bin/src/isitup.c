@@ -111,7 +111,11 @@ int main (int argc, char ** argv)
             char ipAddress[43];
             sscanf(response, "%*[^,], %d, %d, %[^,], %d, %lg", &port, &status, ipAddress, &httpResponse, &responseTime);
 
-            if ( !flagQuiet ) printf("%s:%d (%d after %lgs)\n", ipAddress, port, httpResponse, responseTime);
+            if ( !flagQuiet )
+            {   printf("%s:%d ", ipAddress, port);
+                if ( status > 1 ) printf("appears down\n");
+                else printf("(%d after %lgs)\n", httpResponse, responseTime);
+            }
         }
     }
     
