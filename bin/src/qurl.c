@@ -1,3 +1,9 @@
+/*****************************\
+* Create shortcut URLs        *
+* Author: Sam Stuewe (C) 2014 *
+* License: GPLv3              *
+\*****************************/
+
 // Includes //
 #include <stdio.h>
 #include <stdlib.h>

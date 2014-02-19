@@ -1,7 +1,15 @@
+/*****************************\
+* Get external IP address     *
+* Author: Sam Stuewe (C) 2014 *
+* License: GPLv3              *
+\*****************************/
+
+// Includes //
 #include <stdio.h>
 #include <stdlib.h>
 #include <curl/curl.h>
 
+// Main Function //
 int main ()
 {   CURL * handle;
     CURLcode res;

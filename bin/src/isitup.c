@@ -1,3 +1,9 @@
+/*****************************\
+* Check if a website is up    *
+* Author: Sam Stuewe (C) 2014 *
+* License: GPLv3              *
+\*****************************/
+
 // Includes //
 #include <stdio.h>
 #include <stdlib.h>
