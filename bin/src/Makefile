@@ -1,25 +1,25 @@
 CFLAGS  +=  -Os -Wall
 LIBS    =   `pkg-config --libs-only-l libcurl`
+PREFIX	=	
+DESTDIR	=	..
 
-.PHONY: all isitup lsip clobber qurl
+.PHONY: all isitup lsip clobber qurl strip
 
-all: isitup lsip qurl
+all: isitup lsip qurl strip
 
 clobber:
-	@rm -f ../lsip
-	@rm -f ../isitup
-	@rm -f ../qurl
+	@rm -f ../{isitup,lsip,qurl}
 
 isitup:
-	${CC} ${CFLAGS} ${LIBS} -o ../isitup isitup.c
-	@strip ../isitup
+	${CC} ${CFLAGS} ${LIBS} -o ${PREFIX}${DESTDIR}/isitup isitup.c
 
 lsip:
-	${CC} ${CFLAGS} ${LIBS} -o ../lsip lsip.c
-	@strip ../lsip
+	${CC} ${CFLAGS} ${LIBS} -o ${PREFIX}${DESTDIR}/lsip lsip.c
 
 qurl:
-	${CC} ${CFLAGS} ${LIBS} -o ../qurl qurl.c
-	@strip ../qurl
+	${CC} ${CFLAGS} ${LIBS} -o ${PREFIX}${DESTDIR}/qurl qurl.c
+
+strip:
+	@strip ${PREFIX}${DESTDIR}/{isitup,lsip,qurl}
 
 # vim:set tabstop=4 shiftwidth=4:
