@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+[[ -z $((xprop -id $(</tmp/tabbed.xid)) 2>/dev/null) ]] && tabbed -f -p s+1 -n "web" -d > /tmp/tabbed.xid
+exec vimb -e $(</tmp/tabbed.xid) $( [[  "$1"  ]] && echo "$1") &
+
