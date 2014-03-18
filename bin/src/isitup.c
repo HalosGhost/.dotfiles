@@ -87,11 +87,8 @@ int main (int argc, char ** argv)
 
     if ( flagHelp || !*uri ) _usage();
 
-    CURL * handle;
-    CURLcode res;
-
     curl_global_init(CURL_GLOBAL_ALL);
-    handle = curl_easy_init();
+    CURL * handle = curl_easy_init();
     int status = 0;
 
     if ( handle )
@@ -104,8 +101,7 @@ int main (int argc, char ** argv)
         curl_easy_setopt(handle, CURLOPT_WRITEDATA, response);
         curl_easy_setopt(handle, CURLOPT_VERBOSE, flagVerbose);
 
-        res = curl_easy_perform(handle);
-        if ( res != CURLE_OK )
+        if ( curl_easy_perform(handle) != CURLE_OK )
         {   curl_easy_cleanup(handle);
             curl_global_cleanup();
             fputs("Could not reach isitup.org\n", stderr);
