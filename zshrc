@@ -121,5 +121,9 @@ lsupd () {
     cower -u
 }
 
+yt () {
+   ytdl -e --get-id "ytsearch$2:$1"
+}
+
 #<- Source ZSh Syntax Highlighting ->
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
