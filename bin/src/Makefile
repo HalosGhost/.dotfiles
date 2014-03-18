@@ -1,7 +1,7 @@
 CFLAGS  +=  -Os -Wall
 LIBS    =   `pkg-config --libs-only-l libcurl`
-PREFIX	=	
-DESTDIR	=	..
+PREFIX	=	..
+DESTDIR	=	
 
 .PHONY: all isitup lsip clobber qurl strip install
 
@@ -23,6 +23,6 @@ strip:
 	@strip {isitup,lsip,qurl}
 
 install:
-	@install -Dm755 {isitup,lsip,qurl} ${PREFIX}${DESTDIR}/
+	@install -Dm755 {isitup,lsip,qurl} ${DESTDIR}${PREFIX}/
 
 # vim:set tabstop=4 shiftwidth=4:
