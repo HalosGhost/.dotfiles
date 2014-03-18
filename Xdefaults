@@ -28,10 +28,10 @@ URxvt*visualBell:          False
 URxvt*cursorBlink:         True
 URxvt*cursorColor:         #dcdccc
 URxvt*cursorColor2:        #000000
-URxvt*perl-ext-common:     default,tabbed,matcher
-URxvt*url-launcher:        /usr/bin/nightly
-URxvt*matcher.button:      1
-URxvt.underlineURLs:       true
+URxvt*perl-ext-common:     default,tabbed,url-select,keyboard-select
+URxvt.url-select.launcher: /home/halosghost/.bin/tvimb
+URxvt.url-select.underline:true
+URxvt.keysym.C-Escape:     perl:url-select:select_next
 
 URxvt.fading:              20
 URxvt.fadeColor:           #002b36
