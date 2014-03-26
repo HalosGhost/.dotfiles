@@ -3,12 +3,12 @@ LIBS    =   `pkg-config --libs-only-l libcurl`
 PREFIX	=	..
 DESTDIR	=	
 
-.PHONY: all isitup lsip clobber qurl strip install
+.PHONY: all isitup lsip clobber sicolor qurl strip install
 
-all: isitup lsip qurl strip
+all: isitup lsip sicolor qurl strip
 
 clobber:
-	@rm -f {isitup,lsip,qurl}
+	@rm -f {isitup,lsip,sicolor,qurl}
 
 isitup: isitup.c
 	${CC} ${CFLAGS} ${LIBS} -o isitup isitup.c
@@ -16,13 +16,16 @@ isitup: isitup.c
 lsip: lsip.c
 	${CC} ${CFLAGS} ${LIBS} -o lsip lsip.c
 
+sicolor: sicolor.c ansicolor.h
+	${CC} ${CFLAGS} ${LIBS} -o sicolor sicolor.c
+
 qurl: qurl.c
 	${CC} ${CFLAGS} ${LIBS} -o qurl qurl.c
 
 strip:
-	@strip {isitup,lsip,qurl}
+	@strip {isitup,lsip,sicolor,qurl}
 
 install:
-	@install -Dm755 {isitup,lsip,qurl} ${DESTDIR}${PREFIX}/
+	@install -Dm755 {isitup,lsip,sicolor,qurl} ${DESTDIR}${PREFIX}/
 
 # vim:set tabstop=4 shiftwidth=4:
