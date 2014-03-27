@@ -1,3 +1,9 @@
+/*************************************************\
+* Shortuct Macros for ANSI text manipulation      *
+* Sam Stuewe (C) 2014 Licensed under the terms of *
+* the GNU Public License version 2                *
+\*************************************************/
+
 #ifndef __ANSICOLOR_H__
 #define __ANSICOLOR_H__
 
@@ -30,3 +36,4 @@
 #define ANSI_BG_DEFAULT    "\e[49m"
 
 #endif // __ANSICOLOR_H__
+// vim: set ts=4 sw=4 et:
