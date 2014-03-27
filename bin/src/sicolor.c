@@ -19,7 +19,7 @@ int main (void) {
            ANSI_FG_YELLOW  "   ▀▄   ▄▀   " 
            ANSI_FG_BLUE	   "  ▄▄▄████▄▄▄  " 
            ANSI_FG_MAGENTA "   ▄██▄   " 
-           ANSI_FG_CYAN	   "   ▀▄   ▄▀\n");
+           ANSI_FG_CYAN	   "   ▀▄   ▄▀   \n");
 
     printf(ANSI_FG_BLACK   " ▄█▀███▀█▄  " 
            ANSI_FG_RED	   " ███▀▀██▀▀███ " 
@@ -27,7 +27,7 @@ int main (void) {
            ANSI_FG_YELLOW  "  ▄█▀███▀█▄  " 
            ANSI_FG_BLUE	   " ███▀▀██▀▀███ " 
            ANSI_FG_MAGENTA " ▄█▀██▀█▄ " 
-           ANSI_FG_CYAN	   "  ▄█▀███▀█▄\n");
+           ANSI_FG_CYAN	   "  ▄█▀███▀█▄  \n");
 
     printf(ANSI_FG_BLACK   "█▀███████▀█ " 
            ANSI_FG_RED	   " ▀▀███▀▀███▀▀ " 
@@ -35,7 +35,7 @@ int main (void) {
            ANSI_FG_YELLOW  " █▀███████▀█ " 
            ANSI_FG_BLUE	   " ▀▀███▀▀███▀▀ " 
            ANSI_FG_MAGENTA " ▀█▀██▀█▀ " 
-           ANSI_FG_CYAN	   " █▀███████▀█\n");
+           ANSI_FG_CYAN	   " █▀███████▀█ \n");
 
     printf(ANSI_FG_BLACK   "▀ ▀▄▄ ▄▄▀ ▀ "
            ANSI_FG_RED	   "  ▀█▄ ▀▀ ▄█▀  "
@@ -43,7 +43,7 @@ int main (void) {
            ANSI_FG_YELLOW  " ▀ ▀▄▄ ▄▄▀ ▀ " 
            ANSI_FG_BLUE	   "  ▀█▄ ▀▀ ▄█▀  " 
            ANSI_FG_MAGENTA " ▀▄    ▄▀ " 
-           ANSI_FG_CYAN	   " ▀ ▀▄▄ ▄▄▀ ▀\n");
+           ANSI_FG_CYAN	   " ▀ ▀▄▄ ▄▄▀ ▀ \n");
 
     printf("\n" ANSI_BOLD_ON);
 
@@ -54,7 +54,7 @@ int main (void) {
            ANSI_FG_YELLOW  " ▄ ▀▄   ▄▀ ▄ " 
            ANSI_FG_BLUE	   "  ▄▄▄████▄▄▄  " 
            ANSI_FG_MAGENTA "   ▄██▄   " 
-           ANSI_FG_CYAN	   " ▄ ▀▄   ▄▀ ▄\n" );
+           ANSI_FG_CYAN	   " ▄ ▀▄   ▄▀ ▄ \n" );
 
     printf(ANSI_FG_BLACK   "█▄█▀███▀█▄█ " 
            ANSI_FG_RED	   " ███▀▀██▀▀███ " 
@@ -62,7 +62,7 @@ int main (void) {
            ANSI_FG_YELLOW  " █▄█▀███▀█▄█ " 
            ANSI_FG_BLUE	   " ███▀▀██▀▀███ " 
            ANSI_FG_MAGENTA " ▄█▀██▀█▄ " 
-           ANSI_FG_CYAN	   " █▄█▀███▀█▄█\n" );
+           ANSI_FG_CYAN	   " █▄█▀███▀█▄█ \n" );
 
     printf(ANSI_FG_BLACK   "▀█████████▀ " 
            ANSI_FG_RED	   " ▀▀▀██▀▀██▀▀▀ " 
@@ -70,7 +70,7 @@ int main (void) {
            ANSI_FG_YELLOW  " ▀█████████▀ " 
            ANSI_FG_BLUE	   " ▀▀▀██▀▀██▀▀▀ " 
            ANSI_FG_MAGENTA " ▀▀█▀▀█▀▀ " 
-           ANSI_FG_CYAN	   " ▀█████████▀\n" );
+           ANSI_FG_CYAN	   " ▀█████████▀ \n" );
 
     printf(ANSI_FG_BLACK   " ▄▀     ▀▄  "
            ANSI_FG_RED	   " ▄▄▀▀ ▀▀ ▀▀▄▄ "
@@ -78,7 +78,7 @@ int main (void) {
            ANSI_FG_YELLOW  "  ▄▀     ▀▄  " 
            ANSI_FG_BLUE	   " ▄▄▀▀ ▀▀ ▀▀▄▄ " 
            ANSI_FG_MAGENTA " ▄▀▄▀▀▄▀▄ " 
-           ANSI_FG_CYAN	   "  ▄▀     ▀▄\n" );
+           ANSI_FG_CYAN	   "  ▄▀     ▀▄  \n" );
 
     printf(ANSI_RESET "\n");
 
