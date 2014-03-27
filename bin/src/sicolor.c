@@ -13,76 +13,72 @@
 int main (void) {
 
     /* Top Row Invaders */
-    printf(ANSI_FG_BLACK "  ▀▄   ▄▀" 
-           ANSI_FG_RED "     ▄▄▄████▄▄▄" 
-           ANSI_FG_GREEN "     ▄██▄" 
-           ANSI_FG_YELLOW "      ▀▄   ▄▀" 
-           ANSI_FG_BLUE "     ▄▄▄████▄▄▄" 
-           ANSI_FG_MAGENTA "     ▄██▄" 
-           ANSI_FG_CYAN "      ▀▄   ▄▀\n" );
+    printf(ANSI_FG_BLACK   "  ▀▄   ▄▀   " 
+           ANSI_FG_RED	   "  ▄▄▄████▄▄▄  " 
+           ANSI_FG_GREEN   "   ▄██▄   " 
+           ANSI_FG_YELLOW  "   ▀▄   ▄▀   " 
+           ANSI_FG_BLUE	   "  ▄▄▄████▄▄▄  " 
+           ANSI_FG_MAGENTA "   ▄██▄   " 
+           ANSI_FG_CYAN	   "   ▀▄   ▄▀\n");
 
-    printf(ANSI_FG_BLACK " ▄█▀███▀█▄" 
-           ANSI_FG_RED "   ███▀▀██▀▀███" 
-           ANSI_FG_GREEN "  ▄█▀██▀█▄" 
-           ANSI_FG_YELLOW "   ▄█▀███▀█▄" 
-           ANSI_FG_BLUE "   ███▀▀██▀▀███" 
-           ANSI_FG_MAGENTA "  ▄█▀██▀█▄" 
-           ANSI_FG_CYAN "   ▄█▀███▀█▄\n" );
+    printf(ANSI_FG_BLACK   " ▄█▀███▀█▄  " 
+           ANSI_FG_RED	   " ███▀▀██▀▀███ " 
+           ANSI_FG_GREEN   " ▄█▀██▀█▄ " 
+           ANSI_FG_YELLOW  "  ▄█▀███▀█▄  " 
+           ANSI_FG_BLUE	   " ███▀▀██▀▀███ " 
+           ANSI_FG_MAGENTA " ▄█▀██▀█▄ " 
+           ANSI_FG_CYAN	   "  ▄█▀███▀█▄\n");
 
-    printf(ANSI_FG_BLACK "█▀███████▀█" 
-           ANSI_FG_RED "  ▀▀███▀▀███▀▀" 
-           ANSI_FG_GREEN "  ▀█▀██▀█▀" 
-           ANSI_FG_YELLOW "  █▀███████▀█" 
-           ANSI_FG_BLUE "  ▀▀███▀▀███▀▀" 
-           ANSI_FG_MAGENTA "  ▀█▀██▀█▀" 
-           ANSI_FG_CYAN "  █▀███████▀█\n" );
+    printf(ANSI_FG_BLACK   "█▀███████▀█ " 
+           ANSI_FG_RED	   " ▀▀███▀▀███▀▀ " 
+           ANSI_FG_GREEN   " ▀█▀██▀█▀ " 
+           ANSI_FG_YELLOW  " █▀███████▀█ " 
+           ANSI_FG_BLUE	   " ▀▀███▀▀███▀▀ " 
+           ANSI_FG_MAGENTA " ▀█▀██▀█▀ " 
+           ANSI_FG_CYAN	   " █▀███████▀█\n");
 
-    printf(ANSI_FG_BLACK "▀ ▀▄▄ ▄▄▀ ▀"
-           ANSI_FG_RED "   ▀█▄ ▀▀ ▄█▀"
-           ANSI_FG_GREEN "   ▀▄    ▄▀" 
-           ANSI_FG_YELLOW "  ▀ ▀▄▄ ▄▄▀ ▀" 
-           ANSI_FG_BLUE "   ▀█▄ ▀▀ ▄█▀" 
-           ANSI_FG_MAGENTA "   ▀▄    ▄▀" 
-           ANSI_FG_CYAN "  ▀ ▀▄▄ ▄▄▀ ▀\n" );
+    printf(ANSI_FG_BLACK   "▀ ▀▄▄ ▄▄▀ ▀ "
+           ANSI_FG_RED	   "  ▀█▄ ▀▀ ▄█▀  "
+           ANSI_FG_GREEN   " ▀▄    ▄▀ " 
+           ANSI_FG_YELLOW  " ▀ ▀▄▄ ▄▄▀ ▀ " 
+           ANSI_FG_BLUE	   "  ▀█▄ ▀▀ ▄█▀  " 
+           ANSI_FG_MAGENTA " ▀▄    ▄▀ " 
+           ANSI_FG_CYAN	   " ▀ ▀▄▄ ▄▄▀ ▀\n");
 
-    printf("\n");
+    printf("\n" ANSI_BOLD_ON);
 
     /* Bottom Row Invaders */
-    printf(ANSI_BOLD_ON
-           ANSI_FG_BLACK "▄ ▀▄   ▄▀ ▄" 
-           ANSI_FG_RED "   ▄▄▄████▄▄▄" 
-           ANSI_FG_GREEN "     ▄██▄" 
-           ANSI_FG_YELLOW "    ▄ ▀▄   ▄▀ ▄" 
-           ANSI_FG_BLUE "   ▄▄▄████▄▄▄" 
-           ANSI_FG_MAGENTA "     ▄██▄" 
-           ANSI_FG_CYAN "    ▄ ▀▄   ▄▀ ▄\n" );
+    printf(ANSI_FG_BLACK   "▄ ▀▄   ▄▀ ▄ " 
+           ANSI_FG_RED	   "  ▄▄▄████▄▄▄  " 
+           ANSI_FG_GREEN   "   ▄██▄   " 
+           ANSI_FG_YELLOW  " ▄ ▀▄   ▄▀ ▄ " 
+           ANSI_FG_BLUE	   "  ▄▄▄████▄▄▄  " 
+           ANSI_FG_MAGENTA "   ▄██▄   " 
+           ANSI_FG_CYAN	   " ▄ ▀▄   ▄▀ ▄\n" );
 
-    printf(ANSI_BOLD_ON
-           ANSI_FG_BLACK "█▄█▀███▀█▄█" 
-           ANSI_FG_RED "  ███▀▀██▀▀███" 
-           ANSI_FG_GREEN "  ▄█▀██▀█▄" 
-           ANSI_FG_YELLOW "  █▄█▀███▀█▄█" 
-           ANSI_FG_BLUE "  ███▀▀██▀▀███" 
-           ANSI_FG_MAGENTA "  ▄█▀██▀█▄" 
-           ANSI_FG_CYAN "  █▄█▀███▀█▄█\n" );
+    printf(ANSI_FG_BLACK   "█▄█▀███▀█▄█ " 
+           ANSI_FG_RED	   " ███▀▀██▀▀███ " 
+           ANSI_FG_GREEN   " ▄█▀██▀█▄ " 
+           ANSI_FG_YELLOW  " █▄█▀███▀█▄█ " 
+           ANSI_FG_BLUE	   " ███▀▀██▀▀███ " 
+           ANSI_FG_MAGENTA " ▄█▀██▀█▄ " 
+           ANSI_FG_CYAN	   " █▄█▀███▀█▄█\n" );
 
-    printf(ANSI_BOLD_ON
-           ANSI_FG_BLACK "▀█████████▀" 
-           ANSI_FG_RED "  ▀▀▀██▀▀██▀▀▀" 
-           ANSI_FG_GREEN "  ▀▀█▀▀█▀▀" 
-           ANSI_FG_YELLOW "  ▀█████████▀" 
-           ANSI_FG_BLUE "  ▀▀▀██▀▀██▀▀▀" 
-           ANSI_FG_MAGENTA "  ▀▀█▀▀█▀▀" 
-           ANSI_FG_CYAN "  ▀█████████▀\n" );
+    printf(ANSI_FG_BLACK   "▀█████████▀ " 
+           ANSI_FG_RED	   " ▀▀▀██▀▀██▀▀▀ " 
+           ANSI_FG_GREEN   " ▀▀█▀▀█▀▀ " 
+           ANSI_FG_YELLOW  " ▀█████████▀ " 
+           ANSI_FG_BLUE	   " ▀▀▀██▀▀██▀▀▀ " 
+           ANSI_FG_MAGENTA " ▀▀█▀▀█▀▀ " 
+           ANSI_FG_CYAN	   " ▀█████████▀\n" );
 
-    printf(ANSI_BOLD_ON
-           ANSI_FG_BLACK " ▄▀     ▀▄"
-           ANSI_FG_RED "   ▄▄▀▀ ▀▀ ▀▀▄▄"
-           ANSI_FG_GREEN "  ▄▀▄▀▀▄▀▄" 
-           ANSI_FG_YELLOW "   ▄▀     ▀▄" 
-           ANSI_FG_BLUE "   ▄▄▀▀ ▀▀ ▀▀▄▄" 
-           ANSI_FG_MAGENTA "  ▄▀▄▀▀▄▀▄" 
-           ANSI_FG_CYAN "   ▄▀     ▀▄\n" );
+    printf(ANSI_FG_BLACK   " ▄▀     ▀▄  "
+           ANSI_FG_RED	   " ▄▄▀▀ ▀▀ ▀▀▄▄ "
+           ANSI_FG_GREEN   " ▄▀▄▀▀▄▀▄ " 
+           ANSI_FG_YELLOW  "  ▄▀     ▀▄  " 
+           ANSI_FG_BLUE	   " ▄▄▀▀ ▀▀ ▀▀▄▄ " 
+           ANSI_FG_MAGENTA " ▄▀▄▀▀▄▀▄ " 
+           ANSI_FG_CYAN	   "  ▄▀     ▀▄\n" );
 
     printf(ANSI_RESET "\n");
 
