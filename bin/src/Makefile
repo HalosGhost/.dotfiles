@@ -29,6 +29,6 @@ strip:
 	@strip {hr,isitup,lsip,sicolor,qurl}
 
 install:
-	@install -Dm755 {isitup,lsip,sicolor,qurl} ${DESTDIR}${PREFIX}/
+	@install -Dm755 {hr,isitup,lsip,sicolor,qurl} ${DESTDIR}${PREFIX}/
 
 # vim:set tabstop=4 shiftwidth=4:
