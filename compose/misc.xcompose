@@ -30,6 +30,10 @@
 <Multi_key> <p> <e> <a> <c> <e>                 : "☮"   U262E   # Peace Sign
 <Multi_key> <i> <n> <f>                         : "∞"   U221E   # Infinity Symbol
 
+#<- Modifier keys ->
+<Multi_key> <a> <l> <t>                         : "⌥"   U2325   # Alternate
+<Multi_key> <s> <h> <f> <t>                     : "⇧"   U21E7   # Shift
+
 #<- Currency ->
 <Multi_key> <e> <u> <r>                         : "€"   U20AC   # Euro
 <Multi_key> <g> <b> <p>                         : "£"   U00A3   # British Pound Sterling
