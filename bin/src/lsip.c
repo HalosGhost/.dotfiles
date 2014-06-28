@@ -10,8 +10,8 @@
 #include <curl/curl.h>
 
 // Main Function //
-int main (void)
-{   curl_global_init(CURL_GLOBAL_ALL);
+int main (void) {
+    curl_global_init(CURL_GLOBAL_ALL);
     CURL * handle = curl_easy_init();
 
     if ( handle )

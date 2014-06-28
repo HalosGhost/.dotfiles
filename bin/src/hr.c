@@ -15,26 +15,23 @@ int main (int argc, char * * argv) {
     ioctl(0, TIOCGWINSZ, &w);
     int COLS;
 
-    if (w.ws_col <= 0) {
+    if ( w.ws_col <= 0 ) {
         COLS = 80;
     } else {
         COLS = w.ws_col;
     }
 
-    if (argc <= 1) {
-        for (int i = 0; i < COLS; i++) {
+    if ( argc <= 1 ) {
+        for ( int i = 0; i < COLS; i ++ ) {
             printf("#");
-        }
-        printf("\n");
+        } printf("\n");
     } else {
-        for (int i = 1; i < argc; i++) {
-            for (int j = 0; j < (COLS/strlen(argv[i])); j++) {
+        for ( int i = 1; i < argc; i ++ ) {
+            for ( int j = 0; j < (COLS/strlen(argv[i])); j ++ ) {
                 printf(argv[i]);
-            }
-            printf("\n");
+            } printf("\n");
         }
-    }
-    return 0;
+    } return 0;
 }
 
 // vim: set tabstop=4 shiftwidth=4 expandtab:
