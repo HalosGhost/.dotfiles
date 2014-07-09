@@ -1,4 +1,4 @@
-CFLAGS  +=  -Os -Wall
+CFLAGS  +=  -Os -Wall -std=c11
 LIBS    =   `pkg-config --libs-only-l libcurl`
 PREFIX	=	..
 DESTDIR	=	
