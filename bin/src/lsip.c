@@ -14,12 +14,12 @@ int main (void) {
     curl_global_init(CURL_GLOBAL_ALL);
     CURL * handle = curl_easy_init();
 
-    if ( handle )
-    {   curl_easy_setopt(handle, CURLOPT_URL, "http://icanhazip.com");
+    if ( handle ) {
+        curl_easy_setopt(handle, CURLOPT_URL, "https://icanhazip.com");
         curl_easy_setopt(handle, CURLOPT_FOLLOWLOCATION, 1);
 
-        if ( (CURLcode )curl_easy_perform(handle) != CURLE_OK )
-        {   curl_easy_cleanup(handle);
+        if ( (CURLcode )curl_easy_perform(handle) != CURLE_OK ) {
+            curl_easy_cleanup(handle);
             curl_global_cleanup();
             fputs("Could not check IP address\n", stderr);
             exit(1);
