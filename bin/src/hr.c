@@ -10,16 +10,12 @@
 #include <sys/ioctl.h>
 
 // Main Function //
-int main (int argc, char * * argv) {
+int 
+main (int argc, char * argv []) {
+
     struct winsize w;
     ioctl(0, TIOCGWINSZ, &w);
-    int COLS;
-
-    if ( w.ws_col <= 0 ) {
-        COLS = 80;
-    } else {
-        COLS = w.ws_col;
-    }
+    int COLS = ( w.ws_col <= 0 ? 80 : w.ws_col);
 
     if ( argc <= 1 ) {
         for ( int i = 0; i < COLS; i ++ ) {
