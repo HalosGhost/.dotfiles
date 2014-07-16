@@ -26,9 +26,14 @@
 <Multi_key> <t> <r> <i>                         : "▲"   U25B2   # Up-Pointing Black Triangle
 <Multi_key> <i> <r> <t>                         : "▼"   U25BC   # Down-Pointing Black Triangle
 
-<Multi_key> <less> <3>                          : "♥"   U2665   # Black Heart Suit
+<Multi_key> <less> <3>                          : "❤"   U2764   # Black Heart
 <Multi_key> <p> <e> <a> <c> <e>                 : "☮"   U262E   # Peace Sign
 <Multi_key> <i> <n> <f>                         : "∞"   U221E   # Infinity Symbol
+
+<Multi_key> <h> <r> <t>                         : "♡"   U2661   # White Heart Suit
+<Multi_key> <c> <l> <b>                         : "♣"   U2663   # Black Club Suit
+<Multi_key> <d> <m> <n> <d>                     : "♢"   U2662   # White Diamond Suit
+<Multi_key> <s> <p> <d>                         : "♠"   U2660   # Black Spade Suit
 
 #<- Modifier keys ->
 <Multi_key> <a> <l> <t>                         : "⌥"   U2325   # Alternate
