@@ -57,26 +57,30 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static char dmenumon[2] = "0";
-static const char * dmenucmd[]  = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, "-b", NULL };
-static const char * termcmd[]   = { "termite", "-e", "tmux", NULL };
-static const char * volumeInc[] = { "pactl", "--", "set-sink-volume", "1", "+5%", NULL };
-static const char * volumeDec[] = { "pactl", "--", "set-sink-volume", "1", "-5%", NULL };
-static const char * volumeTog[] = { "pactl", "--", "set-sink-mute", "1", "toggle", NULL };
-static const char * lockscrn[]  = { "xautolock", "-locknow", NULL };
+static char dmenumon [2] = "0";
+static const char * dmenucmd []  = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, "-b", NULL };
+static const char * termcmd []   = { "st", "-e", "tmux", NULL };
+static const char * volumeInc [] = { "pactl", "--", "set-sink-volume", "1", "+5%", NULL };
+static const char * volumeDec [] = { "pactl", "--", "set-sink-volume", "1", "-5%", NULL };
+static const char * volumeTog [] = { "pactl", "--", "set-sink-mute", "1", "toggle", NULL };
+static const char * lockscrn []  = { "xautolock", "-locknow", NULL };
+static const char * bl_up []     = { "sudo", "enlighten", "increase", "display", NULL };
+static const char * bl_dn []     = { "sudo", "enlighten", "decrease", "display", NULL };
 
 static Key keys[] = {
     /* modifier                key                        function          argument */
     { MODKEY,                  XK_d,                      spawn,            {.v = dmenucmd } },
-   { 0,                       XK_Menu,                   spawn,            {.v = dmenucmd } },
+    { 0,                       XK_Menu,                   spawn,            {.v = dmenucmd } },
     { MODKEY,                  XK_Return,                 spawn,            {.v = termcmd } },
-   { 0,                       XF86XK_AudioRaiseVolume,   spawn,            {.v = volumeInc } }, 
-   { 0,                       XF86XK_AudioLowerVolume,   spawn,            {.v = volumeDec } },
-   { 0,                       XF86XK_AudioMute,          spawn,            {.v = volumeTog } },
-   { MODKEY|ControlMask,      XK_l,                      spawn,            {.v = lockscrn } },
+    { 0,                       XF86XK_AudioRaiseVolume,   spawn,            {.v = volumeInc } }, 
+    { 0,                       XF86XK_AudioLowerVolume,   spawn,            {.v = volumeDec } },
+    { 0,                       XF86XK_AudioMute,          spawn,            {.v = volumeTog } },
+    { 0,                       XF86XK_MonBrightnessDown,  spawn,            {.v = bl_dn } },
+    { 0,                       XF86XK_MonBrightnessUp,    spawn,            {.v = bl_up } },
+    { MODKEY|ControlMask,      XK_l,                      spawn,            {.v = lockscrn } },
     { MODKEY,                  XK_b,                      togglebar,        {0} },
-   { MODKEY|ShiftMask,        XK_j,                      pushdown,         {0} },
-   { MODKEY|ShiftMask,        XK_k,                      pushup,           {0} },
+    { MODKEY|ShiftMask,        XK_j,                      pushdown,         {0} },
+    { MODKEY|ShiftMask,        XK_k,                      pushup,           {0} },
     { MODKEY,                  XK_j,                      focusstack,       {.i = +1 } },
     { MODKEY,                  XK_k,                      focusstack,       {.i = -1 } },
     { MODKEY,                  XK_h,                      setmfact,         {.f = -0.05} },
@@ -98,7 +102,7 @@ static Key keys[] = {
     TAGKEYS(                   XK_2,                                        1)
     TAGKEYS(                   XK_3,                                        2)
     TAGKEYS(                   XK_4,                                        3)
-   TAGKEYS(                   XK_5,                                        4)
+    TAGKEYS(                   XK_5,                                        4)
     { MODKEY|ShiftMask,        XK_q,                      quit,             {0} },
 };
 
