@@ -33,6 +33,13 @@ set laststatus=2
 syntax on 
 hi Normal ctermfg=NONE ctermbg=NONE cterm=NONE
 map <F2> :call g:ClangUpdateQuickFix() <CR>
+runtime! ftplugin/man.vim
+
+"<- Colorizer ->
+let g:colorizer_auto_filetype='css,html'
+
+"<- neocomplete ->
+let g:neocomplete#enable_at_startup = 1
 
 "<- Global Options ->
 let g:netrw_http_cmd='curl'
