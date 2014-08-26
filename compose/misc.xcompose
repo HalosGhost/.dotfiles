@@ -10,6 +10,7 @@
 <Multi_key> <N> <o>                             : "№"   U2116   # Numero
 <Multi_key> <a> <t> <h>                         : "ª"   U00AA   # Feminine Ordinal
 <Multi_key> <o> <t> <h>                         : "º"   U00BA   # Masculine Ordinal
+<Multi_key> <underscore> <space>                : "␣"   U2423   # Open box
 
 <Multi_key> <percent> <o>                       : "‰"   U2030   # Permille
 <Multi_key> <percent> <percent>                 : "‱"   U2031   # Basis Point
