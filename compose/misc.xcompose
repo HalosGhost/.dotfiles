@@ -43,3 +43,10 @@
 #<- Currency ->
 <Multi_key> <e> <u> <r>                         : "€"   U20AC   # Euro
 <Multi_key> <g> <b> <p>                         : "£"   U00A3   # British Pound Sterling
+
+#<- Smileys ->
+<Multi_key> <colon> <parenleft>                 : "☹"   U2639   # :(
+<Multi_key> <colon> <parenright>                : "☺"   U263A   # :)
+<Multi_key> <s> <n> <o> <w>                     : "☃"   U2603   # Snowman
+#<Multi_key> <colon> <D>                         : "😀"   U1F600  # :D
+#<Multi_key> <D> <colon>                         : "😦"   U1F626  # D:
