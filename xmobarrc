@@ -1,0 +1,41 @@
+Config 
+
+   -- appearance
+   { font             = "xft: Inconsolatazi4 for Powerline:size=10"
+   , bgColor          = "black"
+   , fgColor          = "#cccccc"
+   , position         = Static { xpos = 0 , ypos = 0, width = 1686, height = 15 }
+   , border           = NoBorder
+   , borderColor      = "#cccccc"
+
+   -- layout
+   , sepChar          = "%"
+   , alignSep         = "}{"
+   , template         = "%StdinReader%  }{  %wlp3s0wi%  A: %volume%  %battery%  %date% "
+
+   -- behavior
+   , lowerOnStart     = False
+   , hideOnStart      = False
+   , allDesktops      = True
+   , overrideRedirect = True
+   , pickBroadest     = False
+   , persistent       = True
+
+   -- plugins
+   , commands = 
+
+       -- battery monitor
+       [ Run StdinReader
+--       , Run Network  "enp2s0" ["-t", "<dev>"] 300
+       , Run Wireless "wlp3s0" ["-t", "W: <quality>"] 30
+       , Run Com      "ponymix" ["get-volume"] "volume" 10
+       , Run Battery  [ "--template", "<acstatus>", "-L", "15", "-H", "85"
+                      , "-l", "red", "-n", "yellow", "-h", "green", "--"
+                      , "-o", "<left> (<timeleft>)", "-O", "<fc=#daa520>Charging</fc>"
+                      , "-i", "<fc=#006000>Charged</fc>" 
+                      ] 50
+
+       -- clock
+       , Run Date     "%H.%M  %A, %d %b %Y" "date" 10
+       ]
+   }

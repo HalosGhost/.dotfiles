@@ -24,6 +24,7 @@
 <Multi_key> <space> <space>             : " "   U00A0   # Non Breaking Space
 <Multi_key> <period> <space>            : " "   U2009   # Thin Space
 <Multi_key> <space> <period>            : "﻿"    UFEFF   # Zero-Width NBSP
+<Multi_key> <colon> <space>             : "͏"    U034F   # Combining Grapheme Joiner
 
 #<- Ligatures ->
 <Multi_key> <a> <e>                     : "æ"   U00E6   # ae

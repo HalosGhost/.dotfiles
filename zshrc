@@ -142,5 +142,13 @@ yt () {
    ytdl -e --get-id "ytsearch$2:$1"
 }
 
+privateer () {
+   if [[ "$1" == 'export' ]]; then
+      curl -k --key "${HOME}/.ssh/id_ecdsa" -E "${HOME}/.ssh/halosghost.pem" -O "https://privateer1.99.erebor.buhman.org/$2"
+   else
+      curl -k --key "${HOME}/.ssh/id_ecdsa" -E "${HOME}/.ssh/halosghost.pem" "https://privateer1.99.erebor.buhman.org/$1"
+   fi
+}
+
 #<- Source ZSh Syntax Highlighting ->
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
