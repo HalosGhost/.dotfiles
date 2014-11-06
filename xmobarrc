@@ -4,7 +4,7 @@ Config
    { font             = "xft: Inconsolatazi4 for Powerline:size=10"
    , bgColor          = "black"
    , fgColor          = "#cccccc"
-   , position         = Static { xpos = 0 , ypos = 0, width = 1686, height = 15 }
+   , position         = Static { xpos = 0 , ypos = 0, width = 1920, height = 15 }
    , border           = NoBorder
    , borderColor      = "#cccccc"
 
@@ -31,8 +31,8 @@ Config
        , Run Com      "ponymix" ["get-volume"] "volume" 10
        , Run Battery  [ "--template", "<acstatus>", "-L", "15", "-H", "85"
                       , "-l", "red", "-n", "yellow", "-h", "green", "--"
-                      , "-o", "<left> (<timeleft>)", "-O", "<fc=#daa520>Charging</fc>"
-                      , "-i", "<fc=#006000>Charged</fc>" 
+                      , "-o", "<left> (<timeleft>)", "-O", "<left> (<timeleft>)"
+                      , "-i", "<left> (<timeleft>)" 
                       ] 50
 
        -- clock
