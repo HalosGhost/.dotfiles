@@ -35,6 +35,7 @@
 <Multi_key> <c> <l> <b>                         : "♣"   U2663   # Black Club Suit
 <Multi_key> <d> <m> <n> <d>                     : "♢"   U2662   # White Diamond Suit
 <Multi_key> <s> <p> <d>                         : "♠"   U2660   # Black Spade Suit
+<Multi_key> <m> <e> <r>                         : "☿"   U263F   # Mercury Symbol
 
 #<- Modifier keys ->
 <Multi_key> <a> <l> <t>                         : "⌥"   U2325   # Alternate
