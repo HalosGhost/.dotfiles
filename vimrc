@@ -60,7 +60,7 @@ au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 au BufNewFile *zshcle* setft=zsh
 au BufWinEnter,BufRead,BufNewFile *.java set filetype=java makeprg=javamake ts=4 sw=4 noet
-au BufNewFile,BufRead *.svg setf svg 
+au BufNewFile,BufRead *.svg setf svg
 au BufReadPre *.pdf set ro nowrap
 au BufReadPost *.pdf silent %!pdftotext "%" -nopgbrk -layout -q -eol unix -
 au BufWritePost *.pdf silent !rm -rf ~/PDF/%
@@ -72,6 +72,13 @@ au BufReadPost ~/pastes/* noremap q <esc>:q!<esc>
 au BufReadPost /tmp/* noremap q <esc>:q!<esc>
 au BufRead,BufNewFile *systemd* set filetype=systemd
 au BufWinEnter,BufRead,BufNewFile *.c set filetype=c ts=4 sw=4 noet
+
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
 
 "<- Keybinds ->
 map <Esc><Esc> :w<CR>
