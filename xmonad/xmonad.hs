@@ -14,21 +14,21 @@ import qualified Data.Map as M
 --import XMonad.Util.CustomKeys
 --import XMonad.Actions.TagWindows
 
-main = do 
+main = do
     h <- spawnPipe "xmobar"
     xmonad $ withUrgencyHook NoUrgencyHook defaultConfig
        { borderWidth             = 1
        , terminal                = "st -e tmux"
        , focusFollowsMouse       = True
        , normalBorderColor       = "#cccccc"
-       , focusedBorderColor      = "#4c7899" 
+       , focusedBorderColor      = "#4c7899"
        , manageHook              = manageDocks <+> myManageHook
        , layoutHook              = myLayouts
        , workspaces              = [">_", "web", "docs", "play", "&c"]
        , logHook                 = dynamicLogWithPP $ myPP h
        , keys                    = myKeys
        } where
-           
+
            myManageHook          = composeAll
              [ className         =? "Chromium"  --> doShift  "web"
              , className         =? "Steam"     --> doShift  "play"
@@ -37,8 +37,8 @@ main = do
 --             , isFullscreen                     --> (doF W.focusDown <+> doFullFloat)
              ]
 
-           myLayouts             = avoidStruts  
-                                   $   tiled 
+           myLayouts             = avoidStruts
+                                   $   tiled
                                    ||| tabbed shrinkText defaultTheme
              where tiled         = Tall 1 (3/100) (3/5)
 
@@ -82,9 +82,11 @@ main = do
               , ((0      ,  xF86XK_AudioRaiseVolume  ), spawn $ myVol ++ "+5%"             )
               , ((0      ,  xF86XK_AudioLowerVolume  ), spawn $ myVol ++ "-5%"             )
               , ((0      ,  xF86XK_AudioMute         ), spawn $ myMute                     )
+              , ((0      ,  xF86XK_MonBrightnessUp   ), spawn $ "xbacklight +5"            )
+              , ((0      ,  xF86XK_MonBrightnessDown ), spawn $ "xbacklight -5"            )
               ] ++
 
               [ ((m .|. modMask,           k         ), windows $ f i                      )
-                  | (i, k) <- zip (take 5 (XMonad.workspaces conf)) [xK_1 ..]           
+                  | (i, k) <- zip (take 5 (XMonad.workspaces conf)) [xK_1 ..]
                   , (f, m) <- [(W.greedyView, 0      ), (W.shift, shiftMask)               ]
               ]
