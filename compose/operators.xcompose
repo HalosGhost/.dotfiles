@@ -2,7 +2,7 @@
 <Multi_key> <asciicircum> <period> <period>     : "∴"   U2234   # Therefore
 <Multi_key> <period> <period> <asciicircum>     : "∵"   U2235   # Because
 <Multi_key> <slash> <o>                         : "ø"   U2205   # Not
-<Multi_key> <slash> <O>                         : "Ø    U00D8   # Empty Set
+<Multi_key> <slash> <O>                         : "Ø"   U00D8   # Empty Set
 
 #<- Mathematical Operators ->
 <Multi_key> <period> <minus> <period>           : "÷"   U00F7   # Obelus
