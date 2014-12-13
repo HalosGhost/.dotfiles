@@ -1,4 +1,4 @@
-Config 
+Config
 
    -- appearance
    { font             = "xft: Inconsolatazi4 for Powerline:size=10"
@@ -22,7 +22,7 @@ Config
    , persistent       = True
 
    -- plugins
-   , commands = 
+   , commands =
 
        -- battery monitor
        [ Run StdinReader
@@ -32,7 +32,7 @@ Config
        , Run Battery  [ "--template", "<acstatus>", "-L", "15", "-H", "85"
                       , "-l", "red", "-n", "yellow", "-h", "green", "--"
                       , "-o", "<left> (<timeleft>)", "-O", "<left> (<timeleft>)"
-                      , "-i", "<left> (<timeleft>)" 
+                      , "-i", "<left> (<timeleft>)"
                       ] 50
 
        -- clock

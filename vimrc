@@ -16,7 +16,7 @@ set incsearch
 set ignorecase
 set smartcase
 set backspace=2
-set nocp 
+set nocp
 set autoindent
 set formatoptions=c,q,r,t
 set ruler
@@ -30,7 +30,7 @@ set foldopen=all
 set nocp
 set encoding=utf-8
 set laststatus=2
-syntax on 
+syntax on
 hi Normal ctermfg=NONE ctermbg=NONE cterm=NONE
 map <F2> :call g:ClangUpdateQuickFix() <CR>
 runtime! ftplugin/man.vim
