@@ -1,9 +1,0 @@
-[Unit]
-Description=Dropbox Daemon
-After=alopex.service
-
-[Service]
-ExecStart=/usr/bin/dropboxd
-
-[Install]
-WantedBy=initrc.target

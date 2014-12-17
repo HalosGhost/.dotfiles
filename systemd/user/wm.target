@@ -1,9 +1,0 @@
-[Unit]
-Description=X Window Manager
-Wants=xorg.target
-Wants=initrc.target
-Requires=dbus.socket
-AllowIsolate=true
-
-[Install]
-Alias=default.target

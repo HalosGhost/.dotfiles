@@ -1,9 +1,0 @@
-[Unit]
-Description=X Screen Locker
-After=xorg.target
-
-[Service]
-ExecStart=/usr/bin/xautolock -time 15 -locker 'physlock'
-
-[Install]
-WantedBy=initrc.target
