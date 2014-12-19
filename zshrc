@@ -107,7 +107,7 @@ alias praetorian='ssh -i"${HOME}/.ssh/halosghost.ed25519" "praetorian.erebor.buh
 alias centurion='ssh -i"${HOME}/.ssh/halosghost.ed25519" "centurion.erebor.buhman.org"'
 
 #<- Suffixes ->
-alias -s pdf='tzathura'
+alias -s pdf='zathura'
 alias -s jpg='sxiv'
 alias -s png='sxiv'
 alias -s gif='sxiv'
