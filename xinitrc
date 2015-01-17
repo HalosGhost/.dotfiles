@@ -1,5 +1,5 @@
 start-pulseaudio-x11 &
-yawa -F /home/halosghost/.xbkg.jpg
+yawa -F $HOME/.xbkg.jpg
 xmodmap $HOME/.Xmodmap &
 xautolock -time 15 -locker 'physlock' &
 export XDG_CONFIG_HOME=$HOME/.config
