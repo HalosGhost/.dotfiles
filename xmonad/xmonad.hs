@@ -61,7 +61,7 @@ main = do
            myDmenu               = "dmenu_run " ++ dmenuOpts
               where dmenuOpts    = "-nb '#000' -nf '#bbb' -sb '#4c7899' -sf '#eee'"
 
-           myVol                 = "ponymix " -- "pactl -- set-sink-volume 1 "
+           myVol                 = "pactl -- set-sink-volume 1 "
            myMute                = "pactl -- set-sink-mute 1 toggle"
 
            myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
@@ -79,8 +79,8 @@ main = do
               , ((modMask                , xK_space  ), sendMessage NextLayout             )
               , ((modMask .|. shiftMask  , xK_space  ), setLayout $ XMonad.layoutHook conf )
               , ((modMask                , xK_t      ), withFocused $ windows . W.sink     )
-              , ((0      ,  xF86XK_AudioRaiseVolume  ), spawn $ myVol ++ "increase 5"      )
-              , ((0      ,  xF86XK_AudioLowerVolume  ), spawn $ myVol ++ "decrease 5"      )
+              , ((0      ,  xF86XK_AudioRaiseVolume  ), spawn $ myVol ++ "+5%"             )
+              , ((0      ,  xF86XK_AudioLowerVolume  ), spawn $ myVol ++ "-5%"             )
               , ((0      ,  xF86XK_AudioMute         ), spawn $ myMute                     )
               , ((0      ,  xF86XK_MonBrightnessUp   ), spawn $ "xbacklight +5"            )
               , ((0      ,  xF86XK_MonBrightnessDown ), spawn $ "xbacklight -5"            )
