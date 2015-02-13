@@ -27,7 +27,6 @@ Config
 
        -- battery monitor
        [ Run StdinReader
---       , Run Network  "enp2s0" ["-t", "<dev>"] 300
        , Run Wireless "wlp3s0" ["-t", "W: <quality>"] 30
        , Run Com      "ponymix" ["get-volume"] "volume" 10
        , Run Battery  [ "--template", "<acstatus>", "-L", "15", "-H", "85"
