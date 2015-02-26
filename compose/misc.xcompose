@@ -28,6 +28,7 @@
 <Multi_key> <i> <r> <t>                         : "▼"   U25BC   # Down-Pointing Black Triangle
 
 <Multi_key> <less> <3>                          : "❤"   U2764   # Black Heart
+<Multi_key> <asterisk> <s> <t>                  : "★"   U2605   # Black Star
 <Multi_key> <p> <e> <a> <c> <e>                 : "☮"   U262E   # Peace Sign
 <Multi_key> <i> <n> <f>                         : "∞"   U221E   # Infinity Symbol
 
