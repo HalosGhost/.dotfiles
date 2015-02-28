@@ -63,6 +63,7 @@ main = do
 
            myVol                 = "pactl -- set-sink-volume 1 "
            myMute                = "pactl -- set-sink-mute 1 toggle"
+           myMicMute             = "pactl -- set-source-mute 2 toggle"
 
            myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
               [ ((modMask                , xK_Return ), spawn $ XMonad.terminal conf       )
@@ -82,6 +83,7 @@ main = do
               , ((0      ,  xF86XK_AudioRaiseVolume  ), spawn $ myVol ++ "+5%"             )
               , ((0      ,  xF86XK_AudioLowerVolume  ), spawn $ myVol ++ "-5%"             )
               , ((0      ,  xF86XK_AudioMute         ), spawn $ myMute                     )
+              --, ((0      ,  xF86XK_AudioMicMute      ), spawn $ myMicMute                  )
               , ((0      ,  xF86XK_MonBrightnessUp   ), spawn $ "xbacklight +5"            )
               , ((0      ,  xF86XK_MonBrightnessDown ), spawn $ "xbacklight -5"            )
               ] ++
