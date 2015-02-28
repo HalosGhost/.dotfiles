@@ -127,7 +127,7 @@ alias -s md='vim'
 alias -s rst='vim'
 alias -s tex='vim'
 
-alias -s nds='retroarch -L /usr/lib/libretro/desmume_libretro.so'
+alias -s nds='retroarch -L /usr/lib/libretro/libretro-desmume.so'
 
 #<- Functions ->
 dbdl () {
