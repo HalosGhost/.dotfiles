@@ -103,7 +103,6 @@ alias shaman="shaman -l'Saint Paul,US'"
 alias FTL='steam -applaunch 212680'
 alias Splice='steam -applaunch 209790'
 alias dinothawr='retroarch -L /usr/lib/libretro/dinothawr_libretro.so /home/halosghost/Games/dinothawr/dinothawr.game'
-alias praetorian='ssh -i"${HOME}/.ssh/halosghost.ed25519" "praetorian.erebor.buhman.org"'
 alias centurion='ssh -i"${HOME}/.ssh/halosghost.ed25519" "centurion.erebor.buhman.org"'
 
 #<- Suffixes ->
