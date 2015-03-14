@@ -9,8 +9,8 @@ LSEGF=""
 LSEG=""
 BRNCH=""
 HISTFILE=~/.zsh_hist
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=2048
+SAVEHIST=2048
 setopt appendhistory histignorealldups autocd notify prompt_subst
 #setopt correctall
 unsetopt beep
@@ -26,16 +26,6 @@ zle -N edit-command-line
 compinit
 bashcompinit
 eval $(dircolors $HOME/.dircolors )
-
-#precmd () {
-#   vcs_info 'prompt'
-#}
-#
-#zstyle ':vcs_info:*:prompt:*' check-for-changes true
-#zstyle ':vcs_info:*:prompt:*' unstagedstr '±'
-#zstyle ':vcs_info:*:prompt:*' actionformats "%c %b"
-#zstyle ':vcs_info:*:prompt:*' formats "%c %b"
-#vcs_info_msg_0_
 
 if [ "$DISPLAY" ]; then
    export RPROMPT="%F{black}$LSEGF%f%K{black} %B%(?.%F{cyan}^_^ %f.%F{red}o_O %f)%b%k"
@@ -82,10 +72,7 @@ alias la='ls -A'
 alias ll='ls -lh'
 alias lla='ls -lhA'
 
-alias db='dropbox'
-alias purl='db puburl'
 alias ytdl='youtube-dl'
-
 alias sudo='sudo '
 alias grep='grep --color=auto'
 alias ls='ls --color=auto -CF'
@@ -129,11 +116,6 @@ alias -s tex='vim'
 alias -s nds='retroarch -L /usr/lib/libretro/libretro-desmume.so'
 
 #<- Functions ->
-dbdl () {
-    export url="$(purl $*)dl=1"
-    echo $url; unset url
-}
-
 lsupd () {
     checkupdates
     cower -u
