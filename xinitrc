@@ -9,5 +9,5 @@ export PATH=$PATH:$HOME/.bin
 export PAGER=/usr/bin/vimpager
 export GTK_IM_MODULE=xim
 export QT_IM_MODULE=xim
-xmobar &
-exec xmonad
+/home/halosghost/projects/dstat/dstat &
+exec dwm

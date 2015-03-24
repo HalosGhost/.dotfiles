@@ -1,0 +1,14 @@
+set imap_user     = halosghost
+set folder        = imaps://mail.archlinux.info/
+set spoolfile     = +Inbox
+mailboxes         = Inbox
+set mail_check    = 300
+
+set record        = +Sent
+set realname      = 'Sam Stuewe'
+set from          = halosghost@archlinux.info
+set use_from      = yes
+set smtp_url      = smtps://$imap_user@mail.archlinux.info
+set ssl_force_tls = yes
+
+set editor        = vim

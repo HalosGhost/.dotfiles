@@ -40,9 +40,9 @@ static const Rule rules [] = {
 };
 
 /* layout(s) */
-static const float mfact      = 0.6; /* factor of master area size [0.05..0.95] */
+static const float mfact      = 0.6;  /* factor of master area size [0.05..0.95] */
 static const int nmaster      = 1;    /* number of clients in master area */
-static const Bool resizehints = True; /* True means respect size hints in tiled resizals */
+static const Bool resizehints = False; /* True means respect size hints in tiled resizals */
 
 static const Layout layouts [] = {
     /* symbol     arrange function */
@@ -94,11 +94,10 @@ static Key keys [] = {
     { MOD1|MOD3,  XK_j,                      pushdown,        { 0                } },
     { MOD1|MOD3,  XK_k,                      pushup,          { 0                } },
     { MOD1|MOD2,  XK_l,                      spawn,           { .v = lockscrn    } },
-    { MOD1,       XK_i,                      incnmaster,      { .i = +1          } },
-    { MOD1,       XK_d,                      incnmaster,      { .i = -1          } },
+    { MOD1|MOD3,  XK_l,                      incnmaster,      { .i = +1          } },
+    { MOD1|MOD3,  XK_h,                      incnmaster,      { .i = -1          } },
     { MOD1,       XK_h,                      setmfact,        { .f = -0.05       } },
     { MOD1,       XK_l,                      setmfact,        { .f = +0.05       } },
-    { MOD1,       XK_Return,                 zoom,            { 0                } },
     { MOD1,       XK_Tab,                    view,            { 0                } },
     { MOD1|MOD3,  XK_c,                      killclient,      { 0                } },
     { MOD1,       XK_t,                      setlayout,       { .v = &layouts[0] } },
