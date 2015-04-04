@@ -84,7 +84,7 @@ alias pacman='pacman --color=always'
 alias count='wc -l'
 alias sloc='cloc'
 alias lsbat='cat /sys/class/power_supply/BAT0/capacity'
-alias qmpv='mpv --msg-level=all=error:statusline=status'
+alias qmpv='primusrun mpv --msg-level=all=error:statusline=status'
 alias shaman="shaman -l'Saint Paul,US'"
 
 alias FTL='steam -applaunch 212680'
