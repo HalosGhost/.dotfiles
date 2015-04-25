@@ -41,7 +41,7 @@
 <Multi_key> <f> <l>                     : "ﬂ"   UFB02   # fl
 <Multi_key> <f> <f> <l>                 : "ﬄ"   UFB04   # ffl
 
-<Multi_key> <s> <t>                     : "ﬅ"   UFB05   # Long s with t
+<Multi_key> <s> <t> <period>            : "ﬅ"   UFB05   # Long s with t
 <Multi_key> <s> <s>                     : "ß"   U00DF   # Small Double S
 <Multi_key> <S> <S>                     : "ẞ"   U1E9E   # Capital Double S
 <Multi_key> <s> <asciicircum> <t>       : "ﬆ"   UFB06   # Historic st

@@ -41,6 +41,7 @@
 #<- Modifier keys ->
 <Multi_key> <a> <l> <t>                         : "⌥"   U2325   # Alternate
 <Multi_key> <s> <h> <f> <t>                     : "⇧"   U21E7   # Shift
+<Multi_key> <t> <a> <b>                         : "⭾"   U2B7E   # Tab
 
 #<- Currency ->
 <Multi_key> <e> <u> <r>                         : "€"   U20AC   # Euro
@@ -50,5 +51,11 @@
 <Multi_key> <colon> <parenleft>                 : "☹"   U2639   # :(
 <Multi_key> <colon> <parenright>                : "☺"   U263A   # :)
 <Multi_key> <s> <n> <o> <w>                     : "☃"   U2603   # Snowman
+<Multi_key> <s> <i> <g> <h>                     : "-_-"
+<Multi_key> <p> <n> <d> <a>                     : "ʕ•ᴥ•ʔ"
+<Multi_key> <k> <l> <a>                         : "ʔ•ᴥ•ʕ"
+<Multi_key> <s> <t> <p>                         : "•_•"
+<Multi_key> <s> <t> <a> <p>                     : "ಠ_ಠ"
+<Multi_key> <s> <h> <r> <g>                     : "¯\\o/¯"
 #<Multi_key> <colon> <D>                         : "😀"   U1F600  # :D
 #<Multi_key> <D> <colon>                         : "😦"   U1F626  # D:
