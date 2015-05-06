@@ -9,7 +9,7 @@
 <Multi_key> <x> <x>                             : "×"   U000D7  # Multiply
 <Multi_key> <*> <x>                             : "·"   U00B7   # Interpunct
 
-<Multi_key> <equal> <equal>                     : "≡"   U2261   # Identical to
+<Multi_key> <equal> <equal> <equal>             : "≡"   U2261   # Identical to
 <Multi_key> <n> <o> <t>                         : "¬"   U00AC   # Negate / Not
 <Multi_key> <ampersand> <ampersand>             : "∧"   U2227   # Logical Conjunction
 <Multi_key> <bar> <bar>                         : "∨"   U2228   # Logical Disjunction
