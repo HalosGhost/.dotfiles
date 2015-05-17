@@ -1,11 +1,51 @@
 # Lower case
-<Multi_key> <a> <l> <p> <h> <a>     : "α"   U03B1   # Alpha
-<Multi_key> <b> <e> <t> <a>         : "β"   U03B2   # Beta
-<Multi_key> <d> <e> <l> <t> <a>     : "δ"   U03B4   # Delta
-<Multi_key> <g> <a> <m> <m> <a>     : "γ"   U03B3   # Gamma
-<Multi_key> <l> <a> <m> <b> <d> <a> : "λ"   U03BB   # Lambda
-<Multi_key> <p> <i>                 : "π"   U03C0   # Pi
-<Multi_key> <m> <u>                 : "µ"   U03BC   # Mu
+<Multi_key> <g> <r> <a>             : "α"   U03B1   # alpha
+<Multi_key> <g> <r> <b>             : "β"   U03B2   # beta
+<Multi_key> <g> <r> <g>             : "γ"   U03B3   # gamma
+<Multi_key> <g> <r> <d>             : "δ"   U03B4   # delta
+<Multi_key> <g> <r> <e> <p>         : "ε"   U03B5   # epsilon
+<Multi_key> <g> <r> <z>             : "ζ"   U03B6   # zeta
+<Multi_key> <g> <r> <h>             : "η"   U03B7   # eta
+<Multi_key> <g> <r> <t> <h>         : "θ"   U03B8   # theta
+<Multi_key> <g> <r> <i>             : "ι"   U03B9   # iota
+<Multi_key> <g> <r> <k>             : "κ"   U03BA   # kappa
+<Multi_key> <g> <r> <l>             : "λ"   U03BB   # lambda
+<Multi_key> <g> <r> <m>             : "µ"   U03BC   # mu
+<Multi_key> <g> <r> <n>             : "ν"   U03BD   # nu
+<Multi_key> <g> <r> <x>             : "ξ"   U03BE   # xi
+<Multi_key> <g> <r> <o> <c>         : "ο"   U03BF   # omicron
+<Multi_key> <g> <r> <p> <i>         : "π"   U03C0   # pi
+<Multi_key> <g> <r> <r>             : "ρ"   U03C1   # rho
+<Multi_key> <g> <r> <s>             : "σ"   U03C3   # sigma
+<Multi_key> <g> <r> <t> <a>         : "τ"   U03C4   # tau
+<Multi_key> <g> <r> <u>             : "υ"   U03C5   # upsilon
+<Multi_key> <g> <r> <f>             : "φ"   U03C6   # phi
+<Multi_key> <g> <r> <c> <h>         : "χ"   U03C7   # chi
+<Multi_key> <g> <r> <p> <s>         : "ψ"   U03C8   # psi
+<Multi_key> <g> <r> <o> <m>         : "ω"   U03C9   # omega
 
 # Upper case
-<Multi_key> <s> <u> <m>             : "Σ"   U03A3   # Sigma
+<Multi_key> <g> <r> <A>             : "Α"   U0391   # alpha
+<Multi_key> <g> <r> <B>             : "Β"   U0392   # beta
+<Multi_key> <g> <r> <G>             : "Γ"   U0393   # gamma
+<Multi_key> <g> <r> <D>             : "Δ"   U0394   # delta
+<Multi_key> <g> <r> <E> <p>         : "Ε"   U0395   # epsilon
+<Multi_key> <g> <r> <Z>             : "Ζ"   U0396   # zeta
+<Multi_key> <g> <r> <H>             : "Η"   U0397   # eta
+<Multi_key> <g> <r> <T> <h>         : "Θ"   U0398   # theta
+<Multi_key> <g> <r> <I>             : "Ι"   U0399   # iota
+<Multi_key> <g> <r> <K>             : "Κ"   U039A   # kappa
+<Multi_key> <g> <r> <L>             : "Λ"   U039B   # lambda
+<Multi_key> <g> <r> <M>             : "Μ"   U039C   # mu
+<Multi_key> <g> <r> <N>             : "Ν"   U039D   # nu
+<Multi_key> <g> <r> <X>             : "Ξ"   U039E   # xi
+<Multi_key> <g> <r> <O> <c>         : "Ο"   U039F   # omicron
+<Multi_key> <g> <r> <P> <i>         : "Π"   U03A0   # pi
+<Multi_key> <g> <r> <R>             : "Ρ"   U03A1   # rho
+<Multi_key> <g> <r> <S>             : "Σ"   U03A3   # sigma
+<Multi_key> <g> <r> <T> <a>         : "Τ"   U03A4   # tau
+<Multi_key> <g> <r> <U>             : "Υ"   U03A5   # upsilon
+<Multi_key> <g> <r> <F>             : "Φ"   U03A6   # phi
+<Multi_key> <g> <r> <C> <h>         : "Χ"   U03A7   # chi
+<Multi_key> <g> <r> <P> <s>         : "Ψ"   U03A8   # psi
+<Multi_key> <g> <r> <O> <m>         : "Ω"   U03A9   # omega
