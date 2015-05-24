@@ -9,8 +9,8 @@ set shiftwidth=4
 set expandtab
 set showcmd
 set softtabstop=3
-set nu
-set rnu
+set number
+set relativenumber
 set showmatch
 set matchtime=1
 set incsearch
