@@ -5,7 +5,8 @@
 
 /* appearance */
 static const char * fonts [] = {
-    "Inconsolatazi4 for Powerline:size=10"
+    "Inconsolatazi4 for Powerline:size=10",
+    "Symbola:style=Regular:size=8",
     "Sans:size=10.5",
 };
 
