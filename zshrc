@@ -115,6 +115,10 @@ lsupd () {
     cower -u
 }
 
+ytb () {
+    mpv "ytdl://$(xsel)"
+}
+
 yt () {
    ytdl -e --get-id "ytsearch$2:$1"
 }
