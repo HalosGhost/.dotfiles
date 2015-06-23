@@ -9,5 +9,6 @@ export PATH=$PATH:$HOME/.bin
 export PAGER=/usr/bin/vimpager
 export GTK_IM_MODULE=xim
 export QT_IM_MODULE=xim
-/home/halosghost/projects/dstat/dstat &
+export FT2_SUBPIXEL_HINTING=1
+/home/halosghost/projects/lang/hs/dstat/dstat -e enp0s25 -w wlp3s0 &
 exec dwm
