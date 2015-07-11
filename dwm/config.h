@@ -28,9 +28,11 @@ static const Rule rules [] = {
     /* class         instance   title  tagmask  floating  monitor */
     { "st-256color", NULL,      NULL,  0,       False,    -1      },
     { "Dwb",         NULL,      NULL,  1 << 1,  False,    -1      },
+    { "Zathura",     NULL,      NULL,  1 << 2,  False,    -1      },
     { "Gimp",        NULL,      NULL,  1 << 2,  True,     -1      },
     { "Steam",       NULL,      NULL,  1 << 3,  False,    -1      },
     { "mpv",         NULL,      NULL,  1 << 3,  False,    -1      },
+    { "Chromium",    NULL,      NULL,  1 << 3,  False,    -1      },
 
     { NULL,          ">_",      NULL,  1 << 0,  False,    -1      },
     { NULL,          "web",     NULL,  1 << 1,  False,    -1      },
