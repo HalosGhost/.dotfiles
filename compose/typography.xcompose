@@ -9,10 +9,6 @@
 <Multi_key> <bar> <period> <period>     : "⋮"   U22EE   # Vertical Ellipsis
 <Multi_key> <minus> <period> <period>   : "⋯"   U22EF   # Midline Ellipsis
 
-<Multi_key> <grave> <space>             : "‘"   U2018   # Left Single Quotation
-<Multi_key> <apostrophe> <space>        : "’"   U2019   # Right Single Quotation
-<Multi_key> <grave> <grave> <space>     : "“"   U201C   # Left Double Quotation
-<Multi_key> <apostrophe> <apostrophe>   : "”"   U201D   # Right Double Quotation
 <Multi_key> <less> <less>               : "«"   U0171   # Left Guillemet
 <Multi_key> <greater> <greater>         : "»"   U0187   # Right Guillemet
 
