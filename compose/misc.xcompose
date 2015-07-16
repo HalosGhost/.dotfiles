@@ -52,12 +52,12 @@
 <Multi_key> <colon> <parenright>                : "☺"   U263A   # :)
 <Multi_key> <s> <n> <o> <w>                     : "☃"   U2603   # Snowman
 <Multi_key> <s> <i> <g> <h>                     : "-_-"
-<Multi_key> <p> <n> <d> <a>                     : "ʕ•ᴥ•ʔ"
-<Multi_key> <k> <l> <a>                         : "ʔ•ᴥ•ʕ"
+<Multi_key> <p> <n> <d> <a>                     : "ʕ·ᴥ·ʔ"
+<Multi_key> <k> <l> <a>                         : "ʔ·ᴥ·ʕ"
 <Multi_key> <s> <t> <p>                         : "•_•"
 <Multi_key> <s> <t> <a> <p>                     : "ಠ_ಠ"
 <Multi_key> <s> <h> <r> <g>                     : "¯\\o/¯"
-<Multi_key> <p> <s> <h> <r> <g>                 : "¯\\ʕ•ᴥ•ʔ/¯"
+<Multi_key> <p> <s> <h> <r> <g>                 : "¯\\ʕ·ᴥ·ʔ/¯"
 <Multi_key> <p> <f> <a> <c> <e>                 : "🐼"
 #<Multi_key> <colon> <D>                         : "😀"   U1F600  # :D
 #<Multi_key> <D> <colon>                         : "😦"   U1F626  # D:
