@@ -80,6 +80,7 @@ else
     alias qmpv='mpv --msg-level=all=error:statusline=status'
 fi
 
+alias pb='pbpst'
 alias shaman="shaman -l'Saint Paul,US'"
 alias FTL='steam -applaunch 212680'
 alias Splice='steam -applaunch 209790'
