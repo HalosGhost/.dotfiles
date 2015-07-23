@@ -47,6 +47,10 @@
 <Multi_key> <e> <u> <r>                         : "€"   U20AC   # Euro
 <Multi_key> <g> <b> <p>                         : "£"   U00A3   # British Pound Sterling
 
+#<- Musical ->
+<Multi_key> <m> <s> <h> <r> <p>                 : "♯"   U266F   # Sharp
+<Multi_key> <m> <f> <l> <a> <t>                 : "♭"   U266D   # Flat
+
 #<- Smileys ->
 <Multi_key> <colon> <parenleft>                 : "☹"   U2639   # :(
 <Multi_key> <colon> <parenright>                : "☺"   U263A   # :)
