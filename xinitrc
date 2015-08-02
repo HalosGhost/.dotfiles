@@ -3,7 +3,7 @@ yawa -F $HOME/.xbkg.jpg
 xmodmap $HOME/.Xmodmap &
 xautolock -time 15 -locker 'physlock' &
 export XDG_CONFIG_HOME=$HOME/.config
-export BROWSER=/usr/bin/qutebrowser
+export BROWSER=/usr/bin/firefox
 export TERMINAL=/usr/bin/st
 export PATH=$PATH:$HOME/.bin
 export PAGER=/usr/bin/vimpager
