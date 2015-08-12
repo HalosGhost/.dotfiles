@@ -78,6 +78,10 @@ else
     alias qmpv='mpv --msg-level=all=error:statusline=status'
 fi
 
+if [ -f "/usr/bin/primusrun" ]; then
+    alias chromium='primusrun chromium'
+fi
+
 alias pb='pbpst'
 alias shaman="shaman -l'Saint Paul,US'"
 alias FTL='steam -applaunch 212680'
