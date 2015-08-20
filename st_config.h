@@ -30,7 +30,7 @@ static unsigned int doubleclicktimeout = 300;
 static unsigned int tripleclicktimeout = 600;
 
 /* alt screens */
-static bool allowaltscreen = true;
+static int allowaltscreen = 1;
 
 /* frames per second st should at maximum draw to the screen */
 static unsigned int xfps = 120;
@@ -93,6 +93,13 @@ static const char *colorname[] = {
 static unsigned int defaultfg = 7;
 static unsigned int defaultbg = 257;
 static unsigned int defaultcs = 256;
+
+/*
+ * Default colour and shape of the mouse cursor
+ */
+static unsigned int mouseshape = XC_xterm;
+static unsigned int mousefg = 7;
+static unsigned int mousebg = 0;
 
 /*
  * Colors used, when the specific fg == defaultfg. So in reverse mode this
