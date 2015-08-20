@@ -121,6 +121,11 @@ lsupd () {
     cower -u
 }
 
+upgraderepo () {
+    (cd /usr/local/x86_64
+    repose halosghost *)
+}
+
 netsloc () {
     printf '%s: %s\n' "$1" "$(awk 'BEGIN { a = 0; d = 0 } /^\+/ { a ++ } /^\-/ { d ++ } END { print "+" a ", -" d }' "$1")"
 }
