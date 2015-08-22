@@ -123,7 +123,7 @@ lsupd () {
 
 upgraderepo () {
     (cd /usr/local/x86_64
-    repose halosghost *)
+    repose -f halosghost *)
 }
 
 netsloc () {
