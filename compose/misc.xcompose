@@ -63,6 +63,9 @@
 <Multi_key> <s> <h> <r> <g>                     : "¯\\o/¯"
 <Multi_key> <p> <s> <h> <r> <g>                 : "¯\\ʕ·ᴥ·ʔ/¯"
 <Multi_key> <p> <f> <a> <c> <e>                 : "🐼"
-<Multi_key> <k> <o> <a> <l> <a>                 : "🐨" U1F428
+<Multi_key> <h> <o> <r> <s> <e>                 : "🐎"   U1F40E
+<Multi_key> <b> <u> <n> <y>                     : "🐇"   U1F407
+<Multi_key> <d> <r> <a> <g> <o> <n>             : "🐉 "  U1F409
+<Multi_key> <k> <o> <a> <l> <a>                 : "🐨"   U1F428
 <Multi_key> <colon> <D>                         : "😀"   U1F600  # :D
 <Multi_key> <D> <colon>                         : "😦"   U1F626  # D:
