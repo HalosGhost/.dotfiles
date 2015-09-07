@@ -69,7 +69,6 @@ alias whereami='pwd -P'
 alias cower='cower --color=always'
 alias pacman='pacman --color=always'
 alias count='wc -l'
-alias sloc='cloc'
 alias lsbat='cat /sys/class/power_supply/BAT0/capacity'
 
 if [ -f "/usr/bin/primusrun" ]; then
