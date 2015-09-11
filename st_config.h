@@ -9,7 +9,7 @@ static char font[] = "Inconsolatazi4 for Powerline:pixelsize=15";
 static int borderpx = 0;
 static char shell[] = "/bin/sh";
 static char *utmp = NULL;
-static char stty_args[] = "stty raw -echo -iexten echonl";
+static char stty_args[] = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
 /* identification sequence returned in DA and DECID */
 static char vtiden[] = "\033[?6c";
@@ -95,6 +95,15 @@ static unsigned int defaultbg = 257;
 static unsigned int defaultcs = 256;
 
 /*
+ * Default shape of cursor
+ * 2: Block
+ * 4: Underline
+ * 6: IBeam
+ */
+
+static unsigned int cursorshape = 2;
+
+/*
  * Default colour and shape of the mouse cursor
  */
 static unsigned int mouseshape = XC_xterm;
@@ -122,15 +131,17 @@ static Mousekey mshortcuts[] = {
 
 static Shortcut shortcuts[] = {
     /* mask                 keysym          function        argument */
+    { XK_ANY_MOD,           XK_Break,       sendbreak,      {.i =  0} },
     { ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
     { ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
     { XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-    { MODKEY|ShiftMask,     XK_Prior,       xzoom,          {.i = +1} },
-    { MODKEY|ShiftMask,     XK_Next,        xzoom,          {.i = -1} },
-    { MODKEY|ShiftMask,     XK_Home,        xzoomreset,     {.i =  0} },
+    { MODKEY|ShiftMask,     XK_Prior,       xzoom,          {.f = +1} },
+    { MODKEY|ShiftMask,     XK_Next,        xzoom,          {.f = -1} },
+    { MODKEY|ShiftMask,     XK_Home,        xzoomreset,     {.f =  0} },
     { ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
-    { MODKEY|ControlMask,   XK_Insert,      clipcopy,       {.i =  0} },
     { MODKEY|ShiftMask,     XK_Insert,      clippaste,      {.i =  0} },
+    { MODKEY|ShiftMask,     XK_C,           clipcopy,       {.i =  0} },
+    { MODKEY|ShiftMask,     XK_V,           clippaste,      {.i =  0} },
     { MODKEY,               XK_Num_Lock,    numlock,        {.i =  0} },
 };
 
@@ -215,7 +226,7 @@ static Key key[] = {
     { XK_KP_Delete,     ShiftMask,      "\033[2K",      -1,    0,    0},
     { XK_KP_Delete,     ShiftMask,      "\033[3;2~",    +1,    0,    0},
     { XK_KP_Delete,     XK_ANY_MOD,     "\033[P",       -1,    0,    0},
-    { XK_KP_Delete,     XK_ANY_MOD,     "\177",         +1,    0,    0},
+    { XK_KP_Delete,     XK_ANY_MOD,     "\033[3~",      +1,    0,    0},
     { XK_KP_Multiply,   XK_ANY_MOD,     "\033Oj",       +2,    0,    0},
     { XK_KP_Add,        XK_ANY_MOD,     "\033Ok",       +2,    0,    0},
     { XK_KP_Enter,      XK_ANY_MOD,     "\033OM",       +2,    0,    0},
@@ -269,8 +280,9 @@ static Key key[] = {
     { XK_Delete,        ControlMask,    "\033[3;5~",    +1,    0,    0},
     { XK_Delete,        ShiftMask,      "\033[2K",      -1,    0,    0},
     { XK_Delete,        ShiftMask,      "\033[3;2~",    +1,    0,    0},
-    { XK_KP_Delete,     XK_ANY_MOD,     "\033[P",       -1,    0,    0},
-    { XK_KP_Delete,     XK_ANY_MOD,     "\177",         +1,    0,    0},
+    { XK_Delete,        XK_ANY_MOD,     "\033[P",       -1,    0,    0},
+    { XK_Delete,        XK_ANY_MOD,     "\033[3~",      +1,    0,    0},
+    { XK_BackSpace,     XK_NO_MOD,      "\177",          0,    0,    0},
     { XK_Home,          ShiftMask,      "\033[2J",       0,   -1,    0},
     { XK_Home,          ShiftMask,      "\033[1;2H",     0,   +1,    0},
     { XK_Home,          XK_ANY_MOD,     "\033[H",        0,   -1,    0},
