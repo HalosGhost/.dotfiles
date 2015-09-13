@@ -13,7 +13,6 @@ HISTSIZE=2048
 SAVEHIST=2048
 setopt appendhistory histignorealldups autocd notify prompt_subst
 #setopt correctall
-unsetopt beep
 zstyle :compinstall filename '/home/halosghost/.zshrc'
 zstyle ':completion:*' menu select
 setopt completealiases
