@@ -33,3 +33,9 @@
 <Multi_key> <4> <s> <q>                         : "∜"   U221C   # Fourth Root
 
 <Multi_key> <i> <n> <t>                         : "∫"   U222B   # Integral
+
+#<- Mathematical Categories ->
+<Multi_key> <B> <o> <o> <l>                     : "𝔹"
+<Multi_key> <I> <n> <t>                         : "ℤ"
+<Multi_key> <R> <a> <t>                         : "ℚ"
+<Multi_key> <N> <a> <t>                         : "ℕ"
