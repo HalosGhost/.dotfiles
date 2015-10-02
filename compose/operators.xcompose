@@ -14,6 +14,7 @@
 <Multi_key> <ampersand> <ampersand>             : "∧"   U2227   # Logical Conjunction
 <Multi_key> <bar> <bar>                         : "∨"   U2228   # Logical Disjunction
 <Multi_key> <a> <l> <l>                         : "∀"   U2200   # For all
+<Multi_key> <x> <o> <r>                         : "⊕"   U2295   # Xor
 
 <Multi_key> <asciitilde> <asciitilde>           : "≈"   U2248   # Approximately Equal
 <Multi_key> <exclam> <equal>                    : "≠"   U2260   # Not Equal
