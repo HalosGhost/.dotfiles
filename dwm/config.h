@@ -9,7 +9,7 @@ static const char * fonts [] = {
     "Symbola:style=Regular:size=10",
 };
 
-static const char dmenufont       [] = "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*";
+static const char menufnt         [] = "Fira Code 9";
 static const char normbordercolor [] = "#444444";
 static const char normbgcolor     [] = "#222222";
 static const char normfgcolor     [] = "#bbbbbb";
@@ -70,7 +70,8 @@ static const Layout layouts [] = {
 
 /* commands */
 static char dmenumon [2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char * dmenucmd  [] = { "dmenu_run", "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, "-b", NULL };
+static const char * dmenucmd  [] = { '\0' };
+static const char * bmenucmd  [] = { "bemenu-run", "--fn", menufnt, "--nb", normbgcolor, "--nf", normfgcolor, "--sb", selbgcolor, "--sf", selfgcolor, "--b", "-p", "run", NULL };
 static const char * termcmd   [] = { "st", "-e", "tmux", NULL };
 static const char * volumeInc [] = { "pactl", "--", "set-sink-volume", "1", "+5%", NULL };
 static const char * volumeDec [] = { "pactl", "--", "set-sink-volume", "1", "-5%", NULL };
@@ -82,7 +83,7 @@ static const char * bl_dn     [] = { "xbacklight", "-5", NULL };
 
 static Key keys [] = {
     /* modifier   key                        function         argument             */
-    { MOD1,       XK_d,                      spawn,           { .v = dmenucmd    } },
+    { MOD1,       XK_d,                      spawn,           { .v = bmenucmd    } },
     { MOD1,       XK_Return,                 spawn,           { .v = termcmd     } },
     { 0,          XF86XK_AudioRaiseVolume,   spawn,           { .v = volumeInc   } },
     { 0,          XF86XK_AudioLowerVolume,   spawn,           { .v = volumeDec   } },
