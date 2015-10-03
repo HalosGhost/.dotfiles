@@ -80,6 +80,7 @@ if [ -f "/usr/bin/primusrun" ]; then
     alias chromium='primusrun chromium'
 fi
 
+alias netflix='chromium --app="https://netflix.com"'
 alias pb='pbpst'
 alias shaman="shaman -l'Saint Paul,US'"
 alias FTL='steam -applaunch 212680'
