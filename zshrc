@@ -70,17 +70,18 @@ alias pacman='pacman --color=always'
 alias count='wc -l'
 alias lsbat='cat /sys/class/power_supply/BAT0/capacity'
 
-if [ -f "/usr/bin/primusrun" ]; then
-    alias qmpv='primusrun mpv --msg-level=all=error:statusline=status'
+if [ -f "/usr/bin/optirun" ]; then
+    alias qmpv='optirun mpv --msg-level=all=error:statusline=status'
 else
     alias qmpv='mpv --msg-level=all=error:statusline=status'
 fi
 
-if [ -f "/usr/bin/primusrun" ]; then
-    alias chromium='primusrun chromium'
+if [ -f "/usr/bin/optirun" ]; then
+    alias netflix='optirun chromium --app="https://netflix.com"'
+else
+    alias netflix='chromium --app="https://netflix.com"'
 fi
 
-alias netflix='chromium --app="https://netflix.com"'
 alias pb='pbpst'
 alias shaman="shaman -l'Saint Paul,US'"
 alias FTL='steam -applaunch 212680'
