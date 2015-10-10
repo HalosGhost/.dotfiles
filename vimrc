@@ -8,9 +8,15 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set showcmd
-set softtabstop=3
+set softtabstop=4
+set cursorline
+set cursorcolumn
+hi CursorLine   ctermbg=black cterm=NONE
+hi CursorColumn ctermbg=black
 set number
+set lazyredraw
 set relativenumber
+set hlsearch
 set showmatch
 set matchtime=1
 set incsearch
