@@ -32,7 +32,7 @@ if [ "$DISPLAY" ]; then
 %(!.%K{red} λ\\.%K{blue} λ\\) %k%(!.%F{red}.%F{blue})$RSEGF%f "
 else
    export RPROMPT='%B%(?.%{%F{cyan}%}^_^ %{%f%}.%{%F{red}%}o_O %{%f%})%b'
-   export PROMPT='╒[%m]═[%~]%
+   export PROMPT='╒[%m]═[%~]%#
 
 └╼ '
 fi
