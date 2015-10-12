@@ -16,6 +16,27 @@
 <Multi_key> <a> <l> <l>                         : "∀"   U2200   # For all
 <Multi_key> <x> <o> <r>                         : "⊕"   U2295   # Xor
 
+#<- APL symbols ->
+<Multi_key> <n> <o> <r>                         : "⍱"           # Nor
+<Multi_key> <n> <a> <n> <d>                     : "⍲"           # Nand
+<Multi_key> <m> <a> <x>                         : "⌈"           # Max / Ceiling
+<Multi_key> <m> <i> <n>                         : "⌊"           # Min / Floor
+<Multi_key> <n> <e> <g>                         : "¯"           # Negative / High Minus
+<Multi_key> <q> <u> <a> <d>                     : "⎕"           # Quad
+<Multi_key> <l> <o> <g>                         : "⍟"           # Log
+<Multi_key> <e> <l> <e> <m>                     : "∊"           # elem / Contained in
+<Multi_key> <s> <e> <a> <r> <c> <h>             : "⍷"           # Search / Find
+<Multi_key> <r> <o> <t>                         : "⌽"           # Rotate
+<Multi_key> <t> <p> <o> <s> <e>                 : "⍉"           # Transpose
+<Multi_key> <d> <r> <o> <p>                     : "↓"           # Drop
+<Multi_key> <t> <a> <k> <e>                     : "↑"           # Take
+<Multi_key> <s> <u> <b>                         : "⊂"           # Subset / Enclose an array
+<Multi_key> <s> <u> <p>                         : "⊃"           # Superset / Disclose an array
+<Multi_key> <a> <s> <c>                         : "⍋"           # Sort Ascending
+<Multi_key> <d> <e> <s>                         : "⍒"           # Sort Descending
+<Multi_key> <t> <o> <p>                         : "⊤"           # Top
+<Multi_key> <b> <t> <m>                         : "⊥"           # Bottom
+
 <Multi_key> <asciitilde> <asciitilde>           : "≈"   U2248   # Approximately Equal
 <Multi_key> <exclam> <equal>                    : "≠"   U2260   # Not Equal
 <Multi_key> <less> <equal>                      : "≤"   U2264   # Less Than or Equal
