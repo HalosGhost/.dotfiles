@@ -13,6 +13,7 @@ set cursorline
 set cursorcolumn
 hi CursorLine   ctermbg=black cterm=NONE
 hi CursorColumn ctermbg=black
+set cuc cul
 set number
 set lazyredraw
 set relativenumber
