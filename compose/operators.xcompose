@@ -36,6 +36,7 @@
 <Multi_key> <d> <e> <s>                         : "⍒"           # Sort Descending
 <Multi_key> <t> <o> <p>                         : "⊤"           # Top
 <Multi_key> <b> <t> <m>                         : "⊥"           # Bottom
+<Multi_key> <m> <a> <p>                         : "¨"           # Map
 
 <Multi_key> <asciitilde> <asciitilde>           : "≈"   U2248   # Approximately Equal
 <Multi_key> <exclam> <equal>                    : "≠"   U2260   # Not Equal
