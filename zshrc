@@ -33,7 +33,6 @@ if [ "$DISPLAY" ]; then
 else
    export RPROMPT='%B%(?.%{%F{cyan}%}^_^ %{%f%}.%{%F{red}%}o_O %{%f%})%b'
    export PROMPT='╒[%m]═[%~]%#
-
 └╼ '
 fi
 
