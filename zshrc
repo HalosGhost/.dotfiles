@@ -60,13 +60,12 @@ alias ll='ls -lh'
 
 alias ytdl='youtube-dl'
 alias sudo='sudo '
-alias grep='grep --color=auto'
+alias grep='grep --color=always'
 alias bc='bc -lq'
 alias matrix='cmatrix -f -l -a'
 alias whereami='pwd -P'
 alias cower='cower --color=always'
 alias pacman='pacman --color=always'
-alias count='wc -l'
 alias lsbat='cat /sys/class/power_supply/BAT0/capacity'
 
 if [ -f "/usr/bin/optirun" ]; then
@@ -86,7 +85,6 @@ alias shaman="shaman -l'Saint Paul,US'"
 alias FTL='steam -applaunch 212680'
 alias Splice='steam -applaunch 209790'
 alias dinothawr='retroarch -L /usr/lib/libretro/dinothawr_libretro.so /home/halosghost/Games/dinothawr/dinothawr.game'
-alias centurion='ssh -i"${HOME}/.ssh/halosghost.ed25519" "centurion.erebor.buhman.org"'
 
 #<- Suffixes ->
 alias -s pdf='zathura'
