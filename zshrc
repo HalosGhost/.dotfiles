@@ -88,6 +88,7 @@ alias dinothawr='retroarch -L /usr/lib/libretro/dinothawr_libretro.so /home/halo
 
 #<- Suffixes ->
 alias -s pdf='zathura'
+alias -s djvu='zathura'
 alias -s jpg='sxiv'
 alias -s png='sxiv'
 alias -s gif='sxiv -a'
