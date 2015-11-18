@@ -13,6 +13,8 @@ set cursorline
 set cursorcolumn
 hi CursorLine   ctermbg=black cterm=NONE
 hi CursorColumn ctermbg=black
+hi ColorColumn  ctermbg=black
+set colorcolumn=80
 set cuc cul
 set number
 set lazyredraw
