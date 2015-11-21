@@ -43,7 +43,7 @@ set encoding=utf-8
 set laststatus=2
 set clipboard=unnamedplus
 syntax on
-let g:rst_syntax_code_list=['c', 'lua', 'hs']
+let g:rst_syntax_code_list=['c', 'lua', 'haskell']
 hi Normal ctermfg=NONE ctermbg=NONE cterm=NONE
 map <F2> :call g:ClangUpdateQuickFix() <CR>
 runtime! ftplugin/man.vim
