@@ -82,8 +82,6 @@ fi
 
 alias pb='pbpst'
 alias shaman="shaman -l'Saint Paul,US'"
-alias FTL='steam -applaunch 212680'
-alias Splice='steam -applaunch 209790'
 alias dinothawr='retroarch -L /usr/lib/libretro/dinothawr_libretro.so /home/halosghost/Games/dinothawr/dinothawr.game'
 
 #<- Suffixes ->
