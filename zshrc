@@ -128,7 +128,7 @@ netsloc () {
 }
 
 ytb () {
-    mpv "ytdl://$(clipit -p)"
+    mpv "$(clipit -p)"
 }
 
 yt () {
