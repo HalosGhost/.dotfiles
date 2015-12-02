@@ -45,7 +45,6 @@ set clipboard=unnamedplus
 syntax on
 let g:rst_syntax_code_list=['c', 'lua', 'haskell']
 hi Normal ctermfg=NONE ctermbg=NONE cterm=NONE
-map <F2> :call g:ClangUpdateQuickFix() <CR>
 runtime! ftplugin/man.vim
 
 "<- Colorizer ->
@@ -72,7 +71,6 @@ au BufRead *.txt set tw=94
 au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 au BufNewFile *zshcle* setft=zsh
-au BufWinEnter,BufRead,BufNewFile *.java set filetype=java makeprg=javamake ts=4 sw=4 noet
 au BufNewFile,BufRead *.svg setf svg
 au BufReadPre *.pdf set ro nowrap
 au BufReadPost *.pdf silent %!pdftotext "%" -nopgbrk -layout -q -eol unix -
@@ -80,11 +78,7 @@ au BufWritePost *.pdf silent !rm -rf ~/PDF/%
 au BufWritePost *.pdf silent !lp -s -d pdffg "%"
 au BufWritePost *.pdf silent !until [ -e ~/PDF/% ]; do sleep 1; done
 au BufWritePost *.pdf silent !mv ~/PDF/% %:p:h
-au BufNewFile,BufRead /etc/nginx/conf/* set ft=nginx
-au BufReadPost ~/pastes/* noremap q <esc>:q!<esc>
-au BufReadPost /tmp/* noremap q <esc>:q!<esc>
 au BufRead,BufNewFile *systemd* set filetype=systemd
-au BufWinEnter,BufRead,BufNewFile *.c set filetype=c ts=4 sw=4 noet
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
