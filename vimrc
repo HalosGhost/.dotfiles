@@ -9,13 +9,12 @@ set shiftwidth=4
 set expandtab
 set showcmd
 set softtabstop=4
-set cursorline
-set cursorcolumn
 hi CursorLine   ctermbg=black cterm=NONE
 hi CursorColumn ctermbg=black
 hi ColorColumn  ctermbg=black
+set cursorline
+set cursorcolumn
 set colorcolumn=80
-set cuc cul
 set number
 set lazyredraw
 set relativenumber
@@ -26,7 +25,7 @@ set incsearch
 set ignorecase
 set smartcase
 set backspace=2
-set nocp
+set nocompatible
 set autoindent
 set formatoptions=c,q,r,t
 set ruler
@@ -35,16 +34,13 @@ set tags=./tags;/
 set virtualedit=block
 set tabpagemax=15
 set scrolloff=3
-set virtualedit=block
 set foldmethod=syntax
 set foldopen=all
-set nocp
 set encoding=utf-8
 set laststatus=2
 set clipboard=unnamedplus
 syntax on
 let g:rst_syntax_code_list=['c', 'lua', 'haskell']
-hi Normal ctermfg=NONE ctermbg=NONE cterm=NONE
 runtime! ftplugin/man.vim
 
 "<- Colorizer ->
