@@ -134,5 +134,9 @@ yt () {
    ytdl -e --get-id "ytsearch$2:$1" | awk 'NR % 2 == 0 { print "ytdl://"$0 } NR % 2 != 0 { print $0 }'
 }
 
+onehs () {
+   printf 'main = print $ %s' "$1" | runhaskell
+}
+
 #<- Source ZSh Syntax Highlighting ->
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
