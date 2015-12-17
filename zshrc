@@ -135,7 +135,7 @@ yt () {
 }
 
 onehs () {
-   printf 'main = print $ %s' "$1" | runhaskell
+   printf 'main = %s' "$1" | runhaskell
 }
 
 #<- Source ZSh Syntax Highlighting ->
