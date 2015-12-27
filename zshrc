@@ -67,18 +67,6 @@ alias cower='cower --color=always'
 alias pacman='pacman --color=always'
 alias lsbat='cat /sys/class/power_supply/BAT0/capacity'
 
-if [ -f "/usr/bin/optirun" ]; then
-    alias qmpv='optirun mpv --msg-level=all=error:statusline=status'
-else
-    alias qmpv='mpv --msg-level=all=error:statusline=status'
-fi
-
-if [ -f "/usr/bin/optirun" ]; then
-    alias netflix='optirun chromium --app="https://netflix.com"'
-else
-    alias netflix='chromium --app="https://netflix.com"'
-fi
-
 alias pb='pbpst'
 alias shaman="shaman -l'Saint Paul,US'"
 alias dinothawr='retroarch -L /usr/lib/libretro/dinothawr_libretro.so /home/halosghost/Games/dinothawr/dinothawr.game'
