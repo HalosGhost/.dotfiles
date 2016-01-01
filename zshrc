@@ -105,6 +105,10 @@ lsupd () {
     cower -u
 }
 
+gitver () {
+    git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+}
+
 upgraderepo () {
     (cd /usr/local/x86_64
     repose -f halosghost *)
