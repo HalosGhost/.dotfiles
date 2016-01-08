@@ -3,27 +3,19 @@
 
 "<- General Settings ->
 filetype indent plugin on
-set smartindent
-set tabstop=4
-set shiftwidth=4
-set expandtab
+set smartindent softtabstop=4 tabstop=4 shiftwidth=4 expandtab
 set showcmd
-set softtabstop=4
 hi CursorLine   ctermbg=black cterm=NONE
 hi CursorColumn ctermbg=black
 hi ColorColumn  ctermbg=black
-set cursorline
-set cursorcolumn
-set colorcolumn=80
-set number
+set cursorline cursorcolumn colorcolumn=80
+set number relativenumber
 set lazyredraw
-set relativenumber
 set hlsearch
 set showmatch
 set matchtime=1
 set incsearch
-set ignorecase
-set smartcase
+set ignorecase smartcase
 set backspace=2
 set nocompatible
 set autoindent
@@ -78,10 +70,10 @@ au BufRead,BufNewFile *systemd* set filetype=systemd
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
+au BufWinEnter * match ExtraWhitespace /\s\+$/
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhitespace /\s\+$/
+au BufWinLeave * call clearmatches()
 
 "<- Keybinds ->
 map <Esc><Esc> :w<CR>
