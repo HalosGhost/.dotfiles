@@ -92,6 +92,7 @@ alias -s oga='qmpv'
 alias -s flv='qmpv'
 alias -s opus='qmpv'
 alias -s wav='qmpv'
+alias -s exe='mono'
 
 alias -s md='vim'
 alias -s rst='vim'
