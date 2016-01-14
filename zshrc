@@ -11,7 +11,7 @@ BRNCH=""
 HISTFILE=~/.zsh_hist
 HISTSIZE=2048
 SAVEHIST=2048
-setopt appendhistory histignorealldups autocd notify prompt_subst
+setopt appendhistory histignorealldups autocd notify prompt_subst interactivecomments
 #setopt correctall
 zstyle :compinstall filename '/home/halosghost/.zshrc'
 zstyle ':completion:*' menu select
