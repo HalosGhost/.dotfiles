@@ -68,6 +68,7 @@ alias pacman='pacman --color=always'
 alias lsbat='cat /sys/class/power_supply/BAT0/capacity'
 
 alias pb='pbpst'
+compdef _pbpst pb
 alias shaman="shaman -l'Saint Paul,US'"
 alias dinothawr='retroarch -L /usr/lib/libretro/dinothawr_libretro.so /home/halosghost/Games/dinothawr/dinothawr.game'
 
