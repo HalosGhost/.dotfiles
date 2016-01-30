@@ -42,9 +42,6 @@ let g:colorizer_auto_filetype='css,html'
 let g:neocomplete#enable_at_startup = 1
 
 "<- Global Options ->
-let g:netrw_http_cmd='curl'
-let g:netrw_http_xcmd='-o'
-let g:netrw_silent=1
 let g:clang_library_path = "/usr/lib"
 let g:clang_complete_copen=1
 
