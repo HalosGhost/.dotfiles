@@ -11,8 +11,7 @@ hi ColorColumn  ctermbg=black
 set cursorline cursorcolumn colorcolumn=80
 set number relativenumber
 set lazyredraw
-set hlsearch
-set showmatch
+set hlsearch showmatch
 set matchtime=1
 set incsearch
 set ignorecase smartcase
@@ -34,12 +33,6 @@ set clipboard=unnamedplus
 syntax on
 let g:rst_syntax_code_list=['c', 'lua', 'haskell']
 runtime! ftplugin/man.vim
-
-"<- Colorizer ->
-let g:colorizer_auto_filetype='css,html'
-
-"<- neocomplete ->
-let g:neocomplete#enable_at_startup = 1
 
 "<- Global Options ->
 let g:clang_library_path = "/usr/lib"
