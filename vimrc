@@ -43,6 +43,9 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'murmur'
 let g:airline#extensions#tabline#enabled = 1
 
+"<- vimpager ->
+let vimpager_passthrough = 0
+
 "<- AutoCmds ->
 au BufRead,BufNew /tmp/mutt* so ~/.mutt/mutt.vim
 au BufRead *.txt set tw=94
