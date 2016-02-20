@@ -83,7 +83,7 @@ static const char * bl_dn     [] = { "xbacklight", "-5", NULL };
 
 static Key keys [] = {
     /* modifier   key                        function         argument             */
-    { MOD1,       XK_d,                      spawn,           { .v = roficmd     } },
+    { 0,          XF86XK_Search,             spawn,           { .v = roficmd     } },
     { MOD1,       XK_Return,                 spawn,           { .v = termcmd     } },
     { 0,          XF86XK_AudioRaiseVolume,   spawn,           { .v = volumeInc   } },
     { 0,          XF86XK_AudioLowerVolume,   spawn,           { .v = volumeDec   } },
