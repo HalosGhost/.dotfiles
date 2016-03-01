@@ -71,5 +71,8 @@ au BufWinLeave * call clearmatches()
 "<- Keybinds ->
 map <Esc><Esc> :w<CR>
 nnoremap <C-t> :vsp<CR>
+nnoremap <C-o> :sp<CR>
+nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>w
 nnoremap <C-k> <C-w>W
+nnoremap <C-l> <C-w>l
