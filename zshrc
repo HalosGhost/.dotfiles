@@ -89,8 +89,6 @@ alias -s md='vim'
 alias -s rst='vim'
 alias -s tex='vim'
 
-alias -s nds='retroarch -L /usr/lib/libretro/libretro-desmume.so'
-
 #<- Functions ->
 lsupd () {
     checkupdates
@@ -124,6 +122,10 @@ yt () {
 
 onehs () {
    printf 'main = %s' "$1" | runhaskell
+}
+
+wifiscan () {
+   sudo iw dev wlp3s0 scan|awk "/SSID: $1/"
 }
 
 #<- Source ZSh Syntax Highlighting ->
