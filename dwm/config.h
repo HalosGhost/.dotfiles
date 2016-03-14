@@ -5,8 +5,8 @@
 
 /* appearance */
 static const char * fonts [] = {
-    "Inconsolatazi4 for Powerline:size=10"
-    "Symbola:style=Regular:size=10",
+    "Inconsolatazi4 for Powerline:size=10",
+    "Symbola:style=Regular:size=10"
 };
 
 static const char menufnt         [] = "Fira Code 9";
@@ -78,8 +78,8 @@ static const char * volumeDec [] = { "pactl", "--", "set-sink-volume", "1", "-5%
 static const char * volumeTog [] = { "pactl", "--", "set-sink-mute", "1", "toggle", NULL };
 static const char * micTog    [] = { "pactl", "--", "set-source-mute", "2", "toggle", NULL };
 static const char * lockscrn  [] = { "physlock", NULL };
-static const char * bl_up     [] = { "enlighten", "+", NULL };
-static const char * bl_dn     [] = { "enlighten", "-", NULL };
+static const char * bl_up     [] = { "sudo", "enlighten", "+", NULL };
+static const char * bl_dn     [] = { "sudo", "enlighten", "-", NULL };
 
 static Key keys [] = {
     /* modifier   key                        function         argument             */
