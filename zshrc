@@ -39,6 +39,7 @@ fi
 #<- Keybinds ->
 bindkey -M vicmd v edit-command-line
 bindkey "^X" edit-command-line
+bindkey "^R" history-incremental-pattern-search-backward
 typeset -A key
 
 bindkey "${terminfo[khome]}" beginning-of-line
