@@ -59,13 +59,14 @@ alias -g ....='../../..'
 alias ls='ls --color=auto -CFA'
 alias ll='ls -lh'
 
+for i in pacman cower grep; do
+    alias "$i"="$i --color=always"
+done
+
 alias ytdl='youtube-dl'
 alias sudo='sudo '
-alias grep='grep --color=always'
 alias bc='bc -lq'
 alias matrix='cmatrix -f -l -a'
-alias cower='cower --color=always'
-alias pacman='pacman --color=always'
 alias lsbat='cat /sys/class/power_supply/BAT0/capacity'
 
 alias pb='pbpst'
