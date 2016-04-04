@@ -90,9 +90,10 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor
  */
-static unsigned int defaultfg = 7;
-static unsigned int defaultbg = 257;
-static unsigned int defaultcs = 256;
+static unsigned int defaultfg  = 7;
+static unsigned int defaultbg  = 257;
+static unsigned int defaultcs  = 256;
+static unsigned int defaultrcs = 257;
 
 /*
  * Default shape of cursor
@@ -120,7 +121,7 @@ static unsigned int defaultunderline = 7;
 
 /* Internal mouse shortcuts. */
 /* Beware that overloading Button1 will disable the selection. */
-static Mousekey mshortcuts[] = {
+static MouseShortcut mshortcuts[] = {
     /* button               mask            string */
     { Button4,              XK_ANY_MOD,     "\031" },
     { Button5,              XK_ANY_MOD,     "\005" },
@@ -396,4 +397,9 @@ static Key key[] = {
 static uint selmasks[] = {
     [SEL_RECTANGULAR] = Mod1Mask,
 };
+
+static char ascii_printable[] =
+	" !\"#$%&'()*+,-./0123456789:;<=>?"
+	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
+	"`abcdefghijklmnopqrstuvwxyz{|}~";
 
