@@ -78,8 +78,8 @@ static const char * volumeDec [] = { "pactl", "--", "set-sink-volume", "1", "-5%
 static const char * volumeTog [] = { "pactl", "--", "set-sink-mute", "1", "toggle", NULL };
 static const char * micTog    [] = { "pactl", "--", "set-source-mute", "2", "toggle", NULL };
 static const char * lockscrn  [] = { "physlock", NULL };
-static const char * bl_up     [] = { "sudo", "enlighten", "+", NULL };
-static const char * bl_dn     [] = { "sudo", "enlighten", "-", NULL };
+static const char * bl_up     [] = { "sudo", "enlighten", "i", NULL };
+static const char * bl_dn     [] = { "sudo", "enlighten", "d", NULL };
 
 static Key keys [] = {
     /* modifier   key                        function         argument             */
