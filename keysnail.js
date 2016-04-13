@@ -57,7 +57,7 @@ var viewKs =
 , [ 'T',       ()     => { shell.input('tabopen ' + bmui._uri.asciiSpec);                    }, 'Tabopen URL'     ]
 , [ 'o',       ()     => { shell.input('open ');                                             }, 'Open'            ]
 , [ 'O',       ()     => { shell.input('open ' + bmui._uri.asciiSpec);                       }, 'Open URL'        ]
-, [ 'y',       ()     => { var url = bmui._uri.asciiSpec; scpt(url); secho('Yanked ' + url); }, 'Yank URL'        ]
+, [ 'y',       ()     => { let url = bmui._uri.asciiSpec; scpt(url); secho('Yanked ' + url); }, 'Yank URL'        ]
 , [ 'p',       ()     => { gBrowser.loadURI(gcpt(), null, null);                             }, 'Open Yanked'     ]
 , [ 'P',       ()     => { gBrowser.loadOneTab(gcpt(), null, null, null, false);             }, 'Tabopen Yanked'  ]
 , [ '/',       ()     => { command.iSearchForward();                                         }, 'Search Forward'  ]
@@ -67,7 +67,7 @@ var viewKs =
 , [ ['Z','R'], ()     => { command.restartApp();                                             }, 'Restart Firefox' ]
 ]
 
-for ( var i = 0; i < viewKs.length; ++ i ) {
+for ( let i = 0; i < viewKs.length; ++ i ) {
     key.setViewKey(viewKs[i][0], viewKs[i][1], viewKs[i][2]);
 }
 
@@ -77,6 +77,6 @@ var editKs =
 , [ 'ESC',     ()     => { document.activeElement.blur();                                    }, 'Escape Focus'    ]
 ]
 
-for ( var i = 0; i < editKs.length; ++ i ) {
+for ( let i = 0; i < editKs.length; ++ i ) {
     key.setEditKey(editKs[i][0], editKs[i][1], editKs[i][2]);
 }
