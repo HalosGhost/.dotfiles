@@ -79,7 +79,6 @@ for ( let i = 0; i < viewKs.length; ++ i ) {
 var editKs =
 [ [ 'C-u',     ()     => goDoCommand('cmd_deleteToBeginningOfLine')                 , 'Backline'        ]
 , [ 'C-w',     ()     => goDoCommand('cmd_deleteWordBackward')                      , 'Backword'        ]
-, [ 'ESC',     ()     => document.activeElement.blur()                              , 'Escape Focus'    ]
 ]
 
 for ( let i = 0; i < editKs.length; ++ i ) {
