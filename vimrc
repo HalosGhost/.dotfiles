@@ -8,6 +8,8 @@ set showcmd
 hi CursorLine   ctermbg=black cterm=NONE
 hi CursorColumn ctermbg=black
 hi ColorColumn  ctermbg=black
+hi SpecialKey   ctermfg=darkgrey
+hi NonText      ctermfg=darkgrey
 set cursorline cursorcolumn colorcolumn=80
 set number relativenumber
 set lazyredraw
@@ -37,6 +39,7 @@ runtime! ftplugin/man.vim
 set encoding=utf-8
 set lcs=tab:\|•,eol:$,space:␣
 nnoremap <C-w> :set list!<CR>
+set list
 
 nnoremap <C-p> :set paste!<CR>
 
