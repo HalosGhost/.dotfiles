@@ -37,7 +37,7 @@ let g:rst_syntax_code_list=['c', 'lua', 'haskell']
 runtime! ftplugin/man.vim
 
 set encoding=utf-8
-set lcs=tab:\|•,eol:$,space:␣
+set lcs=tab:│•,eol:$,space:␣
 nnoremap <C-w> :set list!<CR>
 set list
 
