@@ -27,7 +27,7 @@ set tags=./tags;/
 set virtualedit=block
 set tabpagemax=15
 set scrolloff=3
-set foldmethod=syntax
+set foldmethod=manual
 set foldopen=all
 set encoding=utf-8
 set laststatus=2
@@ -37,7 +37,7 @@ let g:rst_syntax_code_list=['c', 'lua', 'haskell']
 runtime! ftplugin/man.vim
 
 set encoding=utf-8
-set lcs=tab:│•,eol:$,space:␣
+set listchars=tab:│•,eol:$,space:␣
 nnoremap <C-w> :set list!<CR>
 set list
 
