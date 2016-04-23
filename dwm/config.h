@@ -83,7 +83,7 @@ static const char * bl_dn     [] = { "sudo", "enlighten", "d", NULL };
 
 static Key keys [] = {
     /* modifier   key                        function         argument             */
-    { 0,          XF86XK_Search,             spawn,           { .v = roficmd     } },
+    { MOD1,       XK_d,                      spawn,           { .v = roficmd     } },
     { MOD1,       XK_Return,                 spawn,           { .v = termcmd     } },
     { 0,          XF86XK_AudioRaiseVolume,   spawn,           { .v = volumeInc   } },
     { 0,          XF86XK_AudioLowerVolume,   spawn,           { .v = volumeDec   } },
