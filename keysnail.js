@@ -72,6 +72,9 @@ var viewKs =
 , [ '[',       ()     => gBrowser.loadOneTab('about:about', null, null, null, false), 'about:about'     ]
 , [ ['Z','Q'], ()     => goQuitApplication()                                        , 'Close Firefox'   ]
 , [ ['Z','R'], ()     => command.restartApp()                                       , 'Restart Firefox' ]
+, [ '+',       ()     => goDoCommand('cmd_textZoomEnlarge')                         , 'Zoom in'         ]
+, [ '-',       ()     => goDoCommand('cmd_textZoomReduce')                          , 'Zoom out'        ]
+, [ '=',       ()     => goDoCommand('cmd_textZoomReset')                           , 'Zoom reset'      ]
 ]
 
 for ( let i = 0; i < viewKs.length; ++ i ) {
