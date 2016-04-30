@@ -78,11 +78,10 @@ alias -s pdf='zathura'
 alias -s djvu='zathura'
 alias -s jpg='sxiv'
 alias -s png='sxiv'
-alias -s gif='sxiv -a'
 alias -s svg='inkview'
 alias -s exe='mono'
 
-for i in mp3 avi flac webm mkv mp4 mov m4a ogg ogv oga flv opus wav; do
+for i in mp3 avi flac webm mkv mp4 mov m4a ogg ogv oga flv opus wav gif; do
     alias -s "$i"='qmpv'
 done
 
