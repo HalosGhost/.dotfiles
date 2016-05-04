@@ -18,7 +18,6 @@ zstyle ':completion:*' menu select
 setopt completealiases
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit
-#autoload -Uz vcs_info
 autoload -U bashcompinit
 autoload -U edit-command-line
 zle -N edit-command-line
