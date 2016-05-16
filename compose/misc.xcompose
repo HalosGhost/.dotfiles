@@ -38,6 +38,9 @@
 <Multi_key> <s> <p> <d>                         : "♠"   U2660   # Black Spade Suit
 <Multi_key> <m> <e> <r>                         : "☿"   U263F   # Mercury Symbol
 
+<Multi_key> <y> <e> <s>                         : "✔"           # Checkmark / Yes
+<Multi_key> <y> <e> <s>                         : "✘"           # X / No
+
 #<- Modifier keys ->
 <Multi_key> <a> <l> <t>                         : "⌥"   U2325   # Alternate
 <Multi_key> <s> <h> <f> <t>                     : "⇧"   U21E7   # Shift
