@@ -39,7 +39,7 @@ var closeNonPinnedTab = function () {
 
 var yankCurrentURL    = function () {
     let url = bmui._uri.asciiSpec;
-    scpt(url); secho('Yanked ' + url);
+    scpt(url, true); secho('Yanked ' + url);
 }
 
 var viewKs =
@@ -65,8 +65,8 @@ var viewKs =
 , [ 's',       ()     => shell.input("open '")                                      , 'Open search'     ]
 , [ 'S',       ()     => shell.input("tabopen '")                                   , 'Tabopen search'  ]
 , [ 'y',       ()     => yankCurrentURL()                                           , 'Yank URL'        ]
-, [ 'p',       ()     => gBrowser.loadURI(gcpt(), null, null)                       , 'Open Yanked'     ]
-, [ 'P',       ()     => gBrowser.loadOneTab(gcpt(), null, null, null, false)       , 'Tabopen Yanked'  ]
+, [ 'p',       ()     => gBrowser.loadURI(gcpt(true), null, null)                   , 'Open Yanked'     ]
+, [ 'P',       ()     => gBrowser.loadOneTab(gcpt(true), null, null, null, false)   , 'Tabopen Yanked'  ]
 , [ '/',       ()     => command.iSearchForward()                                   , 'Search Forward'  ]
 , [ '?',       ()     => command.iSearchBackward()                                  , 'Search Backward' ]
 , [ '[',       ()     => gBrowser.loadOneTab('about:about', null, null, null, false), 'about:about'     ]
