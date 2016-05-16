@@ -7,7 +7,7 @@
 <Multi_key> <asciicircum> <asciicircum>         : "‸"   U2038   # Caret
 <Multi_key> <o> <o>                             : "°"   U00B0   # Degree
 <Multi_key> <quotedbl> <quotedbl>               : "〃"  U3003   # Ditto
-<Multi_key> <N> <o>                             : "№"   U2116   # Numero
+<Multi_key> <n> <u> <m>                         : "№"   U2116   # Numero
 <Multi_key> <a> <t> <h>                         : "ª"   U00AA   # Feminine Ordinal
 <Multi_key> <o> <t> <h>                         : "º"   U00BA   # Masculine Ordinal
 <Multi_key> <underscore> <space>                : "␣"   U2423   # Open box
@@ -39,7 +39,7 @@
 <Multi_key> <m> <e> <r>                         : "☿"   U263F   # Mercury Symbol
 
 <Multi_key> <y> <e> <s>                         : "✔"           # Checkmark / Yes
-<Multi_key> <y> <e> <s>                         : "✘"           # X / No
+<Multi_key> <n> <o> <m>                         : "✘"           # X / No
 
 #<- Modifier keys ->
 <Multi_key> <a> <l> <t>                         : "⌥"   U2325   # Alternate
