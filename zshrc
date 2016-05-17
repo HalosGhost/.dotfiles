@@ -84,9 +84,9 @@ for i in mp3 avi flac webm mkv mp4 mov m4a ogg ogv oga flv opus wav gif; do
     alias -s "$i"='qmpv'
 done
 
-alias -s md='vim'
-alias -s rst='vim'
-alias -s tex='vim'
+for i in md mdown rst tex txt; do
+    alias -s "$i"='vim'
+done
 
 #<- Functions ->
 lsupd () {
