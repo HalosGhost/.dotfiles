@@ -11,11 +11,10 @@ BRNCH=""
 HISTFILE=~/.zsh_hist
 HISTSIZE=2048
 SAVEHIST=2048
-setopt appendhistory histignorealldups autocd notify prompt_subst interactivecomments
+setopt appendhistory histignorealldups autocd notify prompt_subst interactivecomments completealiases
 setopt correctall
 zstyle :compinstall filename '/home/halosghost/.zshrc'
 zstyle ':completion:*' menu select
-setopt completealiases
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit
 autoload -U bashcompinit
