@@ -39,7 +39,6 @@ runtime! ftplugin/man.vim
 set encoding=utf-8
 set listchars=tab:│•,eol:$,space:␣
 nnoremap <C-w> :set list!<CR>
-set list
 
 nnoremap <C-p> :set paste!<CR>
 
