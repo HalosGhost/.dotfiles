@@ -1,0 +1,7 @@
+"3.9 (created: 2015/02/15 15:49:05)
+
+nmap J gt
+nmap K gT
+source! /home/halosghost/.vimperatorrc.local
+
+" vim: set ft=vimperator:
