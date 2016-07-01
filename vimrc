@@ -23,7 +23,6 @@ set autoindent
 set formatoptions=c,q,r,t
 set ruler
 set background=dark
-set tags=./tags;/
 set virtualedit=block
 set tabpagemax=15
 set scrolloff=3
