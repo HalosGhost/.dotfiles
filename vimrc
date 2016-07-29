@@ -56,8 +56,6 @@ let vimpager_passthrough = 0
 "<- AutoCmds ->
 au BufRead,BufNew /tmp/mutt* so ~/.mutt/mutt.vim
 au BufRead *.txt set tw=94
-au BufWinLeave * silent! mkview
-au BufWinEnter * silent! loadview
 au BufNewFile *zshcle* setft=zsh
 au BufNewFile,BufRead *.svg setf svg
 au BufReadPre *.pdf set ro nowrap
