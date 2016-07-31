@@ -86,6 +86,8 @@ for i in md mdown rst tex txt; do
     alias -s "$i"='vim'
 done
 
+alias -s hs='runhaskell'
+
 #<- Functions ->
 lsupd () {
     checkupdates
