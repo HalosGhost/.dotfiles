@@ -54,8 +54,7 @@ let g:airline#extensions#tabline#enabled = 1
 let vimpager_passthrough = 0
 
 "<- AutoCmds ->
-au BufRead,BufNew /tmp/mutt* so ~/.mutt/mutt.vim
-au BufRead *.txt set tw=94
+au BufRead,BufNew /tmp/mutt* set tw=79
 au BufNewFile *zshcle* setft=zsh
 au BufNewFile,BufRead *.svg setf svg
 au BufReadPre *.pdf set ro nowrap
