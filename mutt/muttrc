@@ -17,3 +17,6 @@ set sort                  = threads
 
 set editor                = vim
 set pager_index_lines     = 25
+
+set sidebar_width         = 30
+set sidebar_visible       = yes
