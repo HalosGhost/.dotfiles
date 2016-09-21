@@ -111,18 +111,9 @@ netsloc () {
     printf '%s: %s\n' "$1" "$(awk 'BEGIN { a = 0; d = 0 } /^\+/ { a ++ } /^\-/ { d ++ } END { print "+" a ", -" d }' "$1")"
 }
 
-ytb () {
-    mpv "$(clipit -p)"
-}
-
 yt () {
    ytdl -e --get-id "ytsearch$2:$1" | awk 'NR % 2 == 0 { print "ytdl://"$0 } NR % 2 != 0 { print $0 }'
 }
-
-onehs () {
-   printf 'main = %s' "$1" | runhaskell
-}
-
 wifiscan () {
    sudo iw dev wlp3s0 scan|awk "/SSID: $1/"
 }
