@@ -112,10 +112,15 @@ netsloc () {
 }
 
 yt () {
-   ytdl -e --get-id "ytsearch$2:$1" | awk 'NR % 2 == 0 { print "ytdl://"$0 } NR % 2 != 0 { print $0 }'
+    ytdl -e --get-id "ytsearch$2:$1" | awk 'NR % 2 == 0 { print "ytdl://"$0 } NR % 2 != 0 { print $0 }'
 }
+
 wifiscan () {
-   sudo iw dev wlp3s0 scan|awk "/SSID: $1/"
+    sudo iw dev wlp3s0 scan|awk "/SSID: $1/"
+}
+
+highlight () {
+    source-highlight -f esc -o STDOUT -i "$1"
 }
 
 #<- Source ZSh Syntax Highlighting ->
