@@ -14,6 +14,7 @@
 <Multi_key> <underscore> <equal>        : "₌"   U208C   # Equal
 <Multi_key> <underscore> <parenleft>    : "₍"   U208D   # Left Parenthesis
 <Multi_key> <underscore> <parenright>   : "₎"   U208E   # Right Parenthesis
+<Multi_key> <underscore> <n>            : "ₙ"   U2099   # n
 
 #<- Scientific Superiors ->
 <Multi_key> <asciicircum> <1>           : "¹"   U00B9   # One
@@ -31,3 +32,4 @@
 <Multi_key> <asciicircum> <equal>       : "⁼"   U207C   # Equal
 <Multi_key> <asciicircum> <parenleft>   : "⁽"   U207D   # Left Parenthesis
 <Multi_key> <asciicircum> <parenright>  : "⁾"   U207E   # Right Parenthesis
+<Multi_key> <asciicircum> <n>           : "ⁿ"   U207F   # n
