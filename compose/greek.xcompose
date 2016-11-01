@@ -10,7 +10,7 @@
 <Multi_key> <g> <r> <i>             : "ι"   U03B9   # iota
 <Multi_key> <g> <r> <k>             : "κ"   U03BA   # kappa
 <Multi_key> <g> <r> <l>             : "λ"   U03BB   # lambda
-<Multi_key> <g> <r> <m>             : "µ"   U03BC   # mu
+<Multi_key> <g> <r> <m>             : "μ"   U03BC   # mu
 <Multi_key> <g> <r> <n>             : "ν"   U03BD   # nu
 <Multi_key> <g> <r> <x>             : "ξ"   U03BE   # xi
 <Multi_key> <g> <r> <o> <c>         : "ο"   U03BF   # omicron
