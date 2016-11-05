@@ -103,10 +103,6 @@ upgraderepo () {
     repose -f halosghost *)
 }
 
-cvis () {
-    TERM=xterm-256color vis
-}
-
 netsloc () {
     printf '%s: %s\n' "$1" "$(awk 'BEGIN { a = 0; d = 0 } /^\+/ { a ++ } /^\-/ { d ++ } END { print "+" a ", -" d }' "$1")"
 }
