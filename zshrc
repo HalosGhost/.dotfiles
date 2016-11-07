@@ -115,6 +115,10 @@ wifiscan () {
     sudo iw dev wlp3s0 scan|awk "/SSID: $1/"
 }
 
+wifireload () {
+    sudo killall -HUP wpa_supplicant
+}
+
 highlight () {
     source-highlight -f esc -o STDOUT -i "$1"
 }
