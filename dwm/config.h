@@ -10,26 +10,26 @@ static const char * fonts [] = {
 };
 
 static const char menufnt         [] = "Fira Code 9";
-static const char normbordercolor [] = "#444444";
-static const char normbgcolor     [] = "#222222";
-static const char normfgcolor     [] = "#bbbbbb";
-static const char selbordercolor  [] = "#4c7899";
-static const char selbgcolor      [] = "#4c7899";
-static const char selfgcolor      [] = "#eeeeee";
 static const unsigned int borderpx   = 1;        /* border pixel of windows */
 static const unsigned int snap       = 32;       /* snap pixel */
-static const Bool showbar            = True;     /* False means no bar */
-static const Bool topbar             = True;     /* False means bottom bar */
+static const int showbar             = 1;     /* False means no bar */
+static const int topbar              = 1;     /* False means bottom bar */
+static const char * colors [SchemeLast][3] = {
+	/*               fg         bg         border   */
+	[SchemeNorm] = { "#bbbbbb", "#222222", "#444444" },
+	[SchemeSel] =  { "#eeeeee", "#4c7899", "#4c7899" },
+};
 
 /* tagging */
 static const char * tags [] = { ">_", "web", "docs", "play", "&c" };
 
 static const Rule rules [] = {
     /* class         instance   title  tagmask  floating  monitor */
-    { "st-256color", NULL,      NULL,  0,       False,    -1      },
-    { "Palemoon",    NULL,      NULL,  1 << 1,  False,    -1      },
+    { "st-256color", NULL,      NULL,  1 << 0,  False,    -1      },
+    { "Pale moon",   NULL,      NULL,  1 << 1,  False,    -1      },
     { "Zathura",     NULL,      NULL,  1 << 2,  False,    -1      },
     { "Gimp",        NULL,      NULL,  1 << 2,  True,     -1      },
+    { "Inkscape",    NULL,      NULL,  1 << 2,  False,    -1      },
     { "Steam",       NULL,      NULL,  1 << 3,  False,    -1      },
     { "mpv",         NULL,      NULL,  1 << 3,  False,    -1      },
 
