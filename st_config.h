@@ -116,8 +116,7 @@ static unsigned int mousebg = 0;
  * will reverse too. Another logic would only make the simple feature too
  * complex.
  */
-static unsigned int defaultitalic = 7;
-static unsigned int defaultunderline = 7;
+static unsigned int defaultattr = 11;
 
 /* Internal mouse shortcuts. */
 /* Beware that overloading Button1 will disable the selection. */
@@ -144,6 +143,7 @@ static Shortcut shortcuts[] = {
     { MODKEY|ShiftMask,     XK_C,           clipcopy,       {.i =  0} },
     { MODKEY|ShiftMask,     XK_V,           clippaste,      {.i =  0} },
     { MODKEY,               XK_Num_Lock,    numlock,        {.i =  0} },
+    { MODKEY,               XK_Control_L,   iso14755,       {.i =  0} },
 };
 
 /*
