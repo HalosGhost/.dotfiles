@@ -1,72 +1,72 @@
 #<- Logical Operators ->
-<Multi_key> <asciicircum> <period> <period>     : "∴"   U2234   # Therefore
-<Multi_key> <period> <period> <asciicircum>     : "∵"   U2235   # Because
-<Multi_key> <slash> <o>                         : "ø"   U2205   # Not
-<Multi_key> <slash> <O>                         : "Ø"   U00D8   # Empty Set
+<Multi_key> <e> <r> <g> <o>             : "∴"   U2234   # Therefore
+<Multi_key> <w> <h> <e> <r> <e> <a> <s> : "∵"   U2235   # Because
+<Multi_key> <slash> <o>                 : "ø"   U2205   # Not
+<Multi_key> <slash> <O>                 : "Ø"   U00D8   # Empty Set
 
 #<- Mathematical Operators ->
-<Multi_key> <period> <minus> <period>           : "÷"   U00F7   # Obelus
-<Multi_key> <x> <x>                             : "×"   U000D7  # Multiply
-<Multi_key> <asterisk> <x>                      : "·"   U00B7   # Interpunct
-<Multi_key> <p> <r> <i> <m> <e>                 : "′"   U2032   # Prime
+<Multi_key> <period> <minus> <period>   : "÷"   U00F7   # Obelus
+<Multi_key> <x> <x>                     : "×"   U000D7  # Multiply
+<Multi_key> <asterisk> <x>              : "·"   U00B7   # Interpunct
+<Multi_key> <p> <r> <i> <m> <e>         : "′"   U2032   # Prime
 
-<Multi_key> <equal> <equal> <equal>             : "≡"   U2261   # Identical to
-<Multi_key> <n> <o> <t>                         : "¬"   U00AC   # Negate / Not
-<Multi_key> <ampersand> <ampersand>             : "∧"   U2227   # Logical Conjunction
-<Multi_key> <bar> <bar>                         : "∨"   U2228   # Logical Disjunction
-<Multi_key> <a> <l> <l>                         : "∀"   U2200   # For all
-<Multi_key> <x> <o> <r>                         : "⊕"   U2295   # Xor
+<Multi_key> <equal> <equal> <equal>     : "≡"   U2261   # Identical to
+<Multi_key> <n> <o> <t>                 : "¬"   U00AC   # Negate / Not
+<Multi_key> <ampersand> <ampersand>     : "∧"   U2227   # Logical Conjunction
+<Multi_key> <bar> <bar>                 : "∨"   U2228   # Logical Disjunction
+<Multi_key> <a> <l> <l>                 : "∀"   U2200   # For all
+<Multi_key> <x> <o> <r>                 : "⊕"   U2295   # Xor
 
 #<- APL symbols ->
-<Multi_key> <n> <o> <r>                         : "⍱"           # Nor
-<Multi_key> <n> <a> <n> <d>                     : "⍲"           # Nand
-<Multi_key> <m> <a> <x>                         : "⌈"           # Max / Ceiling
-<Multi_key> <m> <i> <n>                         : "⌊"           # Min / Floor
-<Multi_key> <n> <e> <g>                         : "¯"           # Negative / High Minus
-<Multi_key> <q> <u> <a> <d>                     : "⎕"           # Quad
-<Multi_key> <l> <o> <g>                         : "⍟"           # Log
-<Multi_key> <e> <l> <e> <m>                     : "∊"           # elem / Contained in
-<Multi_key> <s> <e> <a> <r> <c> <h>             : "⍷"           # Search / Find
-<Multi_key> <r> <o> <t>                         : "⌽"           # Rotate
-<Multi_key> <t> <p> <o> <s> <e>                 : "⍉"           # Transpose
-<Multi_key> <d> <r> <o> <p>                     : "↓"           # Drop
-<Multi_key> <t> <a> <k> <e>                     : "↑"           # Take
-<Multi_key> <s> <u> <b>                         : "⊂"           # Subset / Enclose an array
-<Multi_key> <s> <u> <p>                         : "⊃"           # Superset / Disclose an array
-<Multi_key> <a> <s> <c>                         : "⍋"           # Sort Ascending
-<Multi_key> <d> <e> <s>                         : "⍒"           # Sort Descending
-<Multi_key> <t> <o> <p>                         : "⊤"           # Top
-<Multi_key> <b> <t> <m>                         : "⊥"           # Bottom
-<Multi_key> <m> <a> <p>                         : "¨"           # Map
-<Multi_key> <c> <m> <p>                         : "∘"           # Compose
-<Multi_key> <c> <n> <s>                         : "∷"           # Cons
+<Multi_key> <n> <o> <r>                 : "⍱"           # Nor
+<Multi_key> <n> <a> <n> <d>             : "⍲"           # Nand
+<Multi_key> <m> <a> <x>                 : "⌈"           # Max / Ceiling
+<Multi_key> <m> <i> <n>                 : "⌊"           # Min / Floor
+<Multi_key> <n> <e> <g>                 : "¯"           # Negative / High Minus
+<Multi_key> <q> <u> <a> <d>             : "⎕"           # Quad
+<Multi_key> <l> <o> <g>                 : "⍟"           # Log
+<Multi_key> <e> <l> <e> <m>             : "∊"           # elem / Contained in
+<Multi_key> <s> <e> <a> <r> <c> <h>     : "⍷"           # Search / Find
+<Multi_key> <r> <o> <t>                 : "⌽"           # Rotate
+<Multi_key> <t> <p> <o> <s> <e>         : "⍉"           # Transpose
+<Multi_key> <d> <r> <o> <p>             : "↓"           # Drop
+<Multi_key> <t> <a> <k> <e>             : "↑"           # Take
+<Multi_key> <s> <u> <b>                 : "⊂"           # Subset / Enclose an array
+<Multi_key> <s> <u> <p>                 : "⊃"           # Superset / Disclose an array
+<Multi_key> <a> <s> <c>                 : "⍋"           # Sort Ascending
+<Multi_key> <d> <e> <s>                 : "⍒"           # Sort Descending
+<Multi_key> <t> <o> <p>                 : "⊤"           # Top
+<Multi_key> <b> <t> <m>                 : "⊥"           # Bottom
+<Multi_key> <m> <a> <p>                 : "¨"           # Map
+<Multi_key> <c> <m> <p>                 : "∘"           # Compose
+<Multi_key> <c> <n> <s>                 : "∷"           # Cons
 
-<Multi_key> <asciitilde> <asciitilde>           : "≈"   U2248   # Approximately Equal
-<Multi_key> <exclam> <equal>                    : "≠"   U2260   # Not Equal
-<Multi_key> <less> <equal>                      : "≤"   U2264   # Less Than or Equal
-<Multi_key> <greater> <equal>                   : "≥"   U2265   # Greater or Equal
-<Multi_key> <less> <slash> <greater>            : "≸"   U2278   # Neither Less or Greater
-<Multi_key> <less> <plus>                       : "≪"   U226A   # Much Less
-<Multi_key> <plus> <greater>                    : "≫"   U226B   # Much Greater
-<Multi_key> <plus> <plus> <less>                : "⋘"   U22D8   # Much Much Less
-<Multi_key> <plus> <plus> <greater>             : "⋙"   U22D9   # Much Much Greater
+<Multi_key> <asciitilde> <asciitilde>   : "≈"   U2248   # Approximately Equal
+<Multi_key> <exclam> <equal>            : "≠"   U2260   # Not Equal
+<Multi_key> <less> <equal>              : "≤"   U2264   # Less Than or Equal
+<Multi_key> <greater> <equal>           : "≥"   U2265   # Greater or Equal
+<Multi_key> <less> <slash> <greater>    : "≸"   U2278   # Neither Less or Greater
+<Multi_key> <less> <plus>               : "≪"   U226A   # Much Less
+<Multi_key> <plus> <greater>            : "≫"   U226B   # Much Greater
+<Multi_key> <plus> <plus> <less>        : "⋘"   U22D8   # Much Much Less
+<Multi_key> <plus> <plus> <greater>     : "⋙"   U22D9   # Much Much Greater
 
-<Multi_key> <plus> <minus>                      : "±"   U00B1   # Plus or Minus
-<Multi_key> <minus> <plus>                      : "∓"   U2213   # Minus or Plus
+<Multi_key> <plus> <minus>              : "±"   U00B1   # Plus or Minus
+<Multi_key> <minus> <plus>              : "∓"   U2213   # Minus or Plus
 
-<Multi_key> <s> <q>                             : "√"   U221A   # Square Root
-<Multi_key> <3> <s> <q>                         : "∛"   U221B   # Cube Root
-<Multi_key> <4> <s> <q>                         : "∜"   U221C   # Fourth Root
+<Multi_key> <s> <q>                     : "√"   U221A   # Square Root
+<Multi_key> <3> <s> <q>                 : "∛"   U221B   # Cube Root
+<Multi_key> <4> <s> <q>                 : "∜"   U221C   # Fourth Root
 
-<Multi_key> <i> <n> <t>                         : "∫"   U222B   # Integral
+<Multi_key> <i> <n> <t>                 : "∫"   U222B   # Integral
 
 #<- Mathematical Categories ->
-<Multi_key> <B> <o> <o> <l>                     : "𝔹"
-<Multi_key> <C> <m> <p> <l> <x>                 : "ℂ"
-<Multi_key> <I> <n> <t>                         : "ℤ"
-<Multi_key> <R> <a> <t>                         : "ℚ"
-<Multi_key> <R> <e> <a> <l>                     : "ℝ"
-<Multi_key> <N> <a> <t>                         : "ℕ"
-<Multi_key> <W> <h> <o> <l> <e>                 : "𝕎"
-<Multi_key> <Q> <u> <a> <t>                     : "ℍ"
-<Multi_key> <U> <v> <r> <s>                     : "𝕌"
+<Multi_key> <B> <o> <o> <l>             : "𝔹"
+<Multi_key> <C> <m> <p> <l> <x>         : "ℂ"
+<Multi_key> <I> <n> <t>                 : "ℤ"
+<Multi_key> <R> <a> <t>                 : "ℚ"
+<Multi_key> <R> <e> <a> <l>             : "ℝ"
+<Multi_key> <N> <a> <t>                 : "ℕ"
+<Multi_key> <W> <h> <o> <l> <e>         : "𝕎"
+<Multi_key> <Q> <u> <a> <t>             : "ℍ"
+<Multi_key> <U> <v> <r> <s>             : "𝕌"
