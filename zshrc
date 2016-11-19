@@ -123,5 +123,9 @@ highlight () {
     source-highlight -f esc -o STDOUT -i "$1"
 }
 
+hashdir () {
+    find "${2:-.}" -maxdepth 1 -type f -exec "${1:-sha256sum}" {} \;
+}
+
 #<- Source ZSh Syntax Highlighting ->
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
