@@ -71,22 +71,20 @@ compdef _pbpst pb
 alias shaman="shaman -l'Saint Paul,US'"
 
 #<- Suffixes ->
-alias -s pdf='zathura'
-alias -s djvu='zathura'
-alias -s jpg='sxiv'
-alias -s png='sxiv'
-alias -s svg='inkview'
-alias -s exe='mono'
+for i in pdf djvu; do alias -s "$i"='zathura'; done
+for i in jpg png; do alias -s "$i"='sxiv'; done
+
+for i in md mdown rst tex txt c h agda; do
+    alias -s "$i"='vim'
+done
 
 for i in mp3 avi flac webm mkv mp4 mov m4a ogg ogv oga flv opus wav gif; do
     alias -s "$i"='qmpv'
 done
 
-for i in md mdown rst tex txt; do
-    alias -s "$i"='vim'
-done
-
 alias -s hs='runhaskell'
+alias -s svg='inkview'
+alias -s exe='mono'
 
 #<- Functions ->
 lsupd () {
