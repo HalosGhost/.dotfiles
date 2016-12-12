@@ -395,7 +395,7 @@ static Key key[] = {
  * If no match is found, regular selection is used.
  */
 static uint selmasks[] = {
-    [SEL_RECTANGULAR] = Mod1Mask,
+    [SEL_RECTANGULAR] = ShiftMask,
 };
 
 static char ascii_printable[] =
