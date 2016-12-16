@@ -125,5 +125,9 @@ hashdir () {
     find "${2:-.}" -maxdepth 1 -type f -exec "${1:-sha256sum}" {} \;
 }
 
+noise () {
+    play -qn synth "${1}noise"
+}
+
 #<- Source ZSh Syntax Highlighting ->
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
