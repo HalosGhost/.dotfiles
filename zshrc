@@ -106,7 +106,7 @@ netsloc () {
 }
 
 yt () {
-    ytdl -e --get-id "ytsearch$2:$1" | awk 'NR % 2 == 0 { print "https://youtube.com/watch?v="$0 } NR % 2 != 0 { print $0 }'
+    ytdl -e --get-id "ytsearch$2:$1" | awk 'NR % 2 == 0 { print "https://youtu.be/"$0 } NR % 2 != 0 { print $0 }'
 }
 
 wifiscan () {
