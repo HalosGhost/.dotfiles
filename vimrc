@@ -72,6 +72,7 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 au BufWinLeave * call clearmatches()
 
 "<- Keybinds ->
+map <F10> :setlocal spell! spelllang=en_us<CR>
 map <Esc><Esc> :w<CR>
 nnoremap ZO <C-w>o
 nnoremap <Leader>h :set hls!<CR>
