@@ -104,6 +104,9 @@ static unsigned int defaultrcs = 257;
 
 static unsigned int cursorshape = 2;
 
+static unsigned int cols = 80;
+static unsigned int rows = 24;
+
 /*
  * Default colour and shape of the mouse cursor
  */
