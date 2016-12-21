@@ -14,7 +14,7 @@ static const unsigned int borderpx   = 1;        /* border pixel of windows */
 static const unsigned int snap       = 32;       /* snap pixel */
 static const int showbar             = 1;     /* False means no bar */
 static const int topbar              = 1;     /* False means bottom bar */
-static const char * colors [SchemeLast][3] = {
+static const char * colors [][3] = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { "#bbbbbb", "#222222", "#444444" },
 	[SchemeSel] =  { "#eeeeee", "#4c7899", "#4c7899" },
