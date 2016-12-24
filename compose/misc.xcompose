@@ -81,3 +81,4 @@
 <Multi_key> <Multi_key> <space>                 : ""          # Unit Sep
 <Multi_key> <Multi_key> <Return>                : ""          # Record Sep
 <Multi_key> <Multi_key> <Tab>                   : ""          # Group Sep
+<Multi_key> <Multi_key> <End>                   : ""          # File Sep
