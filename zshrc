@@ -109,14 +109,6 @@ yt () {
     ytdl -e --get-id "ytsearch$2:$1" | awk 'NR % 2 == 0 { print "https://youtu.be/"$0 } NR % 2 != 0 { print $0 }'
 }
 
-wifiscan () {
-    sudo iw dev wlp3s0 scan|awk "/SSID: $1/"
-}
-
-wifireload () {
-    sudo killall -HUP wpa_supplicant
-}
-
 highlight () {
     source-highlight -f esc -o STDOUT -i "$1"
 }
