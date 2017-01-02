@@ -17,8 +17,6 @@ zstyle ':completion:*' menu select
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit
 autoload -U bashcompinit
-autoload -U edit-command-line
-zle -N edit-command-line
 compinit
 bashcompinit
 eval $(dircolors $HOME/.dircolors )
