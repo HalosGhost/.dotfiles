@@ -62,11 +62,13 @@
 
 #<- Mathematical Categories ->
 <Multi_key> <B> <o> <o> <l>             : "𝔹"
-<Multi_key> <C> <m> <p> <l> <x>         : "ℂ"
+<Multi_key> <N> <a> <t>                 : "ℕ"
+<Multi_key> <W> <h> <o> <l> <e>         : "𝕎"
 <Multi_key> <I> <n> <t>                 : "ℤ"
 <Multi_key> <R> <a> <t>                 : "ℚ"
 <Multi_key> <R> <e> <a> <l>             : "ℝ"
-<Multi_key> <N> <a> <t>                 : "ℕ"
-<Multi_key> <W> <h> <o> <l> <e>         : "𝕎"
+<Multi_key> <I> <m> <a> <g>             : "𝕀"
+<Multi_key> <C> <m> <p> <l> <x>         : "ℂ"
 <Multi_key> <Q> <u> <a> <t>             : "ℍ"
+<Multi_key> <O> <c> <t>                 : "𝕆"
 <Multi_key> <U> <v> <r> <s>             : "𝕌"
