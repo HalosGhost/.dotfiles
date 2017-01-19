@@ -29,7 +29,8 @@
 <Multi_key> <O> <E>                     : "Œ"   U0152   # OE
 <Multi_key> <u> <e>                     : "ᵫ"   U1D6B   # ue
 
-<Multi_key> <e> <t>                     : "&"   U0026   # et
+<Multi_key> <e> <t>                     : "🙰"   U1F670  # et
+<Multi_key> <E> <t>                     : "🙲"   U1F672  # Et
 
 <Multi_key> <f> <f> <period>            : "ﬀ"   UFB00   # ff
 <Multi_key> <f> <i>                     : "ﬁ"   UFB01   # fi
