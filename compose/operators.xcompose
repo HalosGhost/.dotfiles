@@ -41,6 +41,7 @@
 <Multi_key> <c> <m> <p>                 : "∘"           # Compose
 <Multi_key> <c> <n> <s>                 : "∷"           # Cons
 <Multi_key> <asciitilde> <colon>        : "⍨"           # Commute
+<Multi_key> <colon> <colon>             : "¨"           # Each
 
 <Multi_key> <asciitilde> <asciitilde>   : "≈"   U2248   # Approximately Equal
 <Multi_key> <exclam> <equal>            : "≠"   U2260   # Not Equal
