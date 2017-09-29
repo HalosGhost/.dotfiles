@@ -62,7 +62,6 @@ alias ytdl='youtube-dl'
 alias sudo='sudo '
 alias bc='bc -lq'
 alias matrix='cmatrix -f -l -a'
-alias lsbat='cat /sys/class/power_supply/BAT0/capacity'
 
 alias pb='pbpst'
 compdef _pbpst pb
