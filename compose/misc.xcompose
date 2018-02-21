@@ -77,6 +77,8 @@
 <Multi_key> <r> <e> <c> <y> <c> <l> <e>         : "♲"    U2672
 <Multi_key> <t> <r> <a> <s> <h>                 : "🗑"    U1F5D1
 <Multi_key> <l> <o> <c> <k>                     : "🔒"   U1F512
+<Multi_key> <g> <h> <o> <s> <t>                 : "👻"   U1F47B
+<Multi_key> <s> <h> <r> <u> <g>                 : "🤷"
 
 <Multi_key> <plus> <1>                          : "👍"   U1F44D
 <Multi_key> <minus> <1>                         : "👎"   U1F44E
