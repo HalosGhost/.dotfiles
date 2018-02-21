@@ -86,7 +86,7 @@ alias -s exe='mono'
 #<- Functions ->
 lsupd () {
     checkupdates
-    cower -u
+    auracle sync
 }
 
 gitver () {
