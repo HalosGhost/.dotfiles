@@ -10,6 +10,7 @@ export GTK_IM_MODULE=xim
 export QT_IM_MODULE=xim
 export FT2_SUBPIXEL_HINTING=1
 export $(cat /etc/locale.conf)
+export WIFI_IFACE=wlp3s0
 xss-lock physlock &
 dstat &
 clipit -dn &
