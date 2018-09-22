@@ -19,6 +19,7 @@ autoload -Uz compinit
 autoload -U bashcompinit
 compinit
 bashcompinit
+disable kill
 eval $(dircolors $HOME/.dircolors )
 
 if [ "$DISPLAY" ]; then
