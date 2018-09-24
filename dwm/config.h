@@ -28,7 +28,7 @@ static const Rule rules [] = {
     { "st-256color", NULL,      NULL,  1 << 0,  False,    -1      },
     { "Pale moon",   NULL,      NULL,  1 << 1,  False,    -1      },
     { "Zathura",     NULL,      NULL,  1 << 2,  False,    -1      },
-    { "Gimp",        NULL,      NULL,  1 << 2,  True,     -1      },
+    { "Gimp",        NULL,      NULL,  1 << 2,  False,    -1      },
     { "Inkscape",    NULL,      NULL,  1 << 2,  False,    -1      },
     { "Steam",       NULL,      NULL,  1 << 3,  False,    -1      },
     { "mpv",         NULL,      NULL,  1 << 3,  False,    -1      },
