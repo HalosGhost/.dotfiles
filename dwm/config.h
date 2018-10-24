@@ -16,8 +16,10 @@ static const int showbar             = 1;     /* False means no bar */
 static const int topbar              = 1;     /* False means bottom bar */
 static const char * colors [][3] = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { "#bbbbbb", "#222222", "#444444" },
-	[SchemeSel]  = { "#eeeeee", "#4c7899", "#4c7899" },
+	[SchemeNorm]    = { "#bbbbbb", "#222222", "#444444" },
+	[SchemeSel]     = { "#eeeeee", "#4c7899", "#4c7899" },
+	[SchemeWarn]    = { "#000000", "#c6cc66", "#c6cc66" },
+	[SchemeUrgent]  = { "#000000", "#994c59", "#994c59" },
 };
 
 /* tagging */
@@ -30,6 +32,7 @@ static const Rule rules [] = {
     { "Zathura",     NULL,      NULL,  1 << 2,  False,    -1      },
     { "Gimp",        NULL,      NULL,  1 << 2,  False,    -1      },
     { "Inkscape",    NULL,      NULL,  1 << 2,  False,    -1      },
+    { "libreoffice", NULL,      NULL,  1 << 2,  False,    -1      },
     { "Steam",       NULL,      NULL,  1 << 3,  False,    -1      },
     { "mpv",         NULL,      NULL,  1 << 3,  False,    -1      },
 
