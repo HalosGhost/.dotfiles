@@ -1,8 +1,17 @@
 diff --git a/dwm.c b/dwm.c
-index b2bc9bd..32e94a7 100644
+index 4465af1..aea5cf7 100644
 --- a/dwm.c
 +++ b/dwm.c
-@@ -708,10 +708,10 @@ dirtomon(int dir)
+@@ -59,7 +59,7 @@
+ 
+ /* enums */
+ enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
+-enum { SchemeNorm, SchemeSel }; /* color schemes */
++enum { SchemeNorm, SchemeSel, SchemeWarn, SchemeUrgent }; /* color schemes */
+ enum { NetSupported, NetWMName, NetWMState, NetWMCheck,
+        NetWMFullscreen, NetActiveWindow, NetWMWindowType,
+        NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
+@@ -695,20 +695,37 @@ dirtomon(int dir)
  void
  drawbar(Monitor *m)
  {
@@ -12,10 +21,29 @@ index b2bc9bd..32e94a7 100644
  	int boxw = drw->fonts->h / 6 + 2;
 -	unsigned int i, occ = 0, urg = 0;
 +	unsigned int i, occ = 0, urg = 0, n = 0;
++	char *ts = stext;
++	char *tp = stext;
++	int tx = 0;
++	char ctmp;
  	Client *c;
  
  	/* draw status first so it can be overdrawn by tags later */
-@@ -722,6 +722,8 @@ drawbar(Monitor *m)
+ 	if (m == selmon) { /* status is only drawn on selected monitor */
+ 		drw_setscheme(drw, scheme[SchemeNorm]);
+ 		sw = TEXTW(stext) - lrpad + 2; /* 2px right padding */
+-		drw_text(drw, m->ww - sw, 0, sw, bh, 0, stext, 0);
++		//drw_text(drw, m->ww - sw, 0, sw, bh, 0, stext, 0);
++		while (1) {
++			if ((unsigned int)*ts > LENGTH(colors)) { ts++; continue ; }
++			ctmp = *ts;
++			*ts = '\0';
++			drw_text(drw, m->ww - sw + tx, 0, sw - tx, bh, 0, tp, 0);
++			tx += TEXTW(tp) -lrpad;
++			if (ctmp == '\0') { break; }
++			drw_setscheme(drw, scheme[(unsigned int)(ctmp-1)]);
++			*ts = ctmp;
++			tp = ++ts;
++		}
  	}
  
  	for (c = m->clients; c; c = c->next) {
@@ -24,7 +52,7 @@ index b2bc9bd..32e94a7 100644
  		occ |= c->tags;
  		if (c->isurgent)
  			urg |= c->tags;
-@@ -742,15 +744,39 @@ drawbar(Monitor *m)
+@@ -729,15 +746,39 @@ drawbar(Monitor *m)
  	x = drw_text(drw, x, 0, w, bh, lrpad / 2, m->ltsymbol, 0);
  
  	if ((w = m->ww - sw - x) > bh) {
