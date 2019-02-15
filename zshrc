@@ -55,7 +55,7 @@ alias -g ....='../../..'
 alias ls='ls --color=auto -CFA'
 alias ll='ls -lh'
 
-for i in pacman cower grep; do
+for i in pacman cower; do
     alias "$i"="$i --color=always"
 done
 
@@ -70,7 +70,7 @@ alias shaman="shaman -l'Saint Paul,US'"
 
 #<- Suffixes ->
 for i in pdf djvu; do alias -s "$i"='zathura'; done
-for i in jpg png; do alias -s "$i"='sxiv'; done
+for i in jpg png; do alias -s "$i"='imv'; done
 
 for i in md mdown rst tex txt c h agda; do
     alias -s "$i"='vim'
