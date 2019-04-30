@@ -43,6 +43,9 @@
 <Multi_key> <asciitilde> <colon>        : "⍨"           # Commute
 <Multi_key> <colon> <colon>             : "¨"           # Each
 
+#<- Agda symbols ->
+<Multi_key> <q> <e> <d>                 : "∎"   U220E   # QED / End of Proof
+
 <Multi_key> <asciitilde> <asciitilde>   : "≈"   U2248   # Approximately Equal
 <Multi_key> <exclam> <equal>            : "≠"   U2260   # Not Equal
 <Multi_key> <less> <equal>              : "≤"   U2264   # Less Than or Equal
