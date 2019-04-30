@@ -33,8 +33,8 @@ else
 fi
 
 #<- Keybinds ->
-bindkey -M vicmd v edit-command-line
-bindkey "^X" edit-command-line
+#bindkey -M vicmd v edit-command-line
+#bindkey "^X" edit-command-line
 bindkey "^R" history-incremental-pattern-search-backward
 typeset -A key
 
@@ -55,8 +55,8 @@ alias -g ....='../../..'
 alias ls='ls --color=auto -CFA'
 alias ll='ls -lh'
 
-for i in pacman cower; do
-    alias "$i"="$i --color=always"
+for i in pacman cower grep; do
+    alias "$i"="$i --color=auto"
 done
 
 alias ytdl='youtube-dl'
