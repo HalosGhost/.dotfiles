@@ -47,6 +47,7 @@
 <Multi_key> <q> <e> <d>                 : "∎"   U220E   # QED / End of Proof
 <Multi_key> <less> <parenleft>          : "⟨"   U27E8   # left angle bracket
 <Multi_key> <greater> <parenright>      : "⟩"   U27E9   # right angle bracket
+<Multi_key> <a> <l> <s> <o>             : "≡⟨⟩"         # “also equal to”
 
 <Multi_key> <asciitilde> <asciitilde>   : "≈"   U2248   # Approximately Equal
 <Multi_key> <exclam> <equal>            : "≠"   U2260   # Not Equal
