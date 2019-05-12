@@ -63,6 +63,7 @@ alias ytdl='youtube-dl'
 alias sudo='sudo '
 alias bc='bc -lq'
 alias matrix='cmatrix -f -l -a'
+alias imv='imv -b checks'
 
 alias pb='pbpst'
 compdef _pbpst pb
