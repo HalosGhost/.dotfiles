@@ -79,7 +79,7 @@ static const char * volumeInc [] = { "pactl", "--", "set-sink-volume", "@DEFAULT
 static const char * volumeDec [] = { "pactl", "--", "set-sink-volume", "@DEFAULT_SINK@",   "-5%",    NULL };
 static const char * volumeTog [] = { "pactl", "--", "set-sink-mute",   "@DEFAULT_SINK@",   "toggle", NULL };
 static const char * micTog    [] = { "pactl", "--", "set-source-mute", "@DEFAULT_SOURCE@", "toggle", NULL };
-static const char * lockscrn  [] = { "loginctl", "lock-session", NULL };
+static const char * lockscrn  [] = { "loginctl", "--no-ask-password", "lock-session", NULL };
 static const char * bl_up     [] = { "sudo", "enlighten", "+5%", NULL };
 static const char * bl_dn     [] = { "sudo", "enlighten", "-5%", NULL };
 
