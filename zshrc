@@ -71,7 +71,7 @@ alias shaman="shaman -l'Saint Paul,US'"
 
 #<- Suffixes ->
 for i in pdf djvu; do alias -s "$i"='zathura'; done
-for i in jpg png; do alias -s "$i"='imv'; done
+for i in jpg png svg; do alias -s "$i"='imv'; done
 
 for i in md mdown rst tex txt c h agda; do
     alias -s "$i"='vim'
@@ -82,7 +82,6 @@ for i in mp3 avi flac webm mkv mp4 mov m4a ogg ogv oga flv opus wav gif; do
 done
 
 alias -s hs='runhaskell'
-alias -s svg='inkview'
 alias -s exe='mono'
 
 #<- Functions ->
