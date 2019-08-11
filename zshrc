@@ -74,7 +74,7 @@ for i in pdf djvu; do alias -s "$i"='zathura'; done
 for i in jpg png svg; do alias -s "$i"='imv'; done
 
 for i in md mdown rst tex txt c h agda; do
-    alias -s "$i"='vim'
+    alias -s "$i"='vis'
 done
 
 for i in mp3 avi flac webm mkv mp4 mov m4a ogg ogv oga flv opus wav gif; do
