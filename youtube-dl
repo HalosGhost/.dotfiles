@@ -1,0 +1,19 @@
+# automatically download to $HOME/vid/stream
+-o ~/vid/stream/"%(autonumber)d - %(title)s.%(ext)s"
+
+# always get free formats if available
+--prefer-free-formats
+
+# default to bestvideo+bestaudio
+-f ((bestvideo[ext=webm]/bestvideo)+(bestaudio))/best
+
+# auto-merge to mkv
+--merge-output-format mkv
+
+# get best-quality subtitles and embed them
+--sub-format best
+--all-subs
+--embed-subs
+
+# default to not downloading playlists
+--no-playlist
