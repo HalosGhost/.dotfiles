@@ -14,14 +14,17 @@
 <Multi_key> <n> <o> <t>                 : "¬"   U00AC   # Negate / Not
 <Multi_key> <ampersand> <ampersand>     : "∧"   U2227   # Logical Conjunction
 <Multi_key> <bar> <bar>                 : "∨"   U2228   # Logical Disjunction
-<Multi_key> <a> <l> <l>                 : "∀"   U2200   # For all
+<Multi_key> <f> <o> <r> <a> <l> <l>     : "∀"   U2200   # For all
+<Multi_key> <f> <o> <r> <s> <o> <m> <e> : "∃"   U2203   # There exists
 <Multi_key> <x> <o> <r>                 : "⊕"   U2295   # Xor
 
 #<- APL symbols ->
 <Multi_key> <n> <o> <r>                 : "⍱"           # Nor
 <Multi_key> <n> <a> <n> <d>             : "⍲"           # Nand
 <Multi_key> <m> <a> <x>                 : "⌈"           # Max / Ceiling
+<Multi_key> <r> <m> <a> <x>             : "⌉"           # right-side Max / Ceiling
 <Multi_key> <m> <i> <n>                 : "⌊"           # Min / Floor
+<Multi_key> <r> <m> <i> <n>             : "⌋"           # right-side Min / Floor
 <Multi_key> <n> <e> <g>                 : "¯"           # Negative / High Minus
 <Multi_key> <q> <u> <a> <d>             : "⎕"           # Quad
 <Multi_key> <l> <o> <g>                 : "⍟"           # Log
@@ -68,15 +71,30 @@
 
 <Multi_key> <i> <n> <t>                 : "∫"   U222B   # Integral
 
-#<- Mathematical Categories ->
-<Multi_key> <B> <o> <o> <l>             : "𝔹"
-<Multi_key> <N> <a> <t>                 : "ℕ"
-<Multi_key> <W> <h> <o> <l> <e>         : "𝕎"
-<Multi_key> <I> <n> <t>                 : "ℤ"
-<Multi_key> <R> <a> <t>                 : "ℚ"
-<Multi_key> <R> <e> <a> <l>             : "ℝ"
-<Multi_key> <I> <m> <a> <g>             : "𝕀"
-<Multi_key> <C> <m> <p> <l> <x>         : "ℂ"
-<Multi_key> <Q> <u> <a> <t>             : "ℍ"
-<Multi_key> <O> <c> <t>                 : "𝕆"
-<Multi_key> <U> <v> <r> <s>             : "𝕌"
+#<- Double-struck Capitals ->
+<Multi_key> <A> <A> : "𝔸"
+<Multi_key> <B> <B> : "𝔹"
+<Multi_key> <C> <C> : "ℂ"
+<Multi_key> <D> <D> : "𝔻"
+<Multi_key> <E> <E> : "𝔼"
+<Multi_key> <F> <F> : "𝔽"
+<Multi_key> <G> <G> : "𝔾"
+<Multi_key> <H> <H> : "ℍ"
+<Multi_key> <I> <I> : "𝕀"
+<Multi_key> <J> <J> : "𝕁"
+<Multi_key> <K> <K> : "𝕂"
+<Multi_key> <L> <L> : "𝕃"
+<Multi_key> <M> <M> : "𝕄"
+<Multi_key> <N> <N> : "ℕ"
+<Multi_key> <O> <O> : "𝕆"
+<Multi_key> <P> <P> : "ℙ"
+<Multi_key> <Q> <Q> : "ℚ"
+<Multi_key> <R> <R> : "ℝ"
+<Multi_key> <S> <S> : "𝕊"
+<Multi_key> <T> <T> : "𝕋"
+<Multi_key> <U> <U> : "𝕌"
+<Multi_key> <V> <V> : "𝕍"
+<Multi_key> <W> <W> : "𝕎"
+<Multi_key> <X> <X> : "𝕏"
+<Multi_key> <Y> <Y> : "𝕐"
+<Multi_key> <Z> <Z> : "ℤ"

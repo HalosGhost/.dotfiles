@@ -42,6 +42,11 @@
 <Multi_key> <y> <e> <s>                         : "✔"           # Checkmark / Yes
 <Multi_key> <n> <o> <m>                         : "✘"           # X / No
 
+<Multi_key> <s> <y> <n>                         : "␖"   U2416   # symbol for ASCII SYN
+<Multi_key> <a> <c> <k>                         : "␆"   U2406   # symbol for ASCII ACK
+<Multi_key> <S> <Y> <N>                         : ""   U0016   # ASCII SYN
+<Multi_key> <A> <C> <K>                         : ""   U0006   # ASCII ACK
+
 #<- Modifier keys ->
 <Multi_key> <a> <l> <t>                         : "⌥"   U2325   # Alternate
 <Multi_key> <s> <h> <f> <t>                     : "⇧"   U21E7   # Shift
@@ -58,6 +63,7 @@
 #<- Smileys ->
 <Multi_key> <colon> <parenleft>                 : "☹"   U2639   # :(
 <Multi_key> <colon> <parenright>                : "☺"   U263A   # :)
+<Multi_key> <colon> <P>                         : "😛"  U1F61B  # :P
 <Multi_key> <s> <n> <o> <w>                     : "☃"   U2603   # Snowman
 <Multi_key> <s> <i> <g> <h>                     : "-_-"
 <Multi_key> <p> <n> <d> <a>                     : "ʕ·ᴥ·ʔ"
@@ -75,6 +81,7 @@
 <Multi_key> <D> <colon>                         : "😦"   U1F626  # D:
 <Multi_key> <c> <t> <l>                         : "🎮"   U1F3AE
 <Multi_key> <t> <a> <c> <o>                     : "🌮"   U1F32E
+<Multi_key> <b> <a> <g> <e> <l>                 : "🥯"   U1F96F # Bagel
 <Multi_key> <r> <e> <c> <y> <c> <l> <e>         : "♲"    U2672
 <Multi_key> <t> <r> <a> <s> <h>                 : "🗑"    U1F5D1
 <Multi_key> <l> <o> <c> <k>                     : "🔒"   U1F512
